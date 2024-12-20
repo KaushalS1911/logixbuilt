@@ -18,7 +18,7 @@ const Footer = () => {
                     <Grid item xs={12} md={6}>
                         <Box
                             sx={{
-                                p: "40px 130px",
+                                p: {sm:"40px 130px",xs: '40px 0'},
                                 background: `linear-gradient(90deg, #F61B10aa, #EF0963aa) , url(${img1.src})center/cover`,
                                 height: {md: "540px", sm: "327px" },
                                 display: "flex",
@@ -29,7 +29,7 @@ const Footer = () => {
                                 "&::before": {
                                     content: '""',
                                     position: "absolute",
-                                    top: {lg:"20%" },
+                                    top: {sm:"15%",xs: "100%"},
                                     right:{sm : -40 , xs: 10,md: -50},
                                     width: {sm: "350px", xs: "230px",md: '300px'},
                                     height: {sm: "350px", xs: "230px",md: '300px'},
@@ -50,7 +50,7 @@ const Footer = () => {
                                         fontWeight: "bold",
                                         fontSize: {sm: "50px", xs: "30px",md: "60px"},
                                         lineHeight: {sm: "90px", xs: "60px"},
-                                        maxWidth: 400
+                                        maxWidth:{sm:400}
                                     }}
                                 >
                                     Let's get to work
@@ -63,6 +63,7 @@ const Footer = () => {
                                         border: "2px solid white ",
                                         fontSize: "17px",
                                         letterSpacing: "2px",
+                                        textWrap: 'nowrap',
                                         ml: "0 ",
                                         p: {
                                             md: "15px 40px ",
