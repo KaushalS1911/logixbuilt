@@ -1,11 +1,11 @@
-import {Box} from "@mui/material";
+import Herosection from "../components/home/herosection";
+import Services from "../components/home/services";
 
 export default function Home() {
     return (
         <>
-            <Box>
-                Home
-            </Box>
+            <Herosection />
+            <Services />
         </>
     );
 }

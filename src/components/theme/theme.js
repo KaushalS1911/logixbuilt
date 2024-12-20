@@ -1,14 +1,20 @@
 'use client';
-import { createTheme } from "@mui/material/styles";
+import {createTheme} from "@mui/material/styles";
+
 const theme = createTheme({
-  typography: {},
-  palette: {
-    black: "#000",
-    white: "#FFFF",
-    blue: '#008DFF',
-    textGray : '#8B9094',
-    gradient : 'linear-gradient(100.7deg, rgba(30, 30, 30, .21) 1.06%, #000E1A 101.06%',
-    skyBlue : '#BFE2FF'
-  },
+    // typography: {
+    //   fontFamily: 'Roboto, Arial, sans-serif',
+    // },
+    palette: {
+        black: "#000",
+        white: "#FFF",
+        crimson: '#F71C52',
+        cardTextGrey: "rgba(29, 29, 36, .75)",
+        darkGray: '#333333',
+        LightBlueBackground: "#F8F9FC",
+        textGray: "#C6C9D8",
+        eggPlant: '#554C86',
+        springGreen: '#39D47A'
+    },
 });
 export default theme;
