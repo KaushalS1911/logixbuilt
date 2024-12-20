@@ -50,10 +50,10 @@ const Footer = () => {
                                         fontWeight: "bold",
                                         fontSize: {sm: "75px", xs: "50px"},
                                         lineHeight: {sm: "90px", xs: "60px"},
-                                        textWrap: "nowrap",
+                                        maxWidth: 400
                                     }}
                                 >
-                                    Let's get <Box>to work</Box>
+                                    Let's get to work
                                 </Typography>
                                 {/*<NavLink style={{ color: "unset" }} to={"/contact"}>*/}
                                 <Button
