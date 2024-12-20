@@ -20,19 +20,19 @@ const Footer = () => {
                             sx={{
                                 p: "40px 130px",
                                 background: `linear-gradient(90deg, #F61B10aa, #EF0963aa) , url(${img1.src})center/cover`,
-                                height: {md: "540px", sm: "327px"},
+                                height: {md: "540px", sm: "327px" },
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: {xs: "center", sm: "unset"},
+                                justifyContent: {xs: "center", sm: "unset", md: "center"},
                                 color: "white",
                                 position: "relative",
                                 "&::before": {
                                     content: '""',
                                     position: "absolute",
-                                    top: '10%',
-                                    right: 10,
-                                    width: {sm: "380px", xs: "220px"},
-                                    height: {sm: "380px", xs: "220px"},
+                                    top: {lg:"20%" },
+                                    right:{sm : -40 , xs: 10,md: -50},
+                                    width: {sm: "350px", xs: "230px",md: '300px'},
+                                    height: {sm: "350px", xs: "230px",md: '300px'},
                                     zIndex: "0",
                                     backgroundImage: `url(${img2.src})`,
                                     backgroundPosition: "center",
@@ -48,7 +48,7 @@ const Footer = () => {
                                 <Typography
                                     sx={{
                                         fontWeight: "bold",
-                                        fontSize: {sm: "75px", xs: "50px"},
+                                        fontSize: {sm: "50px", xs: "30px",md: "60px"},
                                         lineHeight: {sm: "90px", xs: "60px"},
                                         maxWidth: 400
                                     }}
@@ -68,7 +68,7 @@ const Footer = () => {
                                             md: "15px 40px ",
                                             sm: "10px 30px ",
                                         },
-                                        mt: {md: "40px", xs: "20px"},
+                                        mt: {md: "40px", xs: "20px" },
                                         cursor: "pointer",
                                         "&:hover": {
                                             backgroundColor: "white ",
@@ -100,7 +100,7 @@ const Footer = () => {
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                     width: "100%",
-                                    py: {md: "0", xs: "40px"},
+                                    py: {md: "0px", xs: "40px"},
                                 }}
                             >
                                 <Grid
