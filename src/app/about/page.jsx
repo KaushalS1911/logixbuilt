@@ -1,7 +1,11 @@
+import Feature from "../../components/about/Feature";
+import Faqs from "../../components/about/Faqs";
+
 const Page = () => {
     return (
         <>
-            Hello this is About page
+            <Feature/>
+            <Faqs/>
         </>
     );
 }
