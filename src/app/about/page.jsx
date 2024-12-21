@@ -1,7 +1,9 @@
+import TechnologyFirm from "../../components/about/TechnologyFirm";
+
 const Page = () => {
     return (
         <>
-            Hello this is About page
+            <TechnologyFirm/>
         </>
     );
 }

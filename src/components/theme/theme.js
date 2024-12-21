@@ -9,6 +9,7 @@ const theme = createTheme({
         black: "#000",
         white: "#FFF",
         crimson: '#F71C52',
+        mediumGray: "#4D5072",
         cardTextGrey: "rgba(29, 29, 36, .75)",
         darkGray: '#333333',
         LightBlueBackground: "#F8F9FC",
