@@ -30,7 +30,7 @@ const Footer = () => {
                                     content: '""',
                                     position: "absolute",
                                     top: {sm:"15%",xs: "100%"},
-                                    right:{sm : -40 , xs: 10,md: -50},
+                                    right:{sm : 0 , xs: 10,md: -50},
                                     width: {sm: "350px", xs: "230px",md: '300px'},
                                     height: {sm: "350px", xs: "230px",md: '300px'},
                                     zIndex: "0",

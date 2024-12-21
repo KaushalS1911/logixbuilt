@@ -109,6 +109,7 @@ a {
 }
 
 /*******button*******/
+
 .button {
   padding: 8px 25px !important;
   font-weight: 500;
@@ -123,4 +124,46 @@ a {
   color: #ffffff !important;
   transform: translateY(-5px);
   font-weight: 500;
+}
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 1px;
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #94AADB, #EBA0A0);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.bgbox{
+background:linear-gradient(90deg , #FBE0DF , #fff);
+color:#E64039;
+font-weight: 500;
+justify-content:center;
+width:250px;
+height:50px;
+border-radius:35px;
+margin-bottom:25px;
+display: flex;
+align-items : center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-icon {
+  animation: rotate 1s linear infinite;
+  /*transform*/
 }

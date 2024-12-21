@@ -1,7 +1,10 @@
+import Aboutcompany from "../../components/about/Aboutcompany";
+
 const Page = () => {
     return (
         <>
-            Hello this is About page
+
+            <Aboutcompany/>
         </>
     );
 }
