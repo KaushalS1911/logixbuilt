@@ -13,13 +13,13 @@ function Aboutcompany(props) {
             <Box>
                 <Box
                     sx={{
-                        background: `url(${bgImg2.src})`,
+                        background: `url(${bgImg2.src}) no-repeat`,
                         height: "405px",
                         width : "100%"
                     }}
                 >
                     <Box sx={{
-                        background: `url(${bgImg.src})`,
+                        background: `url(${bgImg.src}) no-repeat`,
                         height: "405px",
                         width : "100%",
                         position : "relative"
@@ -49,7 +49,12 @@ function Aboutcompany(props) {
                             <Box className={"bgbox"} sx={{
                                 fontSize : {md: "18px" , sm : "17px" , xs : "14px"}
                             }}>
-                                <span> <Box className="rotate-icon" sx={{display : "flex" , padding : "0 10px 0 0"}}><SettingsIcon/></Box> </span>  ABOUT COMPANY
+                                 <Box className="rotate-icon" sx={{
+                                     display : "flex" ,
+                                     padding : "0 10px 0 0"}}>
+                                     <SettingsIcon/>
+                                 </Box>
+                                ABOUT COMPANY
                             </Box>
                             <Typography
                                 variant="h2"
