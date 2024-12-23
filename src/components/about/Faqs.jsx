@@ -10,6 +10,7 @@ import {
     Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SettingsIcon from "@mui/icons-material/Settings";
 
 
 
@@ -21,9 +22,23 @@ function Faqs(props) {
                 <Grid container>
                     <Grid item lg={4}>
                    <Box sx={{padding:"15px"}}>
-                       {/*<Box>*/}
-                       {/* */}
-                       {/*</Box>*/}
+                       <Box
+                           sx={{
+                               background:'linear-gradient(90deg , #FBE0DF , #F1F5FF )',
+                               color:"#E64039",
+                               fontSize:"15px" ,
+                               fontWeight:"600" ,
+                               display:"flex",
+                               alignItems:"center",
+                               justifyContent:"center",
+                               width:'310px',
+                               height:"50px",
+                               borderRadius:'35px',
+                               marginBottom:"25px"
+                           }}
+                       >
+                           <span><Box className={"rotate-icon"} sx={{display:"flex",marginRight:"10px" }}><SettingsIcon/></Box></span>FREQUENTLY ASKED QUESTIONS
+                       </Box>
                        <Box sx={{
                            fontSize:"42px",
                            fontWeight:"700",
@@ -53,12 +68,12 @@ function Faqs(props) {
                        </Box>
                    </Box>
                     </Grid>
-                    <Grid item lg={2}>
+                    <Grid item lg={3}>
                         <Box sx={{padding:"15px"}}>
                             {/*<Image src={Img} alt={"#"} ></Image>*/}
                         </Box>
                     </Grid>
-                    <Grid item lg={6}>
+                    <Grid item lg={5}>
                         <Box sx={{ maxWidth: 800, margin: 'auto', padding: '20px' }}>
                             <Accordion
                                 sx={{
