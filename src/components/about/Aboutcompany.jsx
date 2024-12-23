@@ -51,7 +51,7 @@ function Aboutcompany(props) {
                             }}>
                                  <Box className="rotate-icon" sx={{
                                      display : "flex" ,
-                                     padding : "0 10px 0 0"}}>
+                                     mr : "10px"}}>
                                      <SettingsIcon/>
                                  </Box>
                                 ABOUT COMPANY
