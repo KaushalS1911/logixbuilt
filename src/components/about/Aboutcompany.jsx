@@ -13,13 +13,13 @@ function Aboutcompany(props) {
             <Box>
                 <Box
                     sx={{
-                        background: `url(${bgImg2.src})`,
+                        background: `url(${bgImg2.src}) no-repeat`,
                         height: "405px",
-                        width : "100%"
+                        maxWidth : "100%"
                     }}
                 >
                     <Box sx={{
-                        background: `url(${bgImg.src})`,
+                        background: `url(${bgImg.src}) no-repeat`,
                         height: "405px",
                         width : "100%",
                         position : "relative"

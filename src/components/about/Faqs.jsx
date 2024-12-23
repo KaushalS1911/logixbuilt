@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "next/image";
-import {Box, Grid} from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 import EastTwoToneIcon from '@mui/icons-material/EastTwoTone';
-import Img from '../../assets/images/about/img-faq1.png';
+// import Img from '../../assets/images/about/img-faq1.png';
 import {
     Accordion,
     AccordionSummary,
@@ -17,7 +17,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function Faqs(props) {
     return (
         <Box>
-            <container >
+            <Container maxWidth={"xl"}>
                 <Grid container>
                     <Grid item lg={4}>
                    <Box sx={{padding:"15px"}}>
@@ -55,7 +55,7 @@ function Faqs(props) {
                     </Grid>
                     <Grid item lg={2}>
                         <Box sx={{padding:"15px"}}>
-                            <Image src={Img} alt={"#"} ></Image>
+                            {/*<Image src={Img} alt={"#"} ></Image>*/}
                         </Box>
                     </Grid>
                     <Grid item lg={6}>
@@ -144,7 +144,7 @@ function Faqs(props) {
                         </Box>
                     </Grid>
                 </Grid>
-            </container>
+            </Container>
         </Box>
     );
 }

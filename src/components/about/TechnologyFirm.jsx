@@ -16,6 +16,7 @@ function TechnologyFirm(props) {
                 background: `url(${bgImg.src}) no-repeat center center`,
                 backgroundSize: "cover",
                 height: {xl:'100vh' , md:'150vh' , lg:"125vh"},
+                maxWidth:"100%",
                 marginBottom:"280px",
             }}
         >
@@ -28,12 +29,12 @@ function TechnologyFirm(props) {
                         <Grid item xs={12} md={6} sx={{display: "flex", position: "relative", marginBottom: {xs:"50px" ,sm:"50px" , md :'0' }}}>
                             <Box sx={{
                                 position: "absolute",
-                                top: {lg:"100px",md:"250px" ,xs:"50px" , sm:"50px" },
-                                left: {lg:'280px',sm:"350px",md:"140px", xs:"220px"},
+                                top: {xl:"100px",lg:"220px",md:"250px" ,xs:"50px" , sm:"50px" },
+                                left: {xl:'280px',lg:"250px",sm:"350px",md:"120px", xs:"220px"},
                                 borderRadius: "8px 8px 8px 8px",
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"300px" ,xs :"200px"},
-                                width:{xl:"372px" ,sm:"300px" , xs:"200px"},
+                                maxWidth:{xl:"372px" ,sm:"300px" , xs:"200px"},
                                 OObjectFit: "contain"
                             }}>
                                 <Image src={img2} alt={"#"}></Image>
@@ -42,7 +43,7 @@ function TechnologyFirm(props) {
                                 borderRadius: "8px 8px 8px 8px",
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"300px" ,xs :"200px"},
-                                width:{xl:"372px" , sm:"300px",xs:"200px"},
+                                maxWidth:{xl:"372px" , sm:"300px",xs:"200px"},
                                 OObjectFit: "contain"
                             }}>
                                 <Image src={img1} alt={"#"}></Image>
@@ -50,7 +51,7 @@ function TechnologyFirm(props) {
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box sx={{
-                                padding: {xl:"0 0 0 80px" , xs:"20px" , sm:"0"}
+                                padding: {xl:"0 0 0 80px", xs:"20px" , sm:"0"}
                             }}>
                                 <Box
                                     sx={{
@@ -66,7 +67,7 @@ function TechnologyFirm(props) {
                                         borderRadius:'35px',
                                     }}
                                 >
-                                    <span><Box sx={{display:"flex", padding:"0 10px 0 0" }}><SettingsIcon/></Box></span> WE ARE COMPANY
+                                    <Box sx={{display:"flex", padding:"0 10px 0 0" }}><SettingsIcon/></Box> WE ARE COMPANY
                                 </Box>
                                 <Box sx={{
                                     color: "#242E45",
@@ -84,8 +85,8 @@ function TechnologyFirm(props) {
                                         lineHeight: "34px",
                                         paddingBottom: "30px"
                                     }}>
-                                    We are Orritech, as a promising IT Company we are <br/> serving over a decade with
-                                    our tremendous skill in <br/> the software development industry.
+                                    We are Orritech, as a promising IT Company we are serving over a decade with
+                                    our tremendous skill in  the software development industry.
                                 </Box>
                                 <Grid container sx={{paddingBottom: "40px"}}>
                                     {['Market Research', 'Competitive Analysis', 'Investment Decision', "Reporting & Analysis"].map((item, index) => (
@@ -125,31 +126,46 @@ function TechnologyFirm(props) {
                 <Box
                 sx={{
                     background : `url(${bgImg2.src}) no-repeat`,
-                    height:{sm:"215px", lg:"285px",xs:"296px"},
-                    width:{md:"961px", lg:"100%",sm:"750px",xs:"530px"},
+                    height:{sm:"280px", lg:"285px",xs:"296px"},
+                    maxWidth:"100%",
                     display:"flex",
                     justifyContent:"center",
                     alignItems:"center",
                     backgroundSize:"cover",
                     borderRadius:"20px",
-                    marginTop:"100px"
+                    marginTop:"40px"
                 }}>
 
                         <Grid container>
                             <Grid item xs={12} md={9}>
-                                <Typography variant="h3" component="h3" sx={{fontSize:{md:"42px" ,xs:"35px"},fontWeight: "600", color:"#fff",marginLeft:{lg:"80px", xs:"20px"}}}>
+                                <Typography variant="h3" component="h3"
+                                            sx={{
+                                                fontSize:{md:"42px" ,xs:"35px"},
+                                                fontWeight: "600",
+                                                color:"#fff",
+                                                marginLeft:{lg:"80px", xs:"20px"},
+                                                display:{md:"",sm:"flex"},
+                                                justifyContent:{md:"left",sm:"center"}
+                                            }}>
                                     Have a project in mind?
                                 </Typography>
-                                <Box sx={{fontSize:{md:"42px" ,xs:"35px"},color:"#fff",fontWeight: "500",marginLeft:{lg:"80px", xs:"20px"}}}><i>Let's talk to us</i></Box>
+                                <Box sx={{fontSize:{md:"42px" ,xs:"35px"},
+                                    color:"#fff",
+                                    fontWeight: "500",
+                                    marginLeft:{lg:"80px", xs:"20px"},
+                                    display:{md:"",sm:"flex"},
+                                    justifyContent:{md:"left",sm:"center"}
+                                }}>
+                                    <i>Let's talk to us</i>
+                                </Box>
                             </Grid>
                             <Grid item xs={12} md={3}>
                                 <Box sx={{
                                     display:"flex",
                                     justifyContent:"center",
-                                    paddingTop:{xs:"20px" ,sm:"0"},
-
+                                    paddingTop:{xs:"20px" ,sm:"20px"},
                                 }}>
-                                       <Box sx={{display:'flex' , alignItems:"center", justifyContent:"center" ,p: '20px 35px', backgroundColor:"#E64039",
+                                       <Box sx={{display:'flex' , alignItems:"center", justifyContent:{xs:"left" , sm:"center"} ,p: '20px 35px', backgroundColor:"#E64039",
                                            fontSize:"18px",
                                            color:"#fff",
                                            fontWeight: 600,
