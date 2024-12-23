@@ -47,7 +47,7 @@ const Feature = () => {
                 <Container maxWidth={'xl'}>
 
 
-                    <Box>
+                    <Box sx={{padding:"120px 0px"}}>
                        <Box sx={{
                            display:"flex",
                            justifyContent:"center",
@@ -75,7 +75,7 @@ const Feature = () => {
                             fontSize:{md:"38px" , xl:"50px"},
                             fontWeight: "700",
                             lineHeight: {xs:"20px",sm:"35px" , md:"50px"},
-                            letterSpacing: "-1px",
+                            letterSpacing:-1,
                             textAlign: "center",
                             color:"#242E45"
 
@@ -100,7 +100,7 @@ const Feature = () => {
                                         <Box sx={{
                                             paddingTop: "50px",
                                             display: {lg:"flex"},
-                                            textAlign:{xs:"center"},
+                                            textAlign:{xs:"center" , lg:'start'},
 
                                             "&:hover .rotate": {
 

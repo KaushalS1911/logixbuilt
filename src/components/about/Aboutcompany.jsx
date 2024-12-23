@@ -15,7 +15,7 @@ function Aboutcompany(props) {
                     sx={{
                         background: `url(${bgImg2.src}) no-repeat`,
                         height: "405px",
-                        width : "100%"
+                        maxWidth : "100%"
                     }}
                 >
                     <Box sx={{
