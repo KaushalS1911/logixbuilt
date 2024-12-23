@@ -67,7 +67,7 @@ function TechnologyFirm(props) {
                                         borderRadius:'35px',
                                     }}
                                 >
-                                    <Box className={"rotate-icon"} sx={{display:"flex", padding:"0 10px 0 0" }}><SettingsIcon/></Box> WE ARE COMPANY
+                                    <Box className={"rotate-icon"} sx={{display:"flex", margin:"0 10px 0 0" }}><SettingsIcon/></Box> WE ARE COMPANY
                                 </Box>
                                 <Box sx={{
                                     color: "#242E45",

@@ -44,7 +44,7 @@ const Feature = () => {
     return (
         <>
             <Box>
-                <Container maxWidth={'xl'}>
+                <Container>
 
 
                     <Box sx={{padding:"120px 0px"}}>
