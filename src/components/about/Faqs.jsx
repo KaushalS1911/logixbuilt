@@ -75,7 +75,6 @@ function Faqs(props) {
                     </Grid>
                     <Grid item lg={5}>
                         <Box sx={{ maxWidth: 800, margin: 'auto', padding: '20px' }}>
-                            {/* Accordion 1 */}
                             <Accordion
                                 sx={{
                                     marginBottom: '20px',

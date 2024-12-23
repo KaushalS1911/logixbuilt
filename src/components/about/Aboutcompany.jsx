@@ -6,7 +6,7 @@ import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
 import Image from "next/image";
 import {underline} from "next/dist/lib/picocolors";
 
-function Aboutcompany(props) {
+function Aboutcompany() {
     return (
         <>
             <Box>
@@ -32,10 +32,10 @@ function Aboutcompany(props) {
             </Box>
 
             <Container maxWidth={'xl'}>
-                <Box>
                 <Box sx={{
-                    pt : "120px"
+                    padding : "117px 15px 143px"
                 }}>
+                <Box>
                     <Grid container >
                         <Grid item xs={12} md={6}>
                             <Box className={"bgbox"} sx={{
@@ -95,7 +95,6 @@ function Aboutcompany(props) {
                             width: "100%",
                             height: "100%",
                             marginTop: "30px",
-                            pb: "120px",
                             overflow: "hidden",
                         }}
                     >

@@ -132,7 +132,7 @@ function Herosection() {
                             ))}
                         </Swiper>
                         <Box
-                            className="swiper-button-prev"
+                            className="swiper-button-next"
                             sx={{
                                 position: 'absolute',
                                 left: 'unset',
@@ -150,14 +150,15 @@ function Herosection() {
                                     backgroundColor: 'springGreen',
                                 },
                             }}
-                            onClick={handlePrev}
+                            onClick={handleNext}
                         >
                             <KeyboardArrowRightIcon/>
                         </Box>
                         <Box
-                            className="swiper-button-next"
+                            className="swiper-button-prev"
                             sx={{
                                 position: 'absolute',
+                                left: 'unset',
                                 right: 170,
                                 backgroundColor: 'black',
                                 top: {xs:'95%',lg:'108%'},
@@ -172,7 +173,7 @@ function Herosection() {
                                     backgroundColor: 'springGreen',
                                 },
                             }}
-                            onClick={handleNext}
+                            onClick={handlePrev}
                         >
                             <KeyboardArrowLeftIcon/>
                         </Box>

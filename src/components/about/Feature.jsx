@@ -44,10 +44,10 @@ const Feature = () => {
     return (
         <>
             <Box>
-                <Container maxWidth={'xl'}>
+                <Container>
 
 
-                    <Box sx={{padding:"50px 0px"}}>
+                    <Box sx={{padding:"120px 0px"}}>
                        <Box sx={{
                            display:"flex",
                            justifyContent:"center",
@@ -153,7 +153,7 @@ const Feature = () => {
                                                     {item.title}
                                                 </Box>
                                                 <Box sx={{
-                                                    color:"#838497",
+                                                    color:"mediumGray",
                                                     fontSize:"15px",
                                                     paddingBottom:"60px",
                                                     lineHeight:"28px"
