@@ -1,7 +1,6 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
-// import bgImg from '../../assets/images/about/Aboutcompany/about-1.png'
-import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
+import bgImg from '../../assets/images/about/Aboutcompany/about-1.jpg'
 import SettingsIcon from '@mui/icons-material/Settings';
 import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
 import Image from "next/image";
@@ -11,31 +10,24 @@ function Aboutcompany(props) {
     return (
         <>
             <Box>
-                <Box
-                    sx={{
-                        background: `url(${bgImg2.src}) no-repeat`,
-                        height: "405px",
-                        maxWidth : "100%"
-                    }}
-                >
+                <Box sx={{
+                    background: `url(${bgImg.src}) no-repeat center center`,
+                    backgroundSize: 'cover',
+                    height: "405px",
+                    width : "100%",
+                    position : "relative"
+                }}>
                     <Box sx={{
-                        // background: `url(${bgImg.src}) no-repeat`,
-                        height: "405px",
-                        width : "100%",
-                        position : "relative"
+                        fontWeight :"bold",
+                        fontSize : {md: "60px" , sm : "50px" , xs : "30px"},
+                        position : "absolute",
+                        top : "160px",
+                        left : "180px",
+                        color : "white"
                     }}>
-                        <Box sx={{
-                            fontWeight :"bold",
-                            fontSize : {md: "60px" , sm : "50px" , xs : "30px"},
-                            position : "absolute",
-                            top : "160px",
-                            left : "180px",
-                            color : "white"
-                        }}>
-                            About Us
-                        </Box>
-
+                        About Us
                     </Box>
+
                 </Box>
             </Box>
 
