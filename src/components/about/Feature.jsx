@@ -43,35 +43,38 @@ const Feature = () => {
 
     return (
         <>
-            <Box>
-                <Container maxWidth={'xl'}>
+            <Container maxWidth={'xl'}>
+                <Box sx={{
+                    padding:"280px 15px 125px"
+                }}>
 
-                    <Box sx={{padding:"280px 15px 125px"}}>
-                       <Box sx={{
-                           display:"flex",
-                           justifyContent:"center",
+
+                    <Box >
+                        <Box sx={{
+                            display:"flex",
+                            justifyContent:"center",
                             paddingTop:{xs:"60px" , sm:"0px"}
-                       }}>
+                        }}>
 
-                           <Typography sx={{
-                               background:'linear-gradient(90deg , #FBE0DF , #fff,#FBE0DF)',
-                               color:"#E64039",
-                               fontSize:"16px" ,
-                               fontWeight:"500" ,
-                               display:"flex",
-                               alignItems:"center",
-                               justifyContent:"center",
-                               width:'250px',
-                               height:"50px",
-                               borderRadius:'35px',
-                               marginBottom:"25px"
-                           }}>EXPLORE OUR FEATURE</Typography>
-                       </Box>
+                            <Typography sx={{
+                                background:'linear-gradient(90deg , #FBE0DF , #fff,#FBE0DF)',
+                                color:"#E64039",
+                                fontSize:"16px" ,
+                                fontWeight:"500" ,
+                                display:"flex",
+                                alignItems:"center",
+                                justifyContent:"center",
+                                width:'250px',
+                                height:"50px",
+                                borderRadius:'35px',
+                                marginBottom:"25px"
+                            }}>EXPLORE OUR FEATURE</Typography>
+                        </Box>
                         <Box sx={{
                             display: "flex",
                             justifyContent: "center",
                             width: '100%',
-                            fontSize:{md:"38px" , xl:"50px"},
+                            fontSize:{xs:"38px" , xl:"50px"},
                             fontWeight: "700",
                             lineHeight: {xs:"20px",sm:"35px" , md:"50px"},
                             letterSpacing:-1,
@@ -84,7 +87,7 @@ const Feature = () => {
                         <Box sx={{
                             justifyContent: "space-between",
                             display: "flex",
-                            padding:"20px",
+                            padding:{sm:"20px",xs:"10px"},
 
                         }}>
                             <Grid container>
@@ -97,7 +100,7 @@ const Feature = () => {
                                     >
 
                                         <Box sx={{
-                                            paddingTop: "50px",
+                                            paddingTop: {sm:"30px 20px 40px" , xs:"15px"},
                                             display: {lg:"flex"},
                                             textAlign:{xs:"center" , lg:'start'},
 
@@ -113,19 +116,19 @@ const Feature = () => {
 
                                         }}>
                                             <Box className={"rotatparant"}
-                                                sx={{
-                                                    ' svg': { fontSize: '40px' },
-                                                    backgroundColor: "#F6F6FD",
-                                                    height: "90px",
-                                                    padding:3,
-                                                    // marginLeft:"50px",
-                                                    borderRadius: "50%",
-                                                    display: "inline-block",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    transition: "0.5s",
+                                                 sx={{
+                                                     ' svg': { fontSize: '40px' },
+                                                     backgroundColor: "#F6F6FD",
+                                                     height: "90px",
+                                                     padding:3,
+                                                     // marginLeft:"50px",
+                                                     borderRadius: "50%",
+                                                     display: "inline-block",
+                                                     justifyContent: "center",
+                                                     alignItems: "center",
+                                                     transition: "0.5s",
 
-                                                }}
+                                                 }}
                                             >
                                                 <Box
                                                     className="rotate"
@@ -166,8 +169,8 @@ const Feature = () => {
                             </Grid>
                         </Box>
                     </Box>
-                </Container>
-            </Box>
+                </Box>
+            </Container>
         </>
     );
 }

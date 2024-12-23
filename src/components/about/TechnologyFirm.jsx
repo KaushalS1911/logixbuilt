@@ -233,12 +233,8 @@ function TechnologyFirm(props) {
                 </Grid>
             </Grid>
 
-
-
-
-
-        </Box>
-            </Box>
+                </Box>
+                </Box>
             </Container>
         </Box>
 
