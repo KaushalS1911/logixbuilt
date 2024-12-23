@@ -102,7 +102,7 @@ function Aboutcompany() {
                         <Image
                             style={{
                                 maxHeight: "100%",
-                                width: "100%"
+                                width: "100%",
                                 objectFit: "cover",
                             }}
                             src={bgImg3}
