@@ -142,16 +142,16 @@ a {
 }
 
 .bgbox{
-background:linear-gradient(90deg , #FBE0DF , #fff);
-color:#E64039;
-font-weight: 500;
-justify-content:center;
-width:250px;
-height:50px;
-border-radius:35px;
-margin-bottom:25px;
-display: flex;
-align-items : center;
+  background:linear-gradient(90deg , #FBE0DF , #fff);
+  color:#E64039;
+  font-weight: 500;
+  justify-content:center;
+  width:250px;
+  height:50px;
+  border-radius:35px;
+  margin-bottom:25px;
+  display: flex;
+  align-items : center;
 }
 
 @keyframes rotate {
@@ -165,5 +165,4 @@ align-items : center;
 
 .rotate-icon {
   animation: rotate 1s linear infinite;
-  /*transform*/
 }

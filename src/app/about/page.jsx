@@ -13,6 +13,7 @@ const Page = () => {
             <Feature/>
             <Faqs/>
 
+
         </>
     );
 }

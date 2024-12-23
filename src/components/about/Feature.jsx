@@ -75,7 +75,7 @@ const Feature = () => {
                             fontSize:{md:"38px" , xl:"50px"},
                             fontWeight: "700",
                             lineHeight: {xs:"20px",sm:"35px" , md:"50px"},
-                            letterSpacing: "-1px",
+                            letterSpacing:-1,
                             textAlign: "center",
                             color:"#242E45"
 
