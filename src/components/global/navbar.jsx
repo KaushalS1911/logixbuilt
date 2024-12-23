@@ -19,10 +19,24 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import {useRouter} from "next/navigation";
 
 function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const router = useRouter();
+    const pages = [
+        { name: 'Home', route: '/' },
+        { name: 'About', route: '/about' },
+        { name: 'Portfolio', route: '/portfolio' },
+        { name: 'Clients', route: '/clients' },
+        { name: 'Blog', route: '/blog' },
+        { name: 'Contact', route: '/contact' },
+    ];
 
+    const handleNavigation = (route) => {
+        setDrawerOpen(false);
+        router.push(route);
+    };
     return (
         <>
             <Grid container sx={{height: '15px'}}>
@@ -117,13 +131,13 @@ function Navbar() {
                         </Typography>
 
                         <Box sx={{display: {xs: 'none', md: 'flex'}}}>
-                            {['Home', 'About', 'Portfolio', 'Clients', 'Blog', 'Contact'].map((item) => (
+                            {pages.map(({ name, route }) => (
                                 <Button
-                                    key={item}
-                                    className="oswald"
-                                    sx={{color: 'black', textTransform: 'uppercase', fontSize: '18px'}}
+                                    key={name}
+                                    onClick={() => handleNavigation(route)}
+                                    sx={{ color: 'black', textTransform: 'unset', fontSize: '18px' }}
                                 >
-                                    {item}
+                                    {name}
                                 </Button>
                             ))}
                         </Box>
@@ -193,9 +207,9 @@ function Navbar() {
                         <Grid container sx={{paddingBottom: 5,borderBottom: '1px solid #FFFFFF80'}}>
                             <Grid item xs={12} md={8}>
                                 <Box sx={{textAlign: {xs:'center',md: 'left'},mb: {xs:5,md:0}}}>
-                                    {['Home', 'About', 'Portfolio', 'Clients', 'Blog', 'Contact'].map((item) => (
+                                    {pages.map(({ name, route }) => (
                                         <Typography
-                                            key={item}
+                                            key={name}
                                             className={'oswald'}
                                             sx={{
                                                 mt: 1,
@@ -208,9 +222,9 @@ function Navbar() {
                                                     textDecoration: 'underline',
                                                 },
                                             }}
-                                            onClick={() => setDrawerOpen(false)}
+                                            onClick={() => handleNavigation(route)}
                                         >
-                                            {item}
+                                            {name}
                                         </Typography>
                                     ))}
                                 </Box>
