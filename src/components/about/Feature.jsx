@@ -74,7 +74,7 @@ const Feature = () => {
                             display: "flex",
                             justifyContent: "center",
                             width: '100%',
-                            fontSize:{md:"38px" , xl:"50px"},
+                            fontSize:{xs:"38px" , xl:"50px"},
                             fontWeight: "700",
                             lineHeight: {xs:"20px",sm:"35px" , md:"50px"},
                             letterSpacing:-1,
@@ -87,7 +87,7 @@ const Feature = () => {
                         <Box sx={{
                             justifyContent: "space-between",
                             display: "flex",
-                            padding:"20px",
+                            padding:{sm:"20px",xs:"10px"},
 
                         }}>
                             <Grid container>
@@ -100,7 +100,7 @@ const Feature = () => {
                                     >
 
                                         <Box sx={{
-                                            paddingTop: "50px",
+                                            paddingTop: {sm:"30px 20px 40px" , xs:"15px"},
                                             display: {lg:"flex"},
                                             textAlign:{xs:"center" , lg:'start'},
 

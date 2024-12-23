@@ -123,18 +123,18 @@ function TechnologyFirm(props) {
                 <Box sx={{
                     paddingTop:{xl:"80px" ,lg:"180px" , sm:"120px" ,xs:"50px"}
                 }}>
-                    <Box
-                        sx={{
-                            background : `url(${bgImg2.src}) no-repeat`,
-                            height:{sm:"280px", lg:"285px",xs:"296px"},
-                            maxWidth:"100%",
-                            display:"flex",
-                            justifyContent:"center",
-                            alignItems:"center",
-                            backgroundSize:"cover",
-                            borderRadius:"20px",
-                            marginTop:"40px"
-                        }}>
+                <Box
+                sx={{
+                    background : `url(${bgImg2.src}) no-repeat`,
+                    height:{sm:"280px", lg:"285px",xs:"296px"},
+                    maxWidth:"100%",
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",
+                    backgroundSize:"cover",
+                    borderRadius:"20px",
+                    marginTop:"40px"
+                }}>
 
                         <Grid container>
                             <Grid item xs={12} md={9}>
@@ -165,23 +165,23 @@ function TechnologyFirm(props) {
                                     justifyContent:"center",
                                     paddingTop:{xs:"20px" ,sm:"20px"},
                                 }}>
-                                    <Box sx={{display:'flex' , alignItems:"center", justifyContent:{xs:"left" , sm:"center"} ,p: '20px 35px', backgroundColor:"#E64039",
-                                        fontSize:"18px",
-                                        color:"#fff",
-                                        fontWeight: 600,
-                                        borderRadius:"40px",
-                                    }}>
-                                        <Typography sx={{fontWeight:"600" ,mr :1}}>
-                                            More About Us
-                                        </Typography>
-                                        <EastIcon/>
-                                    </Box>
+                                       <Box sx={{display:'flex' , alignItems:"center", justifyContent:{xs:"left" , sm:"center"} ,p: '20px 35px', backgroundColor:"#E64039",
+                                           fontSize:"18px",
+                                           color:"#fff",
+                                           fontWeight: 600,
+                                           borderRadius:"40px",
+                                       }}>
+                                           <Typography sx={{fontWeight:"600" ,mr :1}}>
+                                           More About Us
+                                           </Typography>
+                                           <EastIcon/>
+                                       </Box>
                                 </Box>
                             </Grid>
                         </Grid>
 
 
-                    </Box>
+                </Box>
                 </Box>
             </Container>
         </Box>
