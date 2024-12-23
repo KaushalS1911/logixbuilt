@@ -71,7 +71,7 @@ function TechnologyFirm(props) {
                                     padding: "30px 0",
                                     lineHeight: "34px"
                                 }}>
-                                    <Typography variant="h3" component="h3" sx={{fontSize:{ md: "38px", lg: "50px", xs: "38px" },fontWeight: "700"}}>
+                                    <Typography variant="h3" component="h3" sx={{fontSize:{md:"50px" , sm:"38px" ,xs:"40px"},fontWeight: "600"}}>
                                         Modern Idea Driven <br/> Technology
                                     </Typography>
                                 </Box>
@@ -120,6 +120,9 @@ function TechnologyFirm(props) {
                     </Grid>
                 </Box>
 
+                <Box sx={{
+                    paddingTop:{xl:"80px" ,lg:"180px" , sm:"120px" ,xs:"50px"}
+                }}>
                 <Box
                 sx={{
                     background : `url(${bgImg2.src}) no-repeat`,
@@ -129,7 +132,8 @@ function TechnologyFirm(props) {
                     justifyContent:"center",
                     alignItems:"center",
                     backgroundSize:"cover",
-                    borderRadius:"20px"
+                    borderRadius:"20px",
+                    marginTop:"40px"
                 }}>
 
                         <Grid container>
@@ -137,7 +141,7 @@ function TechnologyFirm(props) {
                                 <Typography variant="h3" component="h3"
                                             sx={{
                                                 fontSize:{md:"42px" ,xs:"35px"},
-                                                fontWeight: "700",
+                                                fontWeight: "600",
                                                 color:"#fff",
                                                 marginLeft:{lg:"80px", xs:"20px"},
                                                 display:{md:"",sm:"flex"},
@@ -166,7 +170,6 @@ function TechnologyFirm(props) {
                                            color:"#fff",
                                            fontWeight: 600,
                                            borderRadius:"40px",
-                                           textWrap:"nowrap"
                                        }}>
                                            <Typography sx={{fontWeight:"600" ,mr :1}}>
                                            More About Us
@@ -178,6 +181,7 @@ function TechnologyFirm(props) {
                         </Grid>
 
 
+                </Box>
                 </Box>
             </Container>
         </Box>

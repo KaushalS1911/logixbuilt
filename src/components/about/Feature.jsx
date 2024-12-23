@@ -155,7 +155,7 @@ const Feature = () => {
                                                     {item.title}
                                                 </Box>
                                                 <Box sx={{
-                                                    color:"#838497",
+                                                    color:"mediumGray",
                                                     fontSize:"15px",
                                                     paddingBottom:"60px",
                                                     lineHeight:"28px"

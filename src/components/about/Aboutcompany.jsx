@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
 import bgImg from '../../assets/images/about/Aboutcompany/about-1.jpg'
-import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
+// import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
 import SettingsIcon from '@mui/icons-material/Settings';
 import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
 import Image from "next/image";
