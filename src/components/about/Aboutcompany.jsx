@@ -1,7 +1,6 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
-import bgImg from '../../assets/images/about/Aboutcompany/about-1.png'
-import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
+import bgImg from '../../assets/images/about/Aboutcompany/about-1.jpg'
 import SettingsIcon from '@mui/icons-material/Settings';
 import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
 import Image from "next/image";
@@ -11,17 +10,10 @@ function Aboutcompany(props) {
     return (
         <>
             <Box>
-                <Box
-                    sx={{
-                        background: `url(${bgImg2.src}) no-repeat`,
-                        height: "405px",
-                        maxWidth : "100%"
-                    }}
-                >
-                    <Box sx={{
+                 <Box sx={{
                         background: `url(${bgImg.src}) no-repeat`,
                         height: "405px",
-                        width : "100%",
+                        Width : "1903px",
                         position : "relative"
                     }}>
                         <Box sx={{
@@ -36,7 +28,7 @@ function Aboutcompany(props) {
                         </Box>
 
                     </Box>
-                </Box>
+
             </Box>
 
             <Container maxWidth={'xl'}>
@@ -51,7 +43,7 @@ function Aboutcompany(props) {
                             }}>
                                  <Box className="rotate-icon" sx={{
                                      display : "flex" ,
-                                     padding : "0 10px 0 0"}}>
+                                     mr : "10px"}}>
                                      <SettingsIcon/>
                                  </Box>
                                 ABOUT COMPANY
@@ -110,8 +102,7 @@ function Aboutcompany(props) {
                         <Image
                             style={{
                                 maxHeight: "100%",
-                                width: "100%",
-                                // objectFit: "cover",
+                                width: "100%"
                             }}
                             src={bgImg3}
                             alt="img"
