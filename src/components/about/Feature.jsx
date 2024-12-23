@@ -47,7 +47,7 @@ const Feature = () => {
                 <Container>
 
 
-                    <Box sx={{padding:"120px 0px"}}>
+                    <Box sx={{padding:"280px 15px 125px"}}>
                        <Box sx={{
                            display:"flex",
                            justifyContent:"center",

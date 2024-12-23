@@ -17,10 +17,10 @@ function TechnologyFirm(props) {
                 backgroundSize: "cover",
                 height: {xl:'100vh' , md:'125vh', sm:"150vh" , xs:"150vh"},
                 width:"100%",
-                padding: "148px 15px 300px"
+                // padding: "148px 15px 300px"
             }}
         >
-            <Container maxWidth={'xl'}>
+            <Container maxWidth={'xl'}  sx={{padding: "148px 15px 300px"}}>
                 <Box>
                     <Grid container>
                         <Grid item xs={12} md={6} sx={{display: "flex", position: "relative", marginBottom: {xs:"50px" ,sm:"50px" , md :'0' }}}>
@@ -32,7 +32,7 @@ function TechnologyFirm(props) {
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"280px" ,xs :"200px"},
                                 maxWidth:{xl:"372px" ,sm:"280px" , xs:"200px"},
-                                OObjectFit: "contain"
+                                objectFit: "contain"
                             }}>
                                 <Image src={img2} alt={"#"}></Image>
                             </Box>
@@ -41,7 +41,7 @@ function TechnologyFirm(props) {
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"280px" ,xs :"200px"},
                                 maxWidth:{xl:"372px" , sm:"280px",xs:"200px"},
-                                OObjectFit: "contain"
+                                objectFit: "contain"
                             }}>
                                 <Image src={img1} alt={"#"}></Image>
                             </Box>
@@ -121,7 +121,7 @@ function TechnologyFirm(props) {
                 </Box>
 
                 <Box sx={{
-                    paddingTop:{xl:"80px" ,lg:"180px" , sm:"120px" ,xs:"50px"}
+                    // paddingTop:{xl:"80px" ,lg:"180px" , sm:"120px" ,xs:"50px"}
                 }}>
                 <Box
                 sx={{
