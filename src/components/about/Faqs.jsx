@@ -14,9 +14,6 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SettingsIcon from "@mui/icons-material/Settings";
 
-
-
-
 function Faqs() {
     const [expanded, setExpanded] = useState(false);
 
@@ -27,8 +24,15 @@ function Faqs() {
     return (
         <Box>
             <Container maxWidth={"xl"}>
-                <Grid container>
-                    <Grid item lg={4}>
+                <Grid container spacing={2}>
+                    {/* First Grid */}
+                    <Grid
+                        item
+                        lg={4}
+                        md={4}
+                        sm={6}
+                        xs={12}
+                    >
                         <Box sx={{ padding: "15px" }}>
                             <Box
                                 sx={{
@@ -54,7 +58,7 @@ function Faqs() {
                             </Box>
                             <Box
                                 sx={{
-                                    fontSize: "42px",
+                                    fontSize: { xs: "38px", xl: "50px" },
                                     fontWeight: "700",
                                     lineHeight: "45px",
                                     marginBottom: "0px",
@@ -90,17 +94,35 @@ function Faqs() {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item lg={3}>
-                        <Box sx={{ padding: "15px" }}>
+
+
+                    <Grid
+                        item
+                        lg={3}
+                        md={4}
+                        sm={6}
+                        xs={12}
+                    >
+                        <Box
+                            sx={{
+                                padding: "15px",
+                                display: "flex",
+                                justifyContent: { xs: "center", lg: "flex-start" }, // Center on mobile, align left on larger screens
+                                alignItems: "center",
+                            }}
+                        >
                             <Image src={Img} alt={"#"} />
                         </Box>
                     </Grid>
-                    <Grid item lg={5}>
+                    <Grid
+                        item
+                        lg={5}
+                        md={4}
+                        sm={12}
+                        xs={12}
+                    >
                         <Box sx={{ maxWidth: 800, margin: 'auto', padding: '20px' }}>
-                            {/* Accordion 1 */}
                             <Accordion
-                                expanded={expanded === 'panel1'}
-                                onChange={handleChange('panel1')}
                                 sx={{
                                     marginBottom: '20px',
                                     borderRadius: '20px',
