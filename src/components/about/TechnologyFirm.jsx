@@ -180,7 +180,6 @@ function TechnologyFirm(props) {
                             </Grid>
                         </Grid>
 
-
                 </Box>
             </Container>
         </Box>
