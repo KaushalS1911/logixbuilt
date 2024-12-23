@@ -15,16 +15,13 @@ function TechnologyFirm(props) {
             sx={{
                 background: `url(${bgImg.src}) no-repeat center center`,
                 backgroundSize: "cover",
-                height: {xl:'100vh' , md:'150vh' , lg:"125vh"},
-                maxWidth:"100%",
-                marginBottom:"280px",
+                height: {xl:'100vh' , md:'125vh', sm:"150vh" , xs:"150vh"},
+                width:"100%",
+                padding: "148px 15px 300px"
             }}
         >
             <Container maxWidth={'xl'}>
-                <Box
-                    sx={{
-                        paddingTop: "148px"
-                    }}>
+                <Box>
                     <Grid container>
                         <Grid item xs={12} md={6} sx={{display: "flex", position: "relative", marginBottom: {xs:"50px" ,sm:"50px" , md :'0' }}}>
                             <Box sx={{
@@ -33,8 +30,8 @@ function TechnologyFirm(props) {
                                 left: {xl:'280px',lg:"250px",sm:"350px",md:"120px", xs:"220px"},
                                 borderRadius: "8px 8px 8px 8px",
                                 overflow: 'hidden',
-                                height:{xl:"425px" , sm:"300px" ,xs :"200px"},
-                                maxWidth:{xl:"372px" ,sm:"300px" , xs:"200px"},
+                                height:{xl:"425px" , sm:"280px" ,xs :"200px"},
+                                maxWidth:{xl:"372px" ,sm:"280px" , xs:"200px"},
                                 OObjectFit: "contain"
                             }}>
                                 <Image src={img2} alt={"#"}></Image>
@@ -42,8 +39,8 @@ function TechnologyFirm(props) {
                             <Box sx={{
                                 borderRadius: "8px 8px 8px 8px",
                                 overflow: 'hidden',
-                                height:{xl:"425px" , sm:"300px" ,xs :"200px"},
-                                maxWidth:{xl:"372px" , sm:"300px",xs:"200px"},
+                                height:{xl:"425px" , sm:"280px" ,xs :"200px"},
+                                maxWidth:{xl:"372px" , sm:"280px",xs:"200px"},
                                 OObjectFit: "contain"
                             }}>
                                 <Image src={img1} alt={"#"}></Image>
@@ -74,7 +71,7 @@ function TechnologyFirm(props) {
                                     padding: "30px 0",
                                     lineHeight: "34px"
                                 }}>
-                                    <Typography variant="h3" component="h3" sx={{fontSize:{md:"50px" , sm:"38px" ,xs:"40px"},fontWeight: "600"}}>
+                                    <Typography variant="h3" component="h3" sx={{fontSize:{ md: "38px", lg: "50px", xs: "38px" },fontWeight: "700"}}>
                                         Modern Idea Driven <br/> Technology
                                     </Typography>
                                 </Box>
@@ -123,6 +120,9 @@ function TechnologyFirm(props) {
                     </Grid>
                 </Box>
 
+                <Box sx={{
+                    paddingTop:{sm:"130px" , xs:"50px" , lg:"180px" , xl : "120px" , md:"180px"}
+                }}>
                 <Box
                 sx={{
                     background : `url(${bgImg2.src}) no-repeat`,
@@ -132,8 +132,7 @@ function TechnologyFirm(props) {
                     justifyContent:"center",
                     alignItems:"center",
                     backgroundSize:"cover",
-                    borderRadius:"20px",
-                    marginTop:"40px"
+                    borderRadius:"20px"
                 }}>
 
                         <Grid container>
@@ -141,7 +140,7 @@ function TechnologyFirm(props) {
                                 <Typography variant="h3" component="h3"
                                             sx={{
                                                 fontSize:{md:"42px" ,xs:"35px"},
-                                                fontWeight: "600",
+                                                fontWeight: "700",
                                                 color:"#fff",
                                                 marginLeft:{lg:"80px", xs:"20px"},
                                                 display:{md:"",sm:"flex"},
@@ -170,6 +169,7 @@ function TechnologyFirm(props) {
                                            color:"#fff",
                                            fontWeight: 600,
                                            borderRadius:"40px",
+                                           textWrap:"nowrap"
                                        }}>
                                            <Typography sx={{fontWeight:"600" ,mr :1}}>
                                            More About Us
@@ -178,9 +178,11 @@ function TechnologyFirm(props) {
                                        </Box>
                                 </Box>
                             </Grid>
+
                         </Grid>
 
 
+                </Box>
                 </Box>
             </Container>
         </Box>

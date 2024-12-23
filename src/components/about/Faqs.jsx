@@ -17,8 +17,10 @@ import SettingsIcon from "@mui/icons-material/Settings";
 
 function Faqs(props) {
     return (
-        <Box>
             <Container maxWidth={"xl"}>
+            <Box sx={{
+                    padding:'0px 15px 90px'
+            }}>
                 <Grid container>
                     <Grid item lg={4}>
                    <Box sx={{padding:"15px"}}>
@@ -40,7 +42,7 @@ function Faqs(props) {
                            <span><Box className={"rotate-icon"} sx={{display:"flex",marginRight:"10px" }}><SettingsIcon/></Box></span>FREQUENTLY ASKED QUESTIONS
                        </Box>
                        <Box sx={{
-                           fontSize:"42px",
+                           fontSize: { md: "38px", lg: "50px", xs: "38px" },
                            fontWeight:"700",
                            lineHeight:"45px",
                            marginBottom:"0px",
@@ -69,7 +71,9 @@ function Faqs(props) {
                    </Box>
                     </Grid>
                     <Grid item lg={3}>
-                        <Box sx={{padding:"15px"}}>
+                        <Box sx={{
+                            padding:"15px",
+                        }}>
                             <Image src={Img} alt={"#"} ></Image>
                         </Box>
                     </Grid>
@@ -159,8 +163,8 @@ function Faqs(props) {
                         </Box>
                     </Grid>
                 </Grid>
+            </Box>
             </Container>
-        </Box>
     );
 }
 
