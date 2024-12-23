@@ -43,13 +43,11 @@ const Feature = () => {
 
     return (
         <>
-                <Container maxWidth={'xl'}>
-                <Box sx={{
-                        padding:"280px 15px 125px"
-                }}>
+            <Box>
+                <Container>
 
 
-                    <Box >
+                    <Box sx={{padding:"120px 0px"}}>
                        <Box sx={{
                            display:"flex",
                            justifyContent:"center",
@@ -169,8 +167,8 @@ const Feature = () => {
                             </Grid>
                         </Box>
                     </Box>
-                </Box>
                 </Container>
+            </Box>
         </>
     );
 }

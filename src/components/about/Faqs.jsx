@@ -17,10 +17,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 
 function Faqs(props) {
     return (
+        <Box>
             <Container maxWidth={"xl"}>
-            <Box sx={{
-                    padding:'0px 15px 90px'
-            }}>
                 <Grid container>
                     <Grid item lg={4}>
                    <Box sx={{padding:"15px"}}>
@@ -42,7 +40,7 @@ function Faqs(props) {
                            <span><Box className={"rotate-icon"} sx={{display:"flex",marginRight:"10px" }}><SettingsIcon/></Box></span>FREQUENTLY ASKED QUESTIONS
                        </Box>
                        <Box sx={{
-                           fontSize: { md: "38px", lg: "50px", xs: "38px" },
+                           fontSize:"42px",
                            fontWeight:"700",
                            lineHeight:"45px",
                            marginBottom:"0px",
@@ -71,9 +69,7 @@ function Faqs(props) {
                    </Box>
                     </Grid>
                     <Grid item lg={3}>
-                        <Box sx={{
-                            padding:"15px",
-                        }}>
+                        <Box sx={{padding:"15px"}}>
                             <Image src={Img} alt={"#"} ></Image>
                         </Box>
                     </Grid>
@@ -84,6 +80,7 @@ function Faqs(props) {
                                     marginBottom: '20px',
                                     borderRadius: '20px',
                                     overflow: 'hidden',
+                                    boxShadow: 'none', // Remove shadow
                                 }}
                             >
                                 <AccordionSummary
@@ -91,12 +88,16 @@ function Faqs(props) {
                                     aria-controls="panel1-content"
                                     id="panel1-header"
                                     sx={{
-                                        '&.Mui-expanded': { color: 'red', fontWeight: '700' }, // Text turns red when expanded
+                                        backgroundColor: '#FFFFFF', // White background for question
+                                        border: '1px solid #D3D3D3', // Gray border
+                                        borderRadius: '50px', // Rounded corners
+                                        fontWeight: '700', // Font weight bold for the question
+                                        '&.Mui-expanded': { color: 'red', fontWeight: '700' }, // Red text when expanded
                                     }}
                                 >
-                                    <Typography>What papers are needed for software development?</Typography>
+                                    <Typography sx={{fontWeight:"600"}}>What papers are needed for software development?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: '#FFFFFF' }}>
+                                <AccordionDetails sx={{ backgroundColor: '#FFFFFF', color: '#6E6E6E' }}> {/* Medium gray for answer */}
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
                                     </Typography>
@@ -104,19 +105,29 @@ function Faqs(props) {
                             </Accordion>
 
                             {/* Accordion 2 */}
-                            <Accordion sx={{ marginBottom: '20px', borderRadius: '20px', overflow: 'hidden' }}>
+                            <Accordion
+                                sx={{
+                                    marginBottom: '20px',
+                                    borderRadius: '20px',
+                                    overflow: 'hidden',
+                                    boxShadow: 'none', // Remove shadow
+                                }}
+                            >
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel2-content"
                                     id="panel2-header"
                                     sx={{
+                                        backgroundColor: '#FFFFFF', // White background for question
+                                        border: '1px solid #D3D3D3', // Gray border
+                                        borderRadius: '50px', // Rounded corners
+                                        fontWeight: '700', // Font weight bold for the question
                                         '&.Mui-expanded': { fontWeight: '700', color: 'red' },
-
                                     }}
                                 >
-                                    <Typography>How is EFT used for your premium payment method?</Typography>
+                                    <Typography sx={{fontWeight:"600"}}>How is EFT used for your premium payment method?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd', color: '#6E6E6E' }}> {/* Medium gray for answer */}
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
                                     </Typography>
@@ -124,18 +135,29 @@ function Faqs(props) {
                             </Accordion>
 
                             {/* Accordion 3 */}
-                            <Accordion sx={{ marginBottom: '20px', borderRadius: '20px', overflow: 'hidden' }}>
+                            <Accordion
+                                sx={{
+                                    marginBottom: '20px',
+                                    borderRadius: '20px',
+                                    overflow: 'hidden',
+                                    boxShadow: 'none', // Remove shadow
+                                }}
+                            >
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel3-content"
                                     id="panel3-header"
                                     sx={{
+                                        backgroundColor: '#FFFFFF', // White background for question
+                                        border: '1px solid #D3D3D3', // Gray border
+                                        borderRadius: '50px', // Rounded corners
+                                        fontWeight: '700', // Font weight bold for the question
                                         '&.Mui-expanded': { fontWeight: '700', color: 'red' },
                                     }}
                                 >
-                                    <Typography>What is the budget limit for a new project?</Typography>
+                                    <Typography sx={{fontWeight:"600"}}>What is the budget limit for a new project?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd', color: '#6E6E6E' }}> {/* Medium gray for answer */}
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
                                     </Typography>
@@ -143,18 +165,28 @@ function Faqs(props) {
                             </Accordion>
 
                             {/* Accordion 4 */}
-                            <Accordion sx={{ borderRadius: '20px', overflow: 'hidden' }}>
+                            <Accordion
+                                sx={{
+                                    borderRadius: '20px',
+                                    overflow: 'hidden',
+                                    boxShadow: 'none', // Remove shadow
+                                }}
+                            >
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel4-content"
                                     id="panel4-header"
                                     sx={{
-                                        '&.Mui-expanded': { fontWeight: '700' , color: 'red'},
+                                        backgroundColor: '#FFFFFF', // White background for question
+                                        border: '1px solid #D3D3D3', // Gray border
+                                        borderRadius: '50px', // Rounded corners
+                                        fontWeight: '700', // Font weight bold for the question
+                                        '&.Mui-expanded': { fontWeight: '700', color: 'red' },
                                     }}
                                 >
-                                    <Typography>How to contact the development team?</Typography>
+                                    <Typography sx={{fontWeight:"600"}}>How to contact the development team?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd', color: '#6E6E6E' }}> {/* Medium gray for answer */}
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
                                     </Typography>
@@ -162,9 +194,14 @@ function Faqs(props) {
                             </Accordion>
                         </Box>
                     </Grid>
+
+
+
+
+
                 </Grid>
-            </Box>
             </Container>
+        </Box>
     );
 }
 

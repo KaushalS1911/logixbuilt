@@ -181,7 +181,6 @@ function TechnologyFirm(props) {
                             </Grid>
                         </Grid>
 
-
                 </Box>
                 </Box>
             </Container>
