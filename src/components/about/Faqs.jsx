@@ -1,9 +1,15 @@
 import React from 'react';
 import Image from "next/image";
-import {Accordion, AccordionDetails, AccordionGroup , AccordionSummary, Box, Container, Grid} from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 import EastTwoToneIcon from '@mui/icons-material/EastTwoTone';
 import Img from '../../assets/images/about/img-faq1.png';
-
+import {
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Typography,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SettingsIcon from "@mui/icons-material/Settings";
 
 
@@ -69,39 +75,87 @@ function Faqs(props) {
                     </Grid>
                     <Grid item lg={5}>
                         <Box sx={{ maxWidth: 800, margin: 'auto', padding: '20px' }}>
-                            <AccordionGroup
+                            <Accordion
                                 sx={{
-                                    maxWidth: 400,
-                                    [`& .${accordionSummaryClasses.indicator}`]: {
-                                        transition: '0.2s',
-                                    },
-                                    [`& [aria-expanded="true"] .${accordionSummaryClasses.indicator}`]: {
-                                        transform: 'rotate(45deg)',
-                                    },
+                                    marginBottom: '20px',
+                                    borderRadius: '20px',
+                                    overflow: 'hidden',
                                 }}
                             >
-                                <Accordion>
-                                    <AccordionSummary indicator={<AddIcon />}>First accordion</AccordionSummary>
-                                    <AccordionDetails>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.
-                                    </AccordionDetails>
-                                </Accordion>
-                                <Accordion>
-                                    <AccordionSummary indicator={<AddIcon />}>Second accordion</AccordionSummary>
-                                    <AccordionDetails>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.
-                                    </AccordionDetails>
-                                </Accordion>
-                                <Accordion>
-                                    <AccordionSummary indicator={<AddIcon />}>Third accordion</AccordionSummary>
-                                    <AccordionDetails>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.
-                                    </AccordionDetails>
-                                </Accordion>
-                            </AccordionGroup>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1-content"
+                                    id="panel1-header"
+                                    sx={{
+                                        '&.Mui-expanded': { color: 'red', fontWeight: '700' }, // Text turns red when expanded
+                                    }}
+                                >
+                                    <Typography>What papers are needed for software development?</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails sx={{ backgroundColor: '#FFFFFF' }}>
+                                    <Typography>
+                                        Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+
+                            {/* Accordion 2 */}
+                            <Accordion sx={{ marginBottom: '20px', borderRadius: '20px', overflow: 'hidden' }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel2-content"
+                                    id="panel2-header"
+                                    sx={{
+                                        '&.Mui-expanded': { fontWeight: '700', color: 'red' },
+
+                                    }}
+                                >
+                                    <Typography>How is EFT used for your premium payment method?</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                    <Typography>
+                                        Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+
+                            {/* Accordion 3 */}
+                            <Accordion sx={{ marginBottom: '20px', borderRadius: '20px', overflow: 'hidden' }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel3-content"
+                                    id="panel3-header"
+                                    sx={{
+                                        '&.Mui-expanded': { fontWeight: '700', color: 'red' },
+                                    }}
+                                >
+                                    <Typography>What is the budget limit for a new project?</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                    <Typography>
+                                        Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+
+                            {/* Accordion 4 */}
+                            <Accordion sx={{ borderRadius: '20px', overflow: 'hidden' }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel4-content"
+                                    id="panel4-header"
+                                    sx={{
+                                        '&.Mui-expanded': { fontWeight: '700' , color: 'red'},
+                                    }}
+                                >
+                                    <Typography>How to contact the development team?</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails sx={{ backgroundColor: '#f9fbfd' }}>
+                                    <Typography>
+                                        Orritech offers a full range of consultancy & training methods for data analysis, business consultation, and strategic way.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
                         </Box>
                     </Grid>
                 </Grid>
