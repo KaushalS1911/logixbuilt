@@ -120,9 +120,6 @@ function TechnologyFirm(props) {
                     </Grid>
                 </Box>
 
-                <Box sx={{
-                    paddingTop:{sm:"130px" , xs:"50px" , lg:"180px" , xl : "120px" , md:"180px"}
-                }}>
                 <Box
                 sx={{
                     background : `url(${bgImg2.src}) no-repeat`,
@@ -178,11 +175,9 @@ function TechnologyFirm(props) {
                                        </Box>
                                 </Box>
                             </Grid>
-
                         </Grid>
 
 
-                </Box>
                 </Box>
             </Container>
         </Box>
