@@ -1,4 +1,4 @@
-import {Geist, Geist_Mono} from "next/font/google";
+import {Geist,  Poppins} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@mui/material";
 import theme from "../components/theme/theme";
@@ -10,8 +10,9 @@ const geistSans = Geist({
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const poppins = Poppins({
+    variable: "--font-poppins",
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ["latin"],
 });
 
@@ -23,7 +24,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable}`} cz-shortcut-listen="true">
+        <body className={`${poppins.variable} ${geistSans.variable}`} cz-shortcut-listen="true">
         <ThemeProvider theme={theme}>
             <Navbar />
                 {children}
