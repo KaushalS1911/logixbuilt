@@ -47,7 +47,7 @@ const Feature = () => {
                 <Container maxWidth={'xl'}>
 
 
-                    <Box>
+                    <Box sx={{padding:"120px 0px"}}>
                        <Box sx={{
                            display:"flex",
                            justifyContent:"center",
@@ -100,7 +100,7 @@ const Feature = () => {
                                         <Box sx={{
                                             paddingTop: "50px",
                                             display: {lg:"flex"},
-                                            textAlign:{xs:"center"},
+                                            textAlign:{xs:"center" , lg:'start'},
 
                                             "&:hover .rotate": {
 
