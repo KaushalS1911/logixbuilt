@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
-import bgImg from '../../assets/images/about/Aboutcompany/about-1.png'
+// import bgImg from '../../assets/images/about/Aboutcompany/about-1.png'
 import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
 import SettingsIcon from '@mui/icons-material/Settings';
 import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
@@ -19,7 +19,7 @@ function Aboutcompany(props) {
                     }}
                 >
                     <Box sx={{
-                        background: `url(${bgImg.src}) no-repeat`,
+                        // background: `url(${bgImg.src}) no-repeat`,
                         height: "405px",
                         width : "100%",
                         position : "relative"
@@ -111,7 +111,7 @@ function Aboutcompany(props) {
                             style={{
                                 maxHeight: "100%",
                                 width: "100%",
-                                // objectFit: "cover",
+                                objectFit: "cover",
                             }}
                             src={bgImg3}
                             alt="img"
