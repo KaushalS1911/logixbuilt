@@ -11,6 +11,8 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SettingsIcon from "@mui/icons-material/Settings";
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import MinimizeOutlinedIcon from '@mui/icons-material/MinimizeOutlined';
 
 
 
@@ -68,8 +70,8 @@ function Faqs(props) {
                        </Box>
                    </Box>
                     </Grid>
-                    <Grid item lg={3}>
-                        <Box sx={{padding:"15px"}}>
+                    <Grid item lg={3} xs={12}>
+                        <Box sx={{padding:"15px" , display:"flex" , justifyContent:"center"}}>
                             <Image src={Img} alt={"#"} ></Image>
                         </Box>
                     </Grid>
@@ -80,23 +82,23 @@ function Faqs(props) {
                                     marginBottom: "20px",
                                     borderRadius: "20px",
                                     overflow: "hidden",
-                                    "&:before": { display: "none" }, // Removes default MUI divider line
+                                    "&:before": { display: "none" },
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<AddOutlinedIcon />}
                                     aria-controls="panel1-content"
                                     id="panel1-header"
                                     sx={{
                                         "&.Mui-expanded": {
                                             color: "red",
-                                            fontWeight: "700", // Bold text on expand
+                                            fontWeight: "700",
                                         },
                                     }}
                                 >
                                     <Typography>What papers are needed for software development?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: "#FFFFFF" }}>
+                                <AccordionDetails>
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for
                                         data analysis, business consultation, and strategic way.
@@ -114,7 +116,7 @@ function Faqs(props) {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<AddOutlinedIcon />}
                                     aria-controls="panel2-content"
                                     id="panel2-header"
                                     sx={{
@@ -126,7 +128,7 @@ function Faqs(props) {
                                 >
                                     <Typography>How is EFT used for your premium payment method?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: "#f9fbfd" }}>
+                                <AccordionDetails >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for
                                         data analysis, business consultation, and strategic way.
@@ -144,7 +146,7 @@ function Faqs(props) {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<AddOutlinedIcon />}
                                     aria-controls="panel3-content"
                                     id="panel3-header"
                                     sx={{
@@ -156,7 +158,7 @@ function Faqs(props) {
                                 >
                                     <Typography>What is the budget limit for a new project?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: "#f9fbfd" }}>
+                                <AccordionDetails >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for
                                         data analysis, business consultation, and strategic way.
@@ -173,7 +175,7 @@ function Faqs(props) {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<AddOutlinedIcon />}
                                     aria-controls="panel4-content"
                                     id="panel4-header"
                                     sx={{
@@ -185,7 +187,7 @@ function Faqs(props) {
                                 >
                                     <Typography>How to contact the development team?</Typography>
                                 </AccordionSummary>
-                                <AccordionDetails sx={{ backgroundColor: "#f9fbfd" }}>
+                                <AccordionDetails >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training methods for
                                         data analysis, business consultation, and strategic way.
