@@ -1,7 +1,6 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
 import bgImg from '../../assets/images/about/Aboutcompany/about-1.jpg'
-import bgImg2 from '../../assets/images/about/Aboutcompany/about-2.jpg'
 import SettingsIcon from '@mui/icons-material/Settings';
 import bgImg3 from '../../assets/images/about/Aboutcompany/about-3.webp'
 import Image from "next/image";
@@ -11,38 +10,43 @@ function Aboutcompany() {
     return (
         <>
             <Box>
+                <Box sx={{
+                    background: `url(${bgImg.src}) no-repeat center center`,
+                    backgroundSize: 'cover',
+                    height: "405px",
+                    width : "100%",
+                    position : "relative"
+                }}>
                     <Box sx={{
-                        background: `url(${bgImg.src}) no-repeat center center`,
-                        backgroundSize: 'cover',
-                        height: "405px",
-                        width : "100%",
-                        position : "relative"
+                        fontWeight :"bold",
+                        fontSize : {md: "60px" , sm : "50px" , xs : "30px"},
+                        position : "absolute",
+                        top : "160px",
+                        left : "180px",
+                        color : "white"
                     }}>
-                        <Box sx={{
-                            fontWeight :"bold",
-                            fontSize : {md: "60px" , sm : "50px" , xs : "30px"},
-                            position : "absolute",
-                            top : "160px",
-                            left : "180px",
-                            color : "white"
-                        }}>
-                            About Us
-                        </Box>
-
+                        About Us
                     </Box>
+
+                </Box>
             </Box>
 
             <Container maxWidth={'xl'}>
-                <Box>
                 <Box sx={{
-                    pt : "120px"
+                    padding : "117px 15px 143px"
                 }}>
+                <Box>
                     <Grid container >
                         <Grid item xs={12} md={6}>
                             <Box className={"bgbox"} sx={{
                                 fontSize : {md: "18px" , sm : "17px" , xs : "14px"}
                             }}>
-                                <span> <Box className="rotate-icon" sx={{display : "flex" , margin : "0 10px 0 0"}}><SettingsIcon/></Box> </span>  ABOUT COMPANY
+                                 <Box className="rotate-icon" sx={{
+                                     display : "flex" ,
+                                     mr : "10px"}}>
+                                     <SettingsIcon/>
+                                 </Box>
+                                ABOUT COMPANY
                             </Box>
                             <Typography
                                 variant="h2"
@@ -91,7 +95,6 @@ function Aboutcompany() {
                             width: "100%",
                             height: "100%",
                             marginTop: "30px",
-                            pb: "120px",
                             overflow: "hidden",
                         }}
                     >
@@ -99,7 +102,7 @@ function Aboutcompany() {
                             style={{
                                 maxHeight: "100%",
                                 width: "100%",
-                                // objectFit: "cover",
+                                objectFit: "cover",
                             }}
                             src={bgImg3}
                             alt="img"

@@ -133,7 +133,7 @@ function Navbar() {
                         <Box sx={{display: {xs: 'none', md: 'flex'}}}>
                             {pages.map(({ name, route }) => (
                                 <Button
-                                    key={name}
+                                    key={route}
                                     onClick={() => handleNavigation(route)}
                                     sx={{ color: 'black', textTransform: 'unset', fontSize: '18px' }}
                                 >
@@ -209,8 +209,7 @@ function Navbar() {
                                 <Box sx={{textAlign: {xs:'center',md: 'left'},mb: {xs:5,md:0}}}>
                                     {pages.map(({ name, route }) => (
                                         <Typography
-                                            key={name}
-                                            className={'oswald'}
+                                            key={route}
                                             sx={{
                                                 mt: 1,
                                                 fontSize: '36px',
