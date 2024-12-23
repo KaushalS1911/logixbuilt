@@ -92,7 +92,7 @@ const Feature = () => {
                         }}>
                             <Grid container>
                                 {Details.map((item, index) => (
-                                    <Grid
+                                    <Grid key={index + 1}
                                         item
                                         xs={12}
                                         sm={6}

@@ -15,8 +15,9 @@ function TechnologyFirm(props) {
             sx={{
                 background: `url(${bgImg.src}) no-repeat center center`,
                 backgroundSize: "cover",
-                height: {xl:'100vh' , md:'125vh', sm:"150vh" , xs:"150vh"},
+                height: {xl:'100vh' , md:'150vh', sm:"150vh" , xs:"150vh"},
                 width:"100%",
+                // BackgroundSize:"100vh",
                 padding: "148px 15px 300px"
             }}
         >
@@ -32,7 +33,7 @@ function TechnologyFirm(props) {
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"280px" ,xs :"200px"},
                                 maxWidth:{xl:"372px" ,sm:"280px" , xs:"200px"},
-                                OObjectFit: "contain"
+                                objectFit: "contain"
                             }}>
                                 <Image src={img2} alt={"#"}></Image>
                             </Box>
@@ -41,7 +42,7 @@ function TechnologyFirm(props) {
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"280px" ,xs :"200px"},
                                 maxWidth:{xl:"372px" , sm:"280px",xs:"200px"},
-                                OObjectFit: "contain"
+                                objectFit: "contain"
                             }}>
                                 <Image src={img1} alt={"#"}></Image>
                             </Box>
@@ -88,7 +89,7 @@ function TechnologyFirm(props) {
                                 <Grid container sx={{paddingBottom: "40px"}}>
                                     {['Market Research', 'Competitive Analysis', 'Investment Decision', "Reporting & Analysis"].map((item, index) => (
                                         <Grid item xs={12} sm={6}>
-                                            <Box
+                                            <Box key={index + 1}
                                                 sx={{
                                                     padding:"10px 0",
                                                     display:"flex",
