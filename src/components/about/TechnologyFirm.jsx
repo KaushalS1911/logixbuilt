@@ -119,12 +119,13 @@ function TechnologyFirm(props) {
                                     Let's Work Together
                                 </Box>
                             </Box>
+
                         </Grid>
                     </Grid>
                 </Box>
 
         <Box sx={{
-            paddingTop:{xl:"250px" ,lg:"160px",md :"130px" , sm:"20px" ,xs:"50px"}
+            paddingTop:{xl:"250px" ,lg:"160px", md :"130px" , sm:"20px" ,xs:"50px"}
 
         }}>
         <Box
