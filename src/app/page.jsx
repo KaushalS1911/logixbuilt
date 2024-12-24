@@ -6,9 +6,9 @@ import Testimonial from "../components/global/testimonial";
 export default function Home() {
     return (
         <>
-            <Herosection />
-            <Services />
-            <Testimonial />
+            {/*<Herosection />*/}
+            {/*<Services />*/}
+            {/*<Testimonial />*/}
         </>
     );
 }

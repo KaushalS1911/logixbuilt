@@ -1,8 +1,11 @@
+import headingPage from '../../components/global/headingPage';
+
+
 
 const Page = () => {
     return (
         <>
-            This is Blog page
+            <headingPage/>
         </>
     );
 }
