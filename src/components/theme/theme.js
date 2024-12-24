@@ -9,11 +9,12 @@ const theme = createTheme({
         black: "#000",
         white: "#FFF",
         crimson: '#F71C52',
+        darkBlue: '#121C27',
         mediumGray: "#4D5072",
         cardTextGrey: "rgba(29, 29, 36, .75)",
         darkGray: '#333333',
         LightBlueBackground: "#F8F9FC",
-        textGray: "#C6C9D8",
+        textGray: "#DBDBDB",
         eggPlant: '#554C86',
         springGreen: '#39D47A'
     },
