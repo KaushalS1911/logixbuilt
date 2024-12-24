@@ -17,7 +17,7 @@ function TechnologyFirm(props) {
                 sx={{
                     background: `url(${bgImg.src}) no-repeat center center`,
                     backgroundSize: "cover",
-                    height: { xl: "1071px", md: "985px", sm: "1020px",xs:"150vh" },
+                    height: { xl: "1071px", md: "1080px", sm: "1150px",xs:"1200px" },
                     width: "100%",
                     padding: "148px 15px 300px",
                 }}
@@ -29,8 +29,8 @@ function TechnologyFirm(props) {
                         <Grid item xs={12} md={6} sx={{display: "flex", position: "relative", marginBottom: {xs:"50px" ,sm:"50px" , md :'0' }}}>
                             <Box sx={{
                                 position: "absolute",
-                                top: {xl:"100px",lg:"220px",md:"250px" ,xs:"50px" , sm:"50px" },
-                                left: {xl:'280px',lg:"250px",sm:"350px",md:"120px", xs:"180px"},
+                                top: {xl:"100px",lg:"220px",md:"250px" ,xs:"0px" , sm:"50px" },
+                                left: {xl:'280px',lg:"250px",sm:"300px",md:"120px", xs:"180px"},
                                 borderRadius: "8px 8px 8px 8px",
                                 overflow: 'hidden',
                                 height:{xl:"425px" , sm:"280px" ,xs :"200px"},
@@ -137,6 +137,7 @@ function TechnologyFirm(props) {
                 alignItems:"center",
                 backgroundSize:"cover",
                 borderRadius:"20px",
+                position:"relative"
             }}>
 
             <Grid
@@ -145,8 +146,7 @@ function TechnologyFirm(props) {
                 justifyContent={{ sm: "space-between", xs: "center" }}
                 alignItems="center"
             >
-                {/* First Grid Item */}
-                <Grid item xs={12} sm={5}>
+                <Grid item xs={12} sm={7} md={5}>
                     <Typography
                         variant="h3"
                         component="h3"
@@ -175,33 +175,29 @@ function TechnologyFirm(props) {
                     </Box>
                 </Grid>
 
-                {/* Second Grid Item */}
-                <Grid item xs={12} sm={3}>
-                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <Image
-                            src={img3}
-                            alt={'#'}
-
-                            style={{
-                                width: {
-                                    xs: "0px",
-                                    sm: "145px", // 145px for sm screens
-                                    md: "200px", // 200px for md screens
-                                    // lg: "235px", // 235px for lg screens
-                                },
-                                height: {
-                                    xs: "0px", // Hidden for xs
-                                    sm: "150px", // 150px for sm screens
-                                    md: "180px", // 180px for md screens
-                                    // lg: "245px", // 245px for lg screens
-                                },
-                            }}
-                        />
-                    </Box>
-                </Grid>
+                <Box
+                    sx={{
+                        display: {md:"flex" , xs:"none"},
+                        alignItems: "center",
+                        justifyContent: "center",
+                        position: "absolute",
+                        right: { xs: "10%", md: "35%" },
+                        bottom: { xs: "10%", md: "-15%" } ,
+                    }}
+                >
+                    <Image
+                        src={img3}
+                        alt={'#'}
+                        style={{
+                            height: "200px",
+                            width: "200px",
+                        }}
+                    />
+                </Box>
 
 
-                <Grid item xs={12} sm={4}>
+
+                <Grid item xs={12} sm={5} md={4}>
                     <Box
                         sx={{
                             display: "flex",
@@ -237,8 +233,7 @@ function TechnologyFirm(props) {
                 </Box>
             </Container>
         </Box>
-
-    </>
+        </>
     );
 }
 
