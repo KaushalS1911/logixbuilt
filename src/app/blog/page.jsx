@@ -1,8 +1,11 @@
+import Newsletter from '../../components/global/newsletter';
+
 
 const Page = () => {
     return (
         <>
-            This is Blog page
+            <Newsletter />
+
         </>
     );
 }
