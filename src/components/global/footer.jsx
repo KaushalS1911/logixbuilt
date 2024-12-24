@@ -194,7 +194,7 @@ const Footer = () => {
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: {sm: "center"},
-                                                px: {xs: "30px"},
+                                                // px: {xs: "30px"},
                                                 cursor: "pointer",
                                             }}
                                         >
@@ -210,7 +210,7 @@ const Footer = () => {
                                                     Address
                                                 </Typography>
                                                 <Box
-                                                    variant="li"
+                                                    // variant="li"
                                                     sx={{
                                                         fontSize: "17px",
                                                         mb: "10px",
@@ -220,12 +220,12 @@ const Footer = () => {
                                                     }}
                                                 >
                                                     <LocationOnIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 1}}>
+                                                    <Typography sx={{ml: 0.5}}>
                                                         S-25/26 Satyam Plaza Raspaan Cross Road Nikol Ahmedabad,Gujarat
                                                     </Typography>
                                                 </Box>
                                                 <Box
-                                                    variant="li"
+                                                    // variant="li"
                                                     sx={{
                                                         fontSize: "17px",
                                                         mb: "10px",
@@ -235,12 +235,12 @@ const Footer = () => {
                                                     }}
                                                 >
                                                     <EmailIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 1}}>
+                                                    <Typography sx={{ml: 0.5}}>
                                                         beyondtech.official@gmail.com
                                                     </Typography>
                                                 </Box>
                                                 <Box
-                                                    variant="li"
+                                                    // variant="li"
                                                     sx={{
                                                         fontSize: "17px",
                                                         mb: "10px",
@@ -250,7 +250,7 @@ const Footer = () => {
                                                     }}
                                                 >
                                                     <LocalPhoneIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 1}}>
+                                                    <Typography sx={{ml: 0.5}}>
                                                         +91 9016402670
                                                     </Typography>
                                                 </Box>
@@ -302,7 +302,7 @@ const Footer = () => {
                                             </Box>
                                         </Box>
                                     </Grid>
-                                    <Grid
+                                    <Grid item xs={12}
                                         sx={{
                                             width: "100%",
                                             px: "20px",

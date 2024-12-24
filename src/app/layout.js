@@ -4,6 +4,7 @@ import {ThemeProvider} from "@mui/material";
 import theme from "../components/theme/theme";
 import Navbar from "../components/global/navbar";
 import Footer from "../components/global/footer";
+import Navigation from "../components/global/navigation";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({children}) {
         <body className={`${poppins.variable} ${geistSans.variable}`} cz-shortcut-listen="true">
         <ThemeProvider theme={theme}>
             {/*<Navbar />*/}
+            <Navigation />
                 {children}
             {/*<Footer />*/}
         </ThemeProvider>
