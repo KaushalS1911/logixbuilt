@@ -64,8 +64,8 @@ const Feature = () => {
                                 display:"flex",
                                 alignItems:"center",
                                 justifyContent:"center",
-                                width:'250px',
-                                height:"50px",
+                                mt: {xs:10,sm: 5,md: 0},
+                                padding: '10px 30px',
                                 borderRadius:'35px',
                                 marginBottom:"25px"
                             }}>EXPLORE OUR FEATURE</Typography>
@@ -74,9 +74,9 @@ const Feature = () => {
                             display: "flex",
                             justifyContent: "center",
                             width: '100%',
-                            fontSize:{xs:"38px",sm:"38px" , md:"38px" ,lg:"50px"},
+                            fontSize:{xs:"28px",sm:"38px" , md:"38px" ,lg:"50px"},
                             fontWeight: "700",
-                            lineHeight: "58px",
+                            lineHeight: {sm:"58px"},
                             letterSpacing:-1,
                             textAlign: "center",
                             color:"#242E45"

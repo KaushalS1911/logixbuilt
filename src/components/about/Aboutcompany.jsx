@@ -13,16 +13,17 @@ function Aboutcompany() {
                 <Box sx={{
                     background: `url(${bgImg.src}) no-repeat center center`,
                     backgroundSize: 'cover',
-                    height: "405px",
+                    height: {xs: '320px',sm:"405px"},
                     width : "100%",
                     position : "relative"
                 }}>
                     <Box sx={{
-                        fontWeight :"bold",
-                        fontSize : {md: "60px" , sm : "50px" , xs : "30px"},
+                        fontWeight :"600",
+                        fontSize : {md: "60px" , sm : "50px" , xs : "45px"},
                         position : "absolute",
-                        top : "160px",
-                        left : "180px",
+                        top : {xs:'50%',sm:"160px"},
+                        transform: {xs:'translateY(-50%)',sm: 'unset'},
+                        left : {xs: '5%',sm:"180px"},
                         color : "white"
                     }}>
                         About Us
@@ -95,18 +96,18 @@ function Aboutcompany() {
                             width: "100%",
                             height: "100%",
                             marginTop: "30px",
-                            overflow: "hidden",
                         }}
                     >
+                        <Box sx={{objectFit: {xs:'contain',sm:'cover'}}}>
                         <Image
                             style={{
-                                maxHeight: "100%",
+                                height: '100%',
                                 width: "100%",
-                                objectFit: {sm:"cover", xs:"contain"},
                             }}
                             src={bgImg3}
                             alt="img"
                         />
+                        </Box>
                     </Box>
                 </Box>
             </Container>

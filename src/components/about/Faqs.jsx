@@ -1,7 +1,7 @@
 "use client"; // Add this directive at the top of the file
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Image from "next/image";
-import { Box, Container, Grid } from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 import EastTwoToneIcon from "@mui/icons-material/EastTwoTone";
 import Img from "../../assets/images/about/img-faq1.png";
 import {
@@ -24,35 +24,33 @@ function Faqs() {
                 <Grid container spacing={2}>
                     {/* First Grid */}
                     <Grid item lg={5} md={4} sm={6} xs={12}>
-                        <Box sx={{ padding: "15px" }}>
+                        <Box sx={{padding: "15px"}}>
                             <Box
                                 sx={{
                                     background: "linear-gradient(90deg , #FBE0DF , #F1F5FF )",
                                     color: "#E64039",
                                     fontSize: "16px",
                                     fontWeight: "500",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "start",
-                                    padding:"10px 30px",
-                                    width:"400px",
+                                    padding: "10px 30px",
+                                    textWrap: 'nowrap',
+                                    display: 'inline-block',
                                     borderRadius: "35px",
                                     marginBottom: "25px",
                                 }}
                             >
-                <span>
-                  <Box
-                      className={"rotate-icon"}
-                      sx={{ display: "flex", marginRight: "10px" }}
-                  >
-                    <SettingsIcon />
-                  </Box>
-                </span>
+                                <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
+                                <Box
+                                    className={"rotate-icon"}
+                                    sx={{display: "flex", marginRight: "10px"}}
+                                >
+                                    <SettingsIcon/>
+                                </Box>
                                 FREQUENTLY ASKED QUESTIONS
+                                </Box>
                             </Box>
                             <Box
                                 sx={{
-                                    fontSize: { xs: "38px", xl: "50px" },
+                                    fontSize: {xs: "38px", xl: "50px"},
                                     fontWeight: "700",
                                     lineHeight: "45px",
                                     marginBottom: "0px",
@@ -84,7 +82,7 @@ function Faqs() {
                           padding: "10px",
                       }}
                   >
-                    <EastTwoToneIcon />
+                    <EastTwoToneIcon/>
                   </Box>
                 </span>
                             </Box>
@@ -96,16 +94,16 @@ function Faqs() {
                             sx={{
                                 padding: "15px",
                                 display: "flex",
-                                justifyContent: { xs: "center", lg: "flex-start" },
+                                justifyContent: {xs: "center", lg: "flex-start"},
                                 alignItems: "center",
                             }}
                         >
-                            <Image src={Img} alt={"#"} />
+                            <Image src={Img} alt={"#"}/>
                         </Box>
                     </Grid>
                     {/* Third Grid */}
                     <Grid item lg={5} md={4} sm={12} xs={12}>
-                        <Box sx={{ maxWidth: 800, margin: "auto", padding: "20px" }}>
+                        <Box sx={{maxWidth: 800, margin: "auto", padding: "20px"}}>
                             {/* Accordion 1 */}
                             <Accordion
                                 expanded={expanded === "panel1"}
@@ -118,7 +116,7 @@ function Faqs() {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<ExpandMoreIcon/>}
                                     aria-controls="panel1-content"
                                     id="panel1-header"
                                     sx={{
@@ -126,15 +124,15 @@ function Faqs() {
                                         border: "1px solid #D3D3D3",
                                         borderRadius: "50px",
                                         fontWeight: "700",
-                                        "&.Mui-expanded": { color: "red", fontWeight: "700" },
+                                        "&.Mui-expanded": {color: "red", fontWeight: "700"},
                                     }}
                                 >
-                                    <Typography sx={{ fontWeight: "600" }}>
+                                    <Typography sx={{fontWeight: "600"}}>
                                         What papers are needed for software development?
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
-                                    sx={{ backgroundColor: "#FFFFFF", color: "#6E6E6E" }}
+                                    sx={{backgroundColor: "#FFFFFF", color: "#6E6E6E"}}
                                 >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training
@@ -155,7 +153,7 @@ function Faqs() {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<ExpandMoreIcon/>}
                                     aria-controls="panel2-content"
                                     id="panel2-header"
                                     sx={{
@@ -163,15 +161,15 @@ function Faqs() {
                                         border: "1px solid #D3D3D3",
                                         borderRadius: "50px",
                                         fontWeight: "700",
-                                        "&.Mui-expanded": { fontWeight: "700", color: "red" },
+                                        "&.Mui-expanded": {fontWeight: "700", color: "red"},
                                     }}
                                 >
-                                    <Typography sx={{ fontWeight: "600" }}>
+                                    <Typography sx={{fontWeight: "600"}}>
                                         How is EFT used for your premium payment method?
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
-                                    sx={{ backgroundColor: "#fff", color: "#6E6E6E" }}
+                                    sx={{backgroundColor: "#fff", color: "#6E6E6E"}}
                                 >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training
@@ -192,7 +190,7 @@ function Faqs() {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<ExpandMoreIcon/>}
                                     aria-controls="panel3-content"
                                     id="panel3-header"
                                     sx={{
@@ -200,15 +198,15 @@ function Faqs() {
                                         border: "1px solid #D3D3D3",
                                         borderRadius: "50px",
                                         fontWeight: "700",
-                                        "&.Mui-expanded": { fontWeight: "700", color: "red" },
+                                        "&.Mui-expanded": {fontWeight: "700", color: "red"},
                                     }}
                                 >
-                                    <Typography sx={{ fontWeight: "600" }}>
+                                    <Typography sx={{fontWeight: "600"}}>
                                         What is the budget limit for a new project?
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
-                                    sx={{ backgroundColor: "#fff", color: "#6E6E6E" }}
+                                    sx={{backgroundColor: "#fff", color: "#6E6E6E"}}
                                 >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training
@@ -228,7 +226,7 @@ function Faqs() {
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
+                                    expandIcon={<ExpandMoreIcon/>}
                                     aria-controls="panel4-content"
                                     id="panel4-header"
                                     sx={{
@@ -236,15 +234,15 @@ function Faqs() {
                                         border: "1px solid #D3D3D3",
                                         borderRadius: "50px",
                                         fontWeight: "700",
-                                        "&.Mui-expanded": { fontWeight: "700", color: "red" },
+                                        "&.Mui-expanded": {fontWeight: "700", color: "red"},
                                     }}
                                 >
-                                    <Typography sx={{ fontWeight: "600" }}>
+                                    <Typography sx={{fontWeight: "600"}}>
                                         How to contact the development team?
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
-                                    sx={{ backgroundColor: "#fff", color: "#6E6E6E" }}
+                                    sx={{backgroundColor: "#fff", color: "#6E6E6E"}}
                                 >
                                     <Typography>
                                         Orritech offers a full range of consultancy & training
@@ -260,4 +258,5 @@ function Faqs() {
         </Box>
     );
 }
+
 export default Faqs;
