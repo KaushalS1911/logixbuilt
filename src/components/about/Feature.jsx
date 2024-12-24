@@ -45,11 +45,11 @@ const Feature = () => {
         <>
             <Container maxWidth={'xl'}>
                 <Box sx={{
-                    padding:"280px 15px 125px"
+                    padding: "280px 15px 125px"
                 }}>
 
 
-                    <Box >
+                    <Box>
                         <Box sx={{
                             display:"flex",
                             justifyContent:"center",
@@ -72,22 +72,27 @@ const Feature = () => {
                         </Box>
                         <Box sx={{
                             display: "flex",
+                            alignItems: 'center',
                             justifyContent: "center",
-                            width: '100%',
-                            fontSize:{xs:"28px",sm:"38px" , md:"38px" ,lg:"50px"},
-                            fontWeight: "700",
-                            lineHeight: {sm:"58px"},
-                            letterSpacing:-1,
-                            textAlign: "center",
-                            color:"#242E45"
-
+                            my: 4
                         }}>
-                            We are continuously improving <br/> our skills in technology
+                            <Box sx={{
+                                width: {xs:'100%',sm:'70%',md:'55%'},
+                                fontSize: {xs: "38px", sm: "38px", md: "38px", lg: "50px"},
+                                fontWeight: "600",
+                                lineHeight: "58px",
+                                letterSpacing: -1,
+                                textAlign: "center",
+                                color: "#242E45"
+
+                            }}>
+                                We are continuously improving our skills in technology
+                            </Box>
                         </Box>
                         <Box sx={{
                             justifyContent: "space-between",
                             display: "flex",
-                            padding:{sm:"20px",xs:"10px"},
+                            padding: {sm: "20px", xs: "10px"},
 
                         }}>
                             <Grid container>
