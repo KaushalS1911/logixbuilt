@@ -39,7 +39,7 @@ a {
     color-scheme: dark;
   }
 }
-.heroSection .swiper-button-next:after, .swiper-button-prev:after {
+.industries .swiper-button-next:after,.industries .swiper-button-prev:after {
   display: none;
 }
 /*************services*************/

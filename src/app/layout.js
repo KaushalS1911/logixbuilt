@@ -26,9 +26,9 @@ export default function RootLayout({children}) {
         <html lang="en">
         <body className={`${poppins.variable} ${geistSans.variable}`} cz-shortcut-listen="true">
         <ThemeProvider theme={theme}>
-            <Navbar />
+            {/*<Navbar />*/}
                 {children}
-            <Footer />
+            {/*<Footer />*/}
         </ThemeProvider>
         </body>
         </html>
