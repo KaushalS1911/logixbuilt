@@ -74,9 +74,9 @@ const Feature = () => {
                             display: "flex",
                             justifyContent: "center",
                             width: '100%',
-                            fontSize:{xs:"38px" , xl:"50px"},
+                            fontSize:{xs:"38px",sm:"38px" , md:"38px" ,lg:"50px"},
                             fontWeight: "700",
-                            lineHeight: {xs:"20px",sm:"35px" , md:"50px"},
+                            lineHeight: "58px",
                             letterSpacing:-1,
                             textAlign: "center",
                             color:"#242E45"
@@ -93,10 +93,10 @@ const Feature = () => {
                             <Grid container>
                                 {Details.map((item, index) => (
                                     <Grid key={index + 1}
-                                        item
-                                        xs={12}
-                                        sm={6}
-                                        md={4}
+                                          item
+                                          xs={12}
+                                          sm={6}
+                                          md={4}
                                     >
 
                                         <Box sx={{
