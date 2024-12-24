@@ -45,49 +45,54 @@ const Feature = () => {
         <>
             <Container maxWidth={'xl'}>
                 <Box sx={{
-                    padding:"280px 15px 125px"
+                    padding: "280px 15px 125px"
                 }}>
 
 
-                    <Box >
+                    <Box>
                         <Box sx={{
-                            display:"flex",
-                            justifyContent:"center",
-                            paddingTop:{xs:"60px" , sm:"0px"}
+                            display: "flex",
+                            justifyContent: "center",
+                            paddingTop: {xs: "60px", sm: "0px"}
                         }}>
 
                             <Typography sx={{
-                                background:'linear-gradient(90deg , #FBE0DF , #fff,#FBE0DF)',
-                                color:"#E64039",
-                                fontSize:"16px" ,
-                                fontWeight:"500" ,
-                                display:"flex",
-                                alignItems:"center",
-                                justifyContent:"center",
-                                width:'250px',
-                                height:"50px",
-                                borderRadius:'35px',
-                                marginBottom:"25px"
+                                background: 'linear-gradient(90deg , #FBE0DF , #fff,#FBE0DF)',
+                                color: "#E64039",
+                                fontSize: "16px",
+                                fontWeight: "500",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                width: '250px',
+                                height: "50px",
+                                borderRadius: '35px',
+                                marginBottom: "25px"
                             }}>EXPLORE OUR FEATURE</Typography>
                         </Box>
                         <Box sx={{
                             display: "flex",
+                            alignItems: 'center',
                             justifyContent: "center",
-                            width: '100%',
-                            fontSize:{xs:"38px",sm:"38px" , md:"38px" ,lg:"50px"},
-                            fontWeight: "700",
-                            lineHeight: "58px",
-                            letterSpacing:-1,
-                            textAlign: "center",
-                            color:"#242E45"
-
+                            my: 4
                         }}>
-                            We are continuously improving <br/> our skills in technology
+                            <Box sx={{
+                                width: {xs:'100%',sm:'70%',md:'55%'},
+                                fontSize: {xs: "38px", sm: "38px", md: "38px", lg: "50px"},
+                                fontWeight: "600",
+                                lineHeight: "58px",
+                                letterSpacing: -1,
+                                textAlign: "center",
+                                color: "#242E45"
+
+                            }}>
+                                We are continuously improving our skills in technology
+                            </Box>
                         </Box>
                         <Box sx={{
                             justifyContent: "space-between",
                             display: "flex",
-                            padding:{sm:"20px",xs:"10px"},
+                            padding: {sm: "20px", xs: "10px"},
 
                         }}>
                             <Grid container>
@@ -100,9 +105,9 @@ const Feature = () => {
                                     >
 
                                         <Box sx={{
-                                            paddingTop: {sm:"30px 20px 40px" , xs:"15px"},
-                                            display: {lg:"flex"},
-                                            textAlign:{xs:"center" , lg:'start'},
+                                            paddingTop: {sm: "30px 20px 40px", xs: "15px"},
+                                            display: {lg: "flex"},
+                                            textAlign: {xs: "center", lg: 'start'},
 
                                             "&:hover .rotate": {
 
@@ -117,10 +122,10 @@ const Feature = () => {
                                         }}>
                                             <Box className={"rotatparant"}
                                                  sx={{
-                                                     ' svg': { fontSize: '40px' },
+                                                     ' svg': {fontSize: '40px'},
                                                      backgroundColor: "#F6F6FD",
                                                      height: "90px",
-                                                     padding:3,
+                                                     padding: 3,
                                                      // marginLeft:"50px",
                                                      borderRadius: "50%",
                                                      display: "inline-block",
@@ -148,17 +153,17 @@ const Feature = () => {
                                             }}>
                                                 <Box sx={{
                                                     paddingBottom: "20px",
-                                                    fontWeight:"700",
-                                                    fontSize:"16px",
-                                                    paddingTop:{xs:"15px" , lg:"0px"}
+                                                    fontWeight: "700",
+                                                    fontSize: "16px",
+                                                    paddingTop: {xs: "15px", lg: "0px"}
                                                 }}>
                                                     {item.title}
                                                 </Box>
                                                 <Box sx={{
-                                                    color:"mediumGray",
-                                                    fontSize:"15px",
-                                                    paddingBottom:"60px",
-                                                    lineHeight:"28px"
+                                                    color: "mediumGray",
+                                                    fontSize: "15px",
+                                                    paddingBottom: "60px",
+                                                    lineHeight: "28px"
                                                 }}>
                                                     {item.description}
                                                 </Box>
