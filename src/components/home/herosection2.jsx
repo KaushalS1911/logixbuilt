@@ -8,6 +8,7 @@ import img2 from '../../assets/images/home/herosection2/hero-1.webp';
 import Image from "next/image";
 import { Box, Grid, Typography } from "@mui/material";
 
+
 const slides = [
     {
         title: "Excellence in Software Engineering.",
@@ -49,7 +50,6 @@ function Herosection2() {
                             container
                             sx={{
                                 height: "100%",
-                                alignItems: "center",
                                 flexDirection: { xs: "column", md: "row" },
                             }}
                         >
@@ -60,8 +60,8 @@ function Herosection2() {
                                 sx={{
                                     display: "flex",
                                     justifyContent: "center",
-                                    alignItems: "center",
                                     backgroundColor: "darkBlue",
+                                    alignItems: "center",
                                     height: "100%",
                                     width: "100%",
                                     p: { xs: '70px 15px', md: '0px 15px', lg: "unset" },
@@ -89,7 +89,6 @@ function Herosection2() {
                                             width: "60px",
                                             height: "4px",
                                             backgroundColor: "white",
-                                            // mt:"10px",
                                             bottom:{marginBottom:".5px"}
                                         }}
                                     />
@@ -99,7 +98,7 @@ function Herosection2() {
                                         margin: "0 0 25px",
                                         display:"flex",
                                         alignItems:"center",
-                                    }}></Box>
+                                    }}/>
                                     <Typography
                                         variant="body1"
                                         sx={{
@@ -126,7 +125,7 @@ function Herosection2() {
 
                                 </Box>
                             </Grid>
-                            <Grid item md={6} xs={12}>
+                            <Grid item md={6} xs={12} >
                                 <Box
                                     sx={{
                                         height: { xs: "440px", sm: "auto" },
@@ -138,7 +137,7 @@ function Herosection2() {
                                         src={item.image}
                                         style={{
                                             width: "100%",
-                                            maxHeight: "100%",
+
                                         }}
                                     />
                                 </Box>
