@@ -1,15 +1,13 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade, Autoplay } from "swiper/modules";
+import { Navigation, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import img1 from '../../assets/images/home/herosection2/her-2.webp';
 import img2 from '../../assets/images/home/herosection2/hero-1.webp';
 import Image from "next/image";
-import { Box, Grid, Typography } from "@mui/material";
-
+import { Box, Grid, Typography, Button } from "@mui/material";
 const slides = [
     {
         title: "Excellence in Software Engineering.",
@@ -34,115 +32,119 @@ const slides = [
 function Herosection2() {
     return (
         <Swiper
-            modules={[ EffectFade, Autoplay]}
-
+            modules={[EffectFade, Autoplay]}
             autoplay={{
-                delay: 4000,
+                delay: 2000,
                 disableOnInteraction: false,
             }}
             loop={true}
             effect="fade"
             className="mySwiper"
-            style={{ width: "100%", height: "100%",  }}
+            style={{ width: "100%", height: "100%" }}
         >
             {slides.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <Grid
-                        container
-                        sx={{
-                            height: "auto",
-                            alignItems: "center",
-                            flexDirection: { xs: "column", md: "row" },
-                        }}
-                    >
-                        {/* Left Section: Title and Description */}
+                    <Box sx={{ height: { xs: "auto", md: "615px" } }}>
                         <Grid
-                            item
-                            md={6}
-                            xs={12}
+                            container
                             sx={{
-                                display: "flex",
-                                justifyContent: "center",
+                                height: "100%",
                                 alignItems: "center",
-                                height: { xs: "auto", md: "595px" },
+                                flexDirection: { xs: "column", md: "row" },
                             }}
                         >
-                            <Box
+                            <Grid
+                                item
+                                md={6}
+                                xs={12}
                                 sx={{
-                                    background: "black",
-                                    color: "white",
-                                    padding: { xs: "70px 15px", md: "119px 15px 129px" },
-                                    flexDirection: "column",
-                                    justifyContent: { xs: "start", md: "center" },
-                                    height: { md: "595px", xs: "auto" },
-                                    width: { xs: "900px", md: "100%" },
-                                    margin: { xs: "70px 0 0", md: "0" },
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    backgroundColor: "darkBlue",
+                                    height: "100%",
+                                    width: "100%",
+                                    p: { xs: '70px 15px', md: '0px 15px', lg: "unset" },
                                 }}
                             >
-                                <Typography
-                                    variant="h2"
-                                    component="h2"
-                                    sx={{
-                                        fontSize: { md: "45px", sm: "35px", xs: "28px" },
-                                        fontWeight: { lg: "600", xs: "500" },
-                                        margin: "0 0 29px",
-                                        padding: "0 0 25px",
-                                    }}
-                                >
-                                    {item.title}
-                                </Typography>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        fontSize: "17px",
-                                        maxWidth: "600px",
-                                        margin: { sm: "0 0 15px" },
-                                    }}
-                                >
-                                    {item.description}
-                                </Typography>
                                 <Box
                                     sx={{
-                                        padding: "15px 35px",
-                                        fontSize: "15px",
-                                        margin: "27px 0 0",
-                                        background: "white",
-                                        color: "#000",
-                                        display: "inline-block",
-                                        borderRadius: "1e3px",
+                                        color: "white",
+                                        maxWidth: "630px",
                                     }}
                                 >
-                                    {item.button}
+                                    <Typography
+                                        variant="h2"
+                                        component="h2"
+                                        sx={{
+                                            fontSize: { xl: "55px", md: '45px', sm: "35px", xs: "28px" },
+                                            fontWeight: 500,
+                                            margin: "0 0 20px",
+                                        }}
+                                    >
+                                        {item.title}
+                                    </Typography>
+                                    <Box
+                                        sx={{
+                                            width: "60px",
+                                            height: "4px",
+                                            backgroundColor: "white",
+                                            // mt:"10px",
+                                            bottom:{marginBottom:".5px"}
+                                        }}
+                                    />
+                                    <Box sx={{maxWidth: "100%",
+                                        height: ".5px",
+                                        backgroundColor: "#5A6168",
+                                        margin: "0 0 25px",
+                                        display:"flex",
+                                        alignItems:"center",
+                                    }}></Box>
+                                    <Typography
+                                        variant="body1"
+                                        sx={{
+                                            fontSize: "17px",
+                                            color: 'textGray',
+                                            margin: { sm: "0 0 15px" },
+                                        }}
+                                    >
+                                        {item.description}
+                                    </Typography>
+                                    <Box
+                                        sx={{
+                                            padding: "15px 35px",
+                                            fontSize: "15px",
+                                            margin: "27px 0 0",
+                                            background: "white",
+                                            color: "#000",
+                                            display: "inline-block",
+                                            borderRadius: "1e3px",
+                                        }}
+                                    >
+                                        {item.button}
+                                    </Box>
+
                                 </Box>
-                            </Box>
+                            </Grid>
+                            <Grid item md={6} xs={12}>
+                                <Box
+                                    sx={{
+                                        height: { xs: "440px", sm: "auto" },
+                                        ' img': { objectFit: 'cover' },
+                                    }}
+                                >
+                                    <Image
+                                        alt={`Hero section image ${index + 1}`}
+                                        src={item.image}
+                                        style={{
+                                            width: "100%",
+                                            maxHeight: "100%",
+                                        }}
+                                    />
+                                </Box>
+                            </Grid>
                         </Grid>
-                        {/* Right Section: Image */}
-                        <Grid
-                            item
-                            md={6}
-                            xs={12}
-                            sx={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                height: { xs: "400px", md: "595px" },
-                                width: '100%',
-                                background: "white",
-                            }}
-                        >
-                            <Image
-                                alt={`Hero section image ${index + 1}`}
-                                src={item.image}
-                                height={'100%'}
-                                width={'100%'}
-                                style={{
-                                    objectFit: "cover",
-                                    width: "100%", // Ensures responsiveness
-                                    height: "100%", // Automatically adjusts height based on width
-                                }}
-                            />
-                        </Grid>
-                    </Grid>
+                    </Box>
                 </SwiperSlide>
             ))}
         </Swiper>
