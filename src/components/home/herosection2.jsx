@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade } from "swiper/modules";
+import {  EffectFade , Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import img1 from '../../assets/images/home/herosection2/her-2.webp';
