@@ -1,117 +1,140 @@
+'use client';
 import React from "react";
 import {
     Box,
     Typography,
     TextField,
-    Button,
     Divider,
     Container,
     Grid,
 } from "@mui/material";
-import Img from "../../assets/images/fotter2/f-1.webp"
 import { Facebook, Twitter, Instagram, Telegram } from "@mui/icons-material";
+import img1 from "../../assets/images/fotter2/f-1.webp";
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import Image from "next/image";
-import img1 from "../../assets/images/fotter2/f-1.webp";
 
 function Footer2() {
+    const footerData = {
+        logo: img1,
+        socialLinks: [
+            { name: "Facebook", link: "https://facebook.com" },
+            { name: "Twitter", link: "https://twitter.com" },
+            { name: "Instagram", link: "https://instagram.com" },
+            { name: "Telegram", link: "https://telegram.org" },
+        ],
+        contact: {
+            title: "Get in Touch!",
+            details: [
+                "1234 Elm Street, Springfield, USA",
+                "Call us: (555) 555-5555",
+                "Email: info@example.com",
+                "Mon–Sat: 8.00am–18.00pm / Holiday: Closed",
+            ],
+        },
+        services: {
+            title: "Our Services",
+            links: [
+                "Web Development",
+                "SEO",
+                "IT Consulting",
+                "Conversion Optimization",
+            ],
+        },
+        newsletter: {
+            title: "Stay Updated!",
+            placeholder: "Enter your email",
+            description: "Sign up for updates and exclusive content.",
+        },
+        footerBottom: {
+            left: "© 2024 Custom Company. All rights reserved.",
+            links: ["Privacy Policy", "Terms of Use", "Support"],
+        },
+    };
+
     return (
         <Box
             sx={{
-                backgroundColor: "#0D1117",
+                backgroundColor: "#1A1F26",
                 color: "white",
                 padding: "60px 0",
             }}
         >
             <Container maxWidth="xl">
+                <Grid container alignItems="center" spacing={2}>
+                    {/* Logo Section */}
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}
+                    >
+                        <Image
+                            src={footerData.logo}
+                            alt="Logo"
+                            style={{
+                                width: '170px',
+                                height: '90px',
+                                objectFit: 'contain',
+                            }}
+                        />
+                    </Grid>
 
-                    <Grid container alignItems="center" spacing={2}>
-                        <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-                            <Image
-                                src={img1}
-                                alt={img1}
-                                style={{
-                                    width: '170px',
-                                    height: '90px',
-                                    objectFit: 'contain',
-                                }}
-                            />
-                        </Grid>
-
-                        <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 3,
-                                }}
-                            >
-                                <Facebook sx={{ fontSize: 20, cursor: "pointer" }} />
-                                <Twitter sx={{ fontSize: 20, cursor: "pointer" }} />
-                                <Instagram sx={{ fontSize: 20, cursor: "pointer" }} />
-                                <Telegram sx={{ fontSize: 20, cursor: "pointer" }} />
-                            </Box>
-                        </Grid>
-
-
+                    {/* Social Icons */}
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}
+                    >
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 3,
+                            }}
+                        >
+                            {footerData.socialLinks.map((social, index) => {
+                                const Icon = {
+                                    Facebook: Facebook,
+                                    Twitter: Twitter,
+                                    Instagram: Instagram,
+                                    Telegram: Telegram,
+                                }[social.name];
+                                return Icon ? (
+                                    <Icon
+                                        key={index}
+                                        sx={{ fontSize: 20, cursor: "pointer" }}
+                                        onClick={() => window.open(social.link, "_blank")}
+                                    />
+                                ) : null;
+                            })}
+                        </Box>
+                    </Grid>
                 </Grid>
-                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
 
-                <Divider sx={{ backgroundColor: "#333", marginBottom: "40px" }} />
+                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
 
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Box
-                            sx={{
-                                padding: "20px",
-                                backgroundColor: "#1A1F26",
-                                borderRadius: "8px",
-                            }}
-                        >
-                            <Typography variant="h6" sx={{ fontWeight: "bold", mb: 3 }}>
-                                Contact With Us!
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.contact.title}
                             </Typography>
-                            <Typography variant="body2" sx={{ mb: 2 }}>
-                                2220 Plymouth Rd #302
-                                <br />
-                                Hopkins, Minnesota(MN), 55305
-                            </Typography>
-                            <Typography variant="body2" sx={{ mb: 2 }}>
-                                Call us: (234) 109-6666
-                            </Typography>
-                            <Typography variant="body2" sx={{ mb: 2 }}>
-                                Mail: Herringtonconsulting@gmail.com
-                            </Typography>
-                            <Typography variant="body2">
-                                Mon–Sat: 8.00am–18.00pm / Holiday: Closed
-                            </Typography>
+                            {footerData.contact.details.map((detail, index) => (
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
+                                    {detail}
+                                </Typography>
+                            ))}
                         </Box>
-
                     </Grid>
 
                     <Grid item xs={12} sm={6} md={3}>
-                        <Box
-                            sx={{
-                                padding: "20px",
-                                backgroundColor: "#1A1F26",
-                                borderRadius: "8px",
-                            }}
-                        >
-                            <Typography variant="h6" sx={{ fontWeight: "bold", mb: 3 }}>
-                                Services Quick Links
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.services.title}
                             </Typography>
-                            {[
-                                "Online Business Consulting",
-                                "Portfolio Management",
-                                "Search Engine Optimization",
-                                "Managed IT Services",
-                                "Conversion Optimization",
-                            ].map((service, index) => (
-                                <Typography
-                                    variant="body2"
-                                    key={index}
-                                    sx={{ mb: 2 }}
-                                >
+                            {footerData.services.links.map((service, index) => (
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
                                     {service}
                                 </Typography>
                             ))}
@@ -119,15 +142,9 @@ function Footer2() {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={5}>
-                        <Box
-                            sx={{
-                                padding: "20px",
-                                backgroundColor: "#1A1F26",
-                                borderRadius: "8px",
-                            }}
-                        >
-                            <Typography variant="h6" sx={{ fontWeight: "bold", mb: 3 }}>
-                                Subscribe Newsletter
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.newsletter.title}
                             </Typography>
                             <Box
                                 sx={{
@@ -140,24 +157,11 @@ function Footer2() {
                                 }}
                             >
                                 <TextField
-                                    placeholder="Don't miss the latest news from us..."
+                                    placeholder={footerData.newsletter.placeholder}
                                     variant="standard"
                                     fullWidth
                                     InputProps={{
                                         disableUnderline: true,
-                                        endAdornment: (
-                                            <Box
-                                                sx={{
-                                                    color: "white",
-                                                    fontSize: "18px",
-                                                    cursor: "pointer",
-                                                    display: "flex",
-                                                    alignItems: "center",
-                                                }}
-                                            >
-
-                                            </Box>
-                                        ),
                                         style: {
                                             color: "white",
                                             fontSize: "14px",
@@ -165,9 +169,7 @@ function Footer2() {
                                             paddingRight: "10px",
                                         },
                                     }}
-                                    sx={{
-                                        flex: 1,
-                                    }}
+                                    sx={{ flex: 1 }}
                                 />
                                 <Box
                                     sx={{
@@ -191,16 +193,15 @@ function Footer2() {
                                 >
                                     <Box
                                         sx={{
-                                            paddingRight: "10px",
+                                            mr: 1,
                                             fontWeight: "900",
-                                            fontSize: "40px",
                                             alignItems: "center",
                                         }}
                                     >
                                         <CircleNotificationsIcon sx={{ fontSize: "30px" }} />
                                     </Box>
                                 </Box>
-                                <Typography variant="body2" sx={{ color: "white" }}>
+                                <Typography variant="body2" sx={{ color: "textGray" }}>
                                     Please sign up to follow the latest news and events from us, we
                                     promise not to spam your inbox.
                                 </Typography>
@@ -209,12 +210,11 @@ function Footer2() {
                     </Grid>
                 </Grid>
 
-                {/* Footer Bottom */}
                 <Divider sx={{ my: 4, backgroundColor: "gray" }} />
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
                         <Typography variant="body2" sx={{ fontSize: "12px" }}>
-                            Copyright © 2024 Graviton by BravisThemes. All Rights Reserved.
+                            {footerData.footerBottom.left}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "right" } }}>
@@ -226,15 +226,11 @@ function Footer2() {
                                 justifyContent: "center",
                             }}
                         >
-                            <Typography variant="body2" sx={{ fontSize: "12px" }}>
-                                Confidentiality & Privacy
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: "12px" }}>
-                                Legal Information
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: "12px" }}>
-                                Return and Refund Policy
-                            </Typography>
+                            {footerData.footerBottom.links.map((link, index) => (
+                                <Typography key={index} variant="body2" sx={{ fontSize: "12px" }}>
+                                    {link}
+                                </Typography>
+                            ))}
                         </Box>
                     </Grid>
                 </Grid>
