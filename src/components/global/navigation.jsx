@@ -41,9 +41,9 @@ function Navigation() {
         <>
             {/* AppBar */}
             <AppBar
-                position="static"
+                position="fixed"
                 sx={{
-                    backgroundColor: '#fff',
+                    backgroundColor: 'transparent',
                     color: '#000',
                     borderBottom: '1px solid #ddd',
                     padding: '10px 10px',
@@ -69,7 +69,7 @@ function Navigation() {
                                         sx={{
                                             // color: router.pathname === `/${item.toLowerCase()}` ? '#000' : '#8E8E8EFF',
                                             textTransform: 'capitalize',
-                                            color: 'darkGray',
+                                            color: '#fff',
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
@@ -91,8 +91,8 @@ function Navigation() {
                                 textTransform: 'capitalize',
                                 borderRadius: '30px',
                                 padding: '12px 30px',
-                                borderColor: '#000',
-                                color: '#000',
+                                borderColor: '#fff',
+                                color: '#fff',
                                 textWrap: 'nowrap',
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -125,6 +125,7 @@ function Navigation() {
                                     fontSize: '18px',
                                     display: { xl: 'flex', xs: 'none' },
                                     alignItems: 'center',
+                                    color:"#fff"
                                 }}
                             >
                                 24/7 Support: (234) 109-6666
@@ -138,7 +139,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: 'darkGray',
+                                color: '#fff',
                                 display: { lg: 'flex', xs: 'none' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -150,7 +151,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: '#8e8e8e',
+                                color: '#fff',
                                 display: { lg: 'flex', xs: 'flex' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
