@@ -25,18 +25,6 @@ import EastIcon from "@mui/icons-material/East";
 import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import Image from "next/image";
 
-const styles = {
-    slide: {
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: "18px",
-        height: "550px",
-        width: "90%",
-    },
-};
-
 function Industries() {
     const swiperRef = useRef(null);
     const allIndustries = [
