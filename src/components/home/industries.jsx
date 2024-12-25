@@ -84,7 +84,7 @@ function Industries() {
     return (
         <Box className={'industries'}>
             <Box sx={{my: 10}}>
-                <Container>
+                <Container maxWidth={'xl'}>
                     <Grid container>
                         <Grid item xs={12} md={4}>
                             <Box component={'h2'} sx={{fontSize: 45, fontWeight: 600}}>Industries</Box>

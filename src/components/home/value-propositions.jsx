@@ -37,13 +37,12 @@ const ValuePropositions = () => {
                 {valuePropositions.map((item, index) => (
                     <Grid
                         item
-                        xs={12}
-                        sm={6}
+                        xs={6}
                         md={3}
                         key={index}
                         sx={{
                             position: "relative",
-                            px: 4,
+                            px: {xs:2,sm:4},
                             "&:not(:last-child)::after": {
                                 content: '""',
                                 position: "absolute",
@@ -60,7 +59,7 @@ const ValuePropositions = () => {
                                 textAlign: "center",
                                 overflow: "hidden",
                                 position: "relative",
-                                height: '210px',
+                                height: {xs: '190px',md:'210px'},
                                 borderRadius: "8px",
                                 transition: "transform 0.5s ease",
                                 "&:hover .contain": {
@@ -78,7 +77,7 @@ const ValuePropositions = () => {
                                     sx={{
                                         marginBottom: 2,
                                         color: "darkGray",
-                                        ' svg': {fontSize: 75},
+                                        ' svg': {fontSize: {xs:65,lg:75}},
                                         transition: "transform 0.4s ease",
                                     }}
                                 >
@@ -90,7 +89,7 @@ const ValuePropositions = () => {
                                     sx={{
                                         marginBottom: 1,
                                         mt: 2,
-                                        fontSize: 23,
+                                        fontSize: {xs:18,sm:23},
                                         fontWeight: 500,
                                         transition: "transform 0.4s ease",
                                     }}
