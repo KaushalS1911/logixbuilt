@@ -63,6 +63,7 @@ function Capabilities() {
                                 fontSize:{xs:"24px" , sm:"45px"},
                                 lineHeight: "55px",
                                 fontWeight: "600",
+                                paddingBottom: {md:"0px" , lg:"80px"}
                             }}
                         >
                             Capabilities
@@ -70,11 +71,7 @@ function Capabilities() {
                     </Grid>
                     <Grid item lg={6}>
                         <Box
-                            sx={{
-                                lineHeight:{xs:"14px" , sm:"16px"},
-                                margin: "0 0 2em",
-                                fontSize: "1rem",
-                            }}
+                            component={'p'} sx={{color: 'cardTextGrey', fontWeight: 500 , paddingBottom:{xs:"30px", lg:"80px"}}}
                         >
                             We offer a wide range of digital solutions and best-in-class platforms to deliver meaningful outcomes, enhance customer experiences, and transform industries at scale and with unparalleled speed.
                         </Box>

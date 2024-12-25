@@ -189,7 +189,7 @@ function Ourmission() {
                                 sx={{
                                     color: '#fff',
                                     position: 'absolute',
-                                    top: {xs:'82%',lg:'78%'},
+                                    top: {xs:'80%',lg:'78%'},
                                     left: {xs: 0,lg:30},
                                     borderRadius: '50%',
                                     height: '75px',
@@ -210,7 +210,7 @@ function Ourmission() {
                                 sx={{
                                     color: '#fff',
                                     position: 'absolute',
-                                    top: {xs:'82%',lg:'78%'},
+                                    top: {xs:'80%',lg:'78%'},
                                     left: {xs: 50,lg:90},
                                     height: '75px',
                                     width: '75px',

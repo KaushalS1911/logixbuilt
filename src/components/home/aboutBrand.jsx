@@ -6,32 +6,33 @@ import img4 from "../../assets/images/brand/brand-04.png";
 import img5 from "../../assets/images/brand/brand-05.png";
 import img6 from "../../assets/images/brand/brand-06.png";
 import {Box, Container, Grid, Typography} from "@mui/material";
+import Image from "next/image";
 
 function AboutBrand() {
     const people = [
         {
-            imageSrc: img1.src,
+            imageSrc: img1,
         },
         {
-            imageSrc: img2.src,
+            imageSrc: img2,
         },
         {
-            imageSrc: img3.src,
+            imageSrc: img3,
         },
         {
-            imageSrc: img4.src,
+            imageSrc: img4,
         },
         {
-            imageSrc: img5.src,
+            imageSrc: img5,
         },
         {
-            imageSrc: img6.src,
+            imageSrc: img6,
         },
         {
-            imageSrc: img5.src,
+            imageSrc: img5,
         },
         {
-            imageSrc: img6.src,
+            imageSrc: img6,
         },
     ];
     return (
@@ -41,54 +42,30 @@ function AboutBrand() {
             >
                 <Box>
                     <Container maxWidth="xl">
-                        {/* <Grid container justifyContent={"center"}> */}
-                        {/* <Grid item xs={12}> */}
                         <Box>
                             <Grid
                                 container
-                                spacing={{ xs: 2, md: 0, xl: 0 }}
-                                justifyContent={"center"}
+                                spacing={{lg:2}}
                             >
                                 {people.map((value, ind) => (
-                                    <Grid
-                                        item
-                                        key={ind}
-                                        md={3}
-                                        sm={4}
-                                        xs={6}
-                                        sx={{
-                                            height: { md: "94px", sm: "94px", xs: "94px" },
-                                            margin: "35px 0px",
-                                        }}
-                                    >
-                                        <Typography
-                                            key={ind}
-                                            variant="li"
-                                            sx={{
-                                                cursor: "pointer",
-                                                "&:hover img": {
-                                                    opacity: "1 !important",
-                                                    transition: "0.9s",
-                                                    scale: "1.1",
-                                                },
-                                            }}
-                                        >
-                                            <img
+                                    <Grid item key={ind} md={3} sm={4} xs={6}>
+                                        <Box sx={{height: '140px',px:5,width: '100%',transition: '1s',':hover img':{opacity: '1 !important',transform: 'scale(1.1)'}}}>
+                                            <Image
                                                 src={value.imageSrc}
                                                 alt={value.name}
                                                 style={{
+                                                    height: '100%',
+                                                    width: '100%',
                                                     opacity: "0.5",
+                                                    objectFit: 'contain',
                                                     borderRadius: "5px",
-                                                    objectFit: "contain",
                                                 }}
                                             />
-                                        </Typography>
+                                        </Box>
                                     </Grid>
                                 ))}
                             </Grid>
                         </Box>
-                        {/* </Grid> */}
-                        {/* </Grid> */}
                     </Container>
                 </Box>
             </Box>

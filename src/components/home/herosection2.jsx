@@ -135,7 +135,6 @@ function Herosection2() {
                                         src={item.image}
                                         style={{
                                             width: "100%",
-
                                         }}
                                     />
                                 </Box>

@@ -5,7 +5,6 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 function FunFactCounter({ gap, color, heading, counters, counterDetails }) {
-    // Ensure consistent hook order
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -31,7 +30,7 @@ function FunFactCounter({ gap, color, heading, counters, counterDetails }) {
                                     <Typography
                                         variant="h2"
                                         sx={{
-                                            fontSize: "72px",
+                                            fontSize: {xs:60,sm:65,md:72},
                                             fontWeight: 600,
                                             color: color ? "white" : "red",
                                         }}
