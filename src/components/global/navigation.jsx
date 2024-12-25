@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -17,13 +17,15 @@ import Image from 'next/image';
 import img1 from '../../assets/images/navigation/logo.png';
 import EastIcon from '@mui/icons-material/East';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
-import { useRouter } from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import { Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
 function Navigation() {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false); // State to track if scrolled
     const router = useRouter();
+    const path = usePathname();
 
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -42,46 +44,65 @@ function Navigation() {
         { name: 'Contact', route: '/contact' },
     ];
 
+    // Scroll event listener
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            {/* AppBar */}
             <AppBar
-                position="static"
+                position={(!scrolled && path ==='/') ?  "static" :"fixed" }
                 sx={{
-                    backgroundColor: '#fff',
-                    color: '#000',
+                    backgroundColor: (scrolled || path ==='/') ? 'white' : 'transparent',
+                    color: (scrolled || path ==='/') ? '#000' : '#fff',
                     borderBottom: '1px solid #ddd',
                     padding: '10px 10px',
+                    boxShadow: (scrolled || path ==='/') ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
+                    top: (scrolled || path ==='/') ? '0' : '10px',
+                    transition: 'all 0.3s ease',
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Link href="/" passHref>
+                        <Box onClick={() => router.push('/')}>
                             <Image
                                 src={img1}
                                 alt="Logo"
                                 style={{ width: '170px', height: '90px', objectFit: 'contain' }}
                             />
-                        </Link>
+                        </Box>
                     </Box>
 
                     <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center' }}>
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: '15px', marginLeft: '20px' }}>
                             {navItems.map(({ name, route }) => (
-                                <Link key={name} href={route} passHref>
+                                <Box key={name}>
                                     <Button
                                         sx={{
                                             textTransform: 'capitalize',
-                                            color: 'darkGray',
+                                            color: (scrolled || path === '/') ? '#000' : '#fff', // Update color on scroll
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
                                             ':hover': { backgroundColor: 'unset', textDecoration: 'underline' },
                                         }}
+                                        onClick={() => router.push(route)}
                                     >
                                         {name}
                                     </Button>
-                                </Link>
+                                </Box>
                             ))}
                         </Box>
                     </Box>
@@ -93,8 +114,8 @@ function Navigation() {
                                 textTransform: 'capitalize',
                                 borderRadius: '30px',
                                 padding: '12px 30px',
-                                borderColor: '#000',
-                                color: '#000',
+                                borderColor: (scrolled || path === '/') ? '#000' : '#fff', // Border color change on scroll
+                                color: (scrolled || path === '/') ? '#000' : '#fff', // Text color change on scroll
                                 textWrap: 'nowrap',
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -127,6 +148,7 @@ function Navigation() {
                                     fontSize: '18px',
                                     display: { xl: 'flex', xs: 'none' },
                                     alignItems: 'center',
+                                    color: (scrolled || path === '/') ? '#000' : "#fff" // Change text color when scrolled
                                 }}
                             >
                                 24/7 Support: (234) 109-6666
@@ -138,7 +160,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: 'darkGray',
+                                color: (scrolled || path === '/') ? '#000' : '#fff', // Icon color change on scroll
                                 display: { lg: 'flex', xs: 'none' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -149,7 +171,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: '#8e8e8e',
+                                color: (scrolled || path === '/') ? '#000' : '#fff', // Icon color change on scroll
                                 display: { lg: 'flex', xs: 'flex' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -188,7 +210,7 @@ function Navigation() {
                         <CloseIcon />
                     </IconButton>
 
-                    <Link href="/" passHref>
+                    <Box onClick={() => router.push('/')}>
                         <Image
                             src={img1}
                             alt="Logo"
@@ -198,22 +220,24 @@ function Navigation() {
                                 objectFit: 'contain',
                             }}
                         />
-                    </Link>
+                    </Box>
 
                     <List>
                         {navItems.map(({ name, route }) => (
                             <ListItem key={name} disablePadding>
-                                <Link href={route} passHref>
+                                <Box onClick={() => router.push(router)}>
                                     <ListItemButton component="a">
                                         <ListItemText primary={name} />
                                     </ListItemButton>
-                                </Link>
+                                </Box>
                             </ListItem>
                         ))}
                     </List>
                 </Box>
             </Drawer>
         </>
+
+
     );
 }
 
