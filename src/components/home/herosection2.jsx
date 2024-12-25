@@ -86,12 +86,20 @@ function Herosection2() {
                                     </Typography>
                                     <Box
                                         sx={{
-                                            width: "100%",
-                                            height: "1px",
+                                            width: "60px",
+                                            height: "4px",
                                             backgroundColor: "white",
-                                            margin: "0 0 25px",
+                                            // mt:"10px",
+                                            bottom:{marginBottom:".5px"}
                                         }}
                                     />
+                                    <Box sx={{maxWidth: "100%",
+                                        height: ".5px",
+                                        backgroundColor: "#5A6168",
+                                        margin: "0 0 25px",
+                                        display:"flex",
+                                        alignItems:"center",
+                                    }}></Box>
                                     <Typography
                                         variant="body1"
                                         sx={{
@@ -115,6 +123,7 @@ function Herosection2() {
                                     >
                                         {item.button}
                                     </Box>
+
                                 </Box>
                             </Grid>
                             <Grid item md={6} xs={12}>
