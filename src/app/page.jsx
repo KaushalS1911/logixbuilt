@@ -19,6 +19,7 @@ export default function Home() {
             <Herosection2/>
             <ValuePropositions />
             <Capabilities/>
+            <Ourmission  />
             <Industries />
             <FunFactCounter
                 gap={true}
@@ -35,7 +36,6 @@ export default function Home() {
                     "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.",
                 ]}
             />
-            <Ourmission  />
             <Testimonial />
             <AboutBrand />
             {/*<Industries />*/}

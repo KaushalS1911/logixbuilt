@@ -36,7 +36,7 @@ function Ourmission() {
         }
     };
     return (
-        <>
+        <Box sx={{mt:10,mb:4}}>
             <Container maxWidth="xxl" className={'ourMission'}>
                 <Grid container>
                     <Grid item xs={12} md={9}>
@@ -229,7 +229,7 @@ function Ourmission() {
                     </Grid>
                 </Grid>
             </Container>
-        </>
+        </Box>
     );
 }
 
