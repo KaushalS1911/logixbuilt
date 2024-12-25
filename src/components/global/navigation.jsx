@@ -17,16 +17,14 @@ import Image from 'next/image';
 import img1 from '../../assets/images/navigation/logo.png';
 import EastIcon from '@mui/icons-material/East';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
-import {useRouter} from "next/navigation";
-import {Typography} from "@mui/material";
+import { useRouter } from "next/navigation";
+import { Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
 function Navigation() {
-    // State to manage Drawer open/close
     const [drawerOpen, setDrawerOpen] = useState(false);
     const router = useRouter();
 
-    // Function to toggle Drawer
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
@@ -34,23 +32,30 @@ function Navigation() {
         setDrawerOpen(open);
     };
 
-    // List of navigation items
-    const navItems = ['Home', 'Pages', 'About', 'Services', 'Case', 'Blog', 'Contact'];
+    const navItems = [
+        { name: 'Home', route: '/' },
+        { name: 'Pages', route: '/pages' },
+        { name: 'About', route: '/about' },
+        { name: 'Services', route: '/services' },
+        { name: 'Case', route: '/case' },
+        { name: 'Blog', route: '/blog' },
+        { name: 'Contact', route: '/contact' },
+    ];
 
     return (
         <>
             {/* AppBar */}
             <AppBar
-                position="static"
+                position="fixed"
                 sx={{
-                    backgroundColor: '#fff',
+                    backgroundColor: 'transparent',
                     color: '#000',
                     borderBottom: '1px solid #ddd',
                     padding: '10px 10px',
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{height: '100%',display: 'flex',alignItems: 'center',justifyContent: 'center'}}>
+                    <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <Link href="/" passHref>
                             <Image
                                 src={img1}
@@ -60,30 +65,27 @@ function Navigation() {
                         </Link>
                     </Box>
 
-                    {/* Navigation Links (Visible on Large Screens) */}
                     <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center' }}>
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: '15px', marginLeft: '20px' }}>
-                            {navItems.map((item) => (
-                                <Link key={item} href={`/${item.toLowerCase()}`} passHref>
+                            {navItems.map(({ name, route }) => (
+                                <Link key={name} href={route} passHref>
                                     <Button
                                         sx={{
-                                            // color: router.pathname === `/${item.toLowerCase()}` ? '#000' : '#8E8E8EFF',
                                             textTransform: 'capitalize',
-                                            color: 'darkGray',
+                                            color: '#fff',
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
-                                            ':hover': { backgroundColor: 'unset' ,textDecoration: 'underline'},
+                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline' },
                                         }}
                                     >
-                                        {item}
+                                        {name}
                                     </Button>
                                 </Link>
                             ))}
                         </Box>
                     </Box>
 
-                    {/* Plan With Us Button */}
                     <Box sx={{ display: { lg: 'flex', xs: 'none' } }}>
                         <Button
                             variant="outlined"
@@ -91,8 +93,8 @@ function Navigation() {
                                 textTransform: 'capitalize',
                                 borderRadius: '30px',
                                 padding: '12px 30px',
-                                borderColor: '#000',
-                                color: '#000',
+                                borderColor: '#fff',
+                                color: '#fff',
                                 textWrap: 'nowrap',
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -116,7 +118,7 @@ function Navigation() {
                                     borderRadius: '50%',
                                 }}
                             >
-                                <PhoneCallbackIcon style={{fontSize: '28px'}}/>
+                                <PhoneCallbackIcon style={{ fontSize: '28px' }} />
                             </Box>
                             <Typography
                                 variant="subtitle1"
@@ -125,6 +127,7 @@ function Navigation() {
                                     fontSize: '18px',
                                     display: { xl: 'flex', xs: 'none' },
                                     alignItems: 'center',
+                                    color:"#fff"
                                 }}
                             >
                                 24/7 Support: (234) 109-6666
@@ -132,52 +135,46 @@ function Navigation() {
                         </Box>
                     </Box>
 
-                    {/* Icons Section */}
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                        {/* Search Icon */}
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: 'darkGray',
+                                color: '#fff',
                                 display: { lg: 'flex', xs: 'none' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
                         >
-                            <SearchIcon style={{fontSize: '26px'}}/>
+                            <SearchIcon style={{ fontSize: '26px' }} />
                         </IconButton>
 
-                        {/* Menu Icon (Triggers Drawer) */}
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: '#8e8e8e',
+                                color: '#fff',
                                 display: { lg: 'flex', xs: 'flex' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
                             onClick={toggleDrawer(true)}
                         >
-                            <MenuIcon style={{fontSize: '26px'}}/>
+                            <MenuIcon style={{ fontSize: '26px' }} />
                         </IconButton>
                     </Box>
                 </Toolbar>
             </AppBar>
 
-            {/* Drawer Component */}
             <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
                 <Box
                     sx={{
                         width: 300,
                         display: 'flex',
                         flexDirection: 'column',
-                        // alignItems: 'center',
                         padding: '40px 35px',
                         gap: '20px',
-                        position: 'relative', // To position the close button
+                        position: 'relative',
                     }}
                     role="presentation"
                     onKeyDown={toggleDrawer(false)}
                 >
-                    {/* Close Button */}
                     <IconButton
                         sx={{
                             position: 'absolute',
@@ -189,10 +186,9 @@ function Navigation() {
                         }}
                         onClick={toggleDrawer(false)}
                     >
-                        <CloseIcon/>
+                        <CloseIcon />
                     </IconButton>
 
-                    {/* Logo Section */}
                     <Link href="/" passHref>
                         <Image
                             src={img1}
@@ -201,18 +197,16 @@ function Navigation() {
                                 width: '150px',
                                 height: 'auto',
                                 objectFit: 'contain',
-                                // paddingTop:"80px"
                             }}
                         />
                     </Link>
 
-                    {/* Navigation Links */}
                     <List>
-                        {navItems.map((text) => (
-                            <ListItem key={text} disablePadding>
-                                <Link href={`/${text.toLowerCase()}`} passHref>
+                        {navItems.map(({ name, route }) => (
+                            <ListItem key={name} disablePadding>
+                                <Link href={route} passHref>
                                     <ListItemButton component="a">
-                                        <ListItemText primary={text} />
+                                        <ListItemText primary={name} />
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
@@ -220,8 +214,6 @@ function Navigation() {
                     </List>
                 </Box>
             </Drawer>
-
-
         </>
     );
 }

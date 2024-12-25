@@ -6,6 +6,7 @@ import Herosection2 from "../components/home/herosection2";
 
 import Industries from "../components/home/industries";
 import Capabilities from "../components/home/capabilities";
+import ValuePropositions from "../components/home/value-propositions";
 
 export default function Home() {
     return (
@@ -16,6 +17,8 @@ export default function Home() {
             <Herosection2/>
             <Industries />
             <Capabilities/>
+            <ValuePropositions />
+            {/*<Industries />*/}
             {/*<Herosection />*/}
             {/*<Services />*/}
             {/*<Testimonial />*/}
