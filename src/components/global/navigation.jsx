@@ -76,7 +76,7 @@ function Navigation() {
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Box onClick={() => router.push('/')} passHref>
+                        <Box onClick={() => router.push('/')}>
                             <Image
                                 src={img1}
                                 alt="Logo"
@@ -210,7 +210,7 @@ function Navigation() {
                         <CloseIcon />
                     </IconButton>
 
-                    <Link href="/" passHref>
+                    <Box onClick={() => router.push('/')}>
                         <Image
                             src={img1}
                             alt="Logo"
@@ -220,16 +220,16 @@ function Navigation() {
                                 objectFit: 'contain',
                             }}
                         />
-                    </Link>
+                    </Box>
 
                     <List>
                         {navItems.map(({ name, route }) => (
                             <ListItem key={name} disablePadding>
-                                <Link href={route} passHref>
+                                <Box onClick={() => router.push(router)}>
                                     <ListItemButton component="a">
                                         <ListItemText primary={name} />
                                     </ListItemButton>
-                                </Link>
+                                </Box>
                             </ListItem>
                         ))}
                     </List>
