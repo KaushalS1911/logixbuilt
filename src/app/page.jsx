@@ -5,6 +5,7 @@ import Herosection2 from "../components/home/herosection2";
 
 
 import Industries from "../components/home/industries";
+import Capabilities from "../components/home/capabilities";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             {/*<Testimonial />*/}
             <Herosection2/>
             <Industries />
+            <Capabilities/>
             {/*<Herosection />*/}
             {/*<Services />*/}
             {/*<Testimonial />*/}
