@@ -61,7 +61,7 @@ function Footer2() {
         >
             <Container maxWidth="xl">
                 <Grid container alignItems="center" spacing={2}>
-                    {/* Logo Section */}
+
                     <Grid
                         item
                         xs={12}
@@ -79,7 +79,7 @@ function Footer2() {
                         />
                     </Grid>
 
-                    {/* Social Icons */}
+
                     <Grid
                         item
                         xs={12}
