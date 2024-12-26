@@ -58,7 +58,7 @@ function Ourmission() {
                                     letterSpacing: "3.2px",
                                 }}
                             >
-                                Herrington IT Solutions since 1996
+                                Beyond Tech Solution since 1996
                             </Typography>
                             <Typography
                                 sx={{
@@ -67,7 +67,7 @@ function Ourmission() {
                                     marginBottom: "10px",
                                 }}
                             >
-                                IT Solutions That Soar
+                                Tech Solutions That Soar
                             </Typography>
                             <Typography
                                 sx={{

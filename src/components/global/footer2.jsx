@@ -9,7 +9,7 @@ import {
     Grid,
 } from "@mui/material";
 import { Facebook, Twitter, Instagram, Telegram } from "@mui/icons-material";
-import img1 from "../../assets/images/fotter2/f-1.webp";
+import img1 from "../../assets/images/fotter2/Png-03.png";
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import Image from "next/image";
 
@@ -25,9 +25,9 @@ function Footer2() {
         contact: {
             title: "Get in Touch!",
             details: [
-                "1234 Elm Street, Springfield, USA",
-                "Call us: (555) 555-5555",
-                "Email: info@example.com",
+                "s-25/26 Satyam Plaza Raspaan Cross Road Nikol Ahemdabad,Gujarat",
+                "Call us: +91 9016402670",
+                "Email: beyondtech.official@gmail.com",
                 "Mon–Sat: 8.00am–18.00pm / Holiday: Closed",
             ],
         },
@@ -61,25 +61,20 @@ function Footer2() {
         >
             <Container maxWidth="xl">
                 <Grid container alignItems="center" spacing={2}>
-                    {/* Logo Section */}
-                    <Grid
-                        item
-                        xs={12}
-                        md={6}
-                        sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}
-                    >
+                    <Grid  item xs={12} md={4}>
+                        <Box  sx={{ display: "flex", justifyContent: { xs: "center" , md: "left" }}}>
                         <Image
                             src={footerData.logo}
                             alt="Logo"
                             style={{
-                                width: '170px',
-                                height: '90px',
-                                objectFit: 'contain',
+                                width: '75%',
+                                height: '150px',
+                                objectFit: 'cover'
                             }}
                         />
+                        </Box>
                     </Grid>
 
-                    {/* Social Icons */}
                     <Grid
                         item
                         xs={12}

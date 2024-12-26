@@ -14,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
 import Image from 'next/image';
-import img1 from '../../assets/images/navigation/logo.png';
+import img1 from '../../assets/images/navigation/Png-04.png';
 import EastIcon from '@mui/icons-material/East';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import {usePathname, useRouter} from "next/navigation";
@@ -68,7 +68,7 @@ function Navigation() {
                     backgroundColor: (scrolled || path ==='/') ? 'white' : 'transparent',
                     color: (scrolled || path ==='/') ? '#000' : '#fff',
                     borderBottom: '1px solid #ddd',
-                    padding: '10px 10px',
+                    padding: '10px 0',
                     boxShadow: (scrolled || path ==='/') ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
                     top: (scrolled || path ==='/') ? '0' : '10px',
                     transition: 'all 0.3s ease',
@@ -80,7 +80,7 @@ function Navigation() {
                             <Image
                                 src={img1}
                                 alt="Logo"
-                                style={{ width: '170px', height: '90px', objectFit: 'contain' }}
+                                style={{ width: '230px', height: '90px', objectFit: 'cover' }}
                             />
                         </Box>
                     </Box>
@@ -96,7 +96,7 @@ function Navigation() {
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
-                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline' },
+                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline'},
                                         }}
                                         onClick={() => router.push(route)}
                                     >
@@ -114,8 +114,8 @@ function Navigation() {
                                 textTransform: 'capitalize',
                                 borderRadius: '30px',
                                 padding: '12px 30px',
-                                borderColor: (scrolled || path === '/') ? '#000' : '#fff', // Border color change on scroll
-                                color: (scrolled || path === '/') ? '#000' : '#fff', // Text color change on scroll
+                                borderColor: (scrolled || path === '/') ? '#000' : '#fff',
+                                color: (scrolled || path === '/') ? '#000' : '#fff',
                                 textWrap: 'nowrap',
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -135,11 +135,11 @@ function Navigation() {
                                     mr: 2,
                                     background: '#000',
                                     color: '#fff',
-                                    p: 2.2,
+                                    p: 2,
                                     borderRadius: '50%',
                                 }}
                             >
-                                <PhoneCallbackIcon style={{ fontSize: '28px' }} />
+                                <PhoneCallbackIcon  />
                             </Box>
                             <Typography
                                 variant="subtitle1"
@@ -148,7 +148,7 @@ function Navigation() {
                                     fontSize: '18px',
                                     display: { xl: 'flex', xs: 'none' },
                                     alignItems: 'center',
-                                    color: (scrolled || path === '/') ? '#000' : "#fff" // Change text color when scrolled
+                                    color: (scrolled || path === '/') ? '#000' : "#fff"
                                 }}
                             >
                                 24/7 Support: (234) 109-6666
@@ -160,7 +160,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: (scrolled || path === '/') ? '#000' : '#fff', // Icon color change on scroll
+                                color: (scrolled || path === '/') ? '#000' : '#fff',
                                 display: { lg: 'flex', xs: 'none' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -171,7 +171,7 @@ function Navigation() {
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
-                                color: (scrolled || path === '/') ? '#000' : '#fff', // Icon color change on scroll
+                                color: (scrolled || path === '/') ? '#000' : '#fff',
                                 display: { lg: 'flex', xs: 'flex' },
                                 ':hover': { backgroundColor: '#000', color: '#fff' },
                             }}
@@ -183,10 +183,19 @@ function Navigation() {
                 </Toolbar>
             </AppBar>
 
-            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        width: { xs: '100%', sm: 300 },
+                        height: '100%',
+                    },
+                }}
+            >
                 <Box
                     sx={{
-                        width: 300,
                         display: 'flex',
                         flexDirection: 'column',
                         padding: '40px 35px',
@@ -214,27 +223,45 @@ function Navigation() {
                         <Image
                             src={img1}
                             alt="Logo"
-                            style={{
-                                width: '150px',
-                                height: 'auto',
-                                objectFit: 'contain',
-                            }}
+                            style={{ width: '230px', height: '90px', objectFit: 'cover' }}
                         />
                     </Box>
 
                     <List>
                         {navItems.map(({ name, route }) => (
                             <ListItem key={name} disablePadding>
-                                <Box onClick={() => router.push(router)}>
-                                    <ListItemButton component="a">
-                                        <ListItemText primary={name} />
+                                <Box
+                                    onClick={() => router.push(route)}
+                                    sx={{
+                                        borderBottom: "1px solid #DBDBDB",
+                                        width: "100%"
+                                    }}
+                                >
+                                    <ListItemButton
+                                        component="a"
+                                        sx={{
+                                            padding: "0",
+                                        }}
+                                    >
+                                        <ListItemText
+                                            primary={name}
+                                            primaryTypographyProps={{
+                                                sx: {
+                                                    padding: "10px 0",
+                                                    textAlign: "start",
+                                                    margin: 0,
+                                                },
+                                            }}
+                                        />
                                     </ListItemButton>
                                 </Box>
                             </ListItem>
                         ))}
                     </List>
+
                 </Box>
             </Drawer>
+
         </>
 
 
