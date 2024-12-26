@@ -7,6 +7,7 @@ import img1 from '../../assets/images/home/herosection2/her-2.webp';
 import img2 from '../../assets/images/home/herosection2/hero-1.webp';
 import Image from "next/image";
 import { Box, Grid, Typography, Button } from "@mui/material";
+
 const slides = [
     {
         title: "Excellence in Software Engineering.",
