@@ -38,7 +38,8 @@ const slides = [
         comments: "Comments",
         title: "Revolutionizing the Future of Financial Services",
         description:
-            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis,…",
+            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis. Pellentesque leo eros," +
+            " sollicitudin vel lacinia non,…",
         button: "Continue Reading",
     },
     {
@@ -50,7 +51,8 @@ const slides = [
         comments: "Comments",
         title: "A Guide to Embracing Meaningful Change in Banking",
         description:
-            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis,…",
+            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis. Pellentesque leo eros," +
+            " sollicitudin vel lacinia non,…",
         button: "Continue Reading",
     },
 ];
@@ -58,7 +60,7 @@ const slides = [
 function Blogslider() {
     return (
         <Box sx={{ width: "100%", height: "100%", position: "relative", padding: "110px 0" }}>
-            <Container>
+            <Container maxWidth={'xl'}>
                 <Swiper
                     modules={[EffectFade, Autoplay]}
                     autoplay={{
@@ -161,7 +163,7 @@ function Blogslider() {
                                         </Grid>
                                     </Stack>
 
-                                    <Divider sx={{ backgroundColor: "gray" }} />
+                                    <Divider sx={{ backgroundColor: "gray" , width:"100%"}} />
                                     <Typography variant="h5" sx={{
                                         p: "25px 0 15px",
                                         fontWeight: "500",
