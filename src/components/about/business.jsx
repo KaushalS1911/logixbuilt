@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Container, Grid, Typography, LinearProgress } from '@mui/material';
+import {Box, Container, Grid, Typography, LinearProgress, Divider} from '@mui/material';
 
 const Business = () => {
     const [progress1, setProgress1] = React.useState(0);
@@ -43,15 +43,17 @@ const Business = () => {
     }, []);
     return (
         <div>
-            <Container maxWidth="lg">
-                <Box>
+            <Container maxWidth="xl">
+                <Box sx={{
+                    padding:"120px 0"
+                }}>
                     <Grid container spacing={10} sx={{display:"flex",justifyContent:{xs:"start",md:"center",sm:"center",lg:"center"}}}>
                         <Grid item xs={12} sm={8} md={6} lg={6} >
                             <Box display="flex" justifyContent="center">
                                 <img
                                     src="https://demo.bravisthemes.com/herrington/wp-content/uploads/2024/05/ab5.webp"
                                     alt="Business Growth"
-                                    style={{ maxWidth: '100%', height: '600px' }}
+                                    style={{ width: '100%', height: '650px' }}
                                 />
                             </Box>
                         </Grid>
@@ -97,7 +99,9 @@ const Business = () => {
                     </Grid>
                 </Box>
             </Container>
+            <Divider sx={{ backgroundColor: "#d3d5d6" , width:"100%"}} />
         </div>
+
     );
 };
 

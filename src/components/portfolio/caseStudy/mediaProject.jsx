@@ -1,10 +1,10 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
 import Image from "next/image";
-import Img1 from '../../../assets/images/portfolio/mediaProject/simple.png'
-import phoneimg1 from '../../../assets/images/portfolio/mediaProject/phone.png'
-import phoneimg2 from '../../../assets/images/portfolio/mediaProject/phone-02.png'
-import phoneimg3 from '../../../assets/images/portfolio/mediaProject/phone-03.png'
+// import Img1 from '../../../assets/images/portfolio/mediaProject/simple.png'
+// import phoneimg1 from '../../../assets/images/portfolio/mediaProject/phone.png'
+// import phoneimg2 from '../../../assets/images/portfolio/mediaProject/phone-02.png'
+// import phoneimg3 from '../../../assets/images/portfolio/mediaProject/phone-03.png'
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 
@@ -21,7 +21,7 @@ const slides = [
         description2:"Fave allows creators to monetize their IP through their fans’ content and gives access to in-depth data. This uses the latent potential of a digital footprint from fans. Creators can fight the waves against the usage by fans of their intellectual property or surf the wave by accepting it and monetizing it.",
         description3:"There was from moment one a great challenge of matching the budget with the scope. Hybrid solutions are very flexible and powerful but are not meant for media-centric apps. Native has the security of having all features supported but it always takes longer and needs a larger team. We did a benchmark of hybrid technologies for the development and we’ve come to the conclusion Native Script would be possible for a quick MVP launch which later should be replaced by a fully native app.",
         icon:<ArrowCircleRightIcon fontSize={"large"}/>,
-        image: phoneimg1,
+        // image: phoneimg1,
     },{
         name:"The Process",
         number:"02",
@@ -34,7 +34,7 @@ const slides = [
         description3:"We developed a non-functional prototype to simulate user interaction. The experience of using the clickable prototype was very much like the final product itself, this was the adequate phase to test the information architecture, the UX and most importantly to present all involved counterparts a concrete outcome.",
         description4:"With the decisions closed in the previous steps, we went on developing the product through agile cycles.",
         icon:<LightbulbCircleIcon fontSize={"large"}/>,
-        image: phoneimg2,
+        // image: phoneimg2,
     },{
         name:"Key Features",
         number:"03",
@@ -45,7 +45,7 @@ const slides = [
         description2:"Rewarding users for uploading content on their creator’s fandom with coins that can be used to purchase merchandise from the same creator.",
         description3:"Fans and creators can visualize the fans with most points won inside each fandom and win specific prizes depending on their scoring.",
         icon:<ArrowCircleRightIcon fontSize={"large"}/>,
-        image: phoneimg3,
+        // image: phoneimg3,
     },
 
 ];

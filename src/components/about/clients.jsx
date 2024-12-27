@@ -64,7 +64,7 @@ const Clients = () => {
     };
     return (
         <>
-            <Box sx={{ borderTop: "1px solid #4B535D", mt: 8 }}>
+            <Box sx={{ borderTop: "1px solid #4B535D" }}>
                 <Container>
                     <Grid container spacing={2} sx={{ mt: 8 }}>
                         <Grid item xs={12} sm={6}>
@@ -132,62 +132,62 @@ const Clients = () => {
                         </Grid>
                     </Grid>
                     <Box sx={{ my: 12 }}>
-                        <Slider {...settings}>
-                            {logoData.map((logo) => (
-                                <Box
-                                    sx={{ border: "1px solid #000", py: 3, width: "100%", px: 4 }}
-                                >
-                                    <Box
-                                        key={logo.id}
-                                        sx={{
-                                            position: "relative",
-                                            width: "150px",
-                                            height: "50px",
-                                            overflow: "hidden",
-                                            "&:hover .logo1": {
-                                                transform: "translateY(50%)",
-                                                opacity: 0,
-                                            },
-                                            "&:hover .logo11": {
-                                                transform: "translateY(0)",
-                                                opacity: 1,
-                                            },
-                                        }}
-                                    >
-                                        <Typography
-                                            component="img"
-                                            src={logo.logo11}
-                                            className="logo11"
-                                            sx={{
-                                                position: "absolute",
-                                                top: 0,
-                                                left: 0,
-                                                width: "80%",
-                                                height: "80%",
-                                                opacity: 0,
-                                                transform: "translateY(-50%)",
-                                                transition: "transform 0.3s ease, opacity 0.3s ease",
-                                            }}
-                                        />
-                                        <Typography
-                                            component="img"
-                                            src={logo.logo1}
-                                            className="logo1"
-                                            sx={{
-                                                position: "absolute",
-                                                top: 0,
-                                                left: 0,
-                                                width: "80%",
-                                                height: "80%",
-                                                opacity: 1,
-                                                transform: "translateY(0)",
-                                                transition: "transform 0.3s ease, opacity 0.3s ease",
-                                            }}
-                                        />
-                                    </Box>
-                                </Box>
-                            ))}
-                        </Slider>
+                        {/*<Slider {...settings}>*/}
+                        {/*    {logoData.map((logo) => (*/}
+                        {/*        <Box*/}
+                        {/*            sx={{ border: "1px solid #000", py: 3, width: "100%", px: 4 }}*/}
+                        {/*        >*/}
+                        {/*            <Box*/}
+                        {/*                key={logo.id}*/}
+                        {/*                sx={{*/}
+                        {/*                    position: "relative",*/}
+                        {/*                    width: "150px",*/}
+                        {/*                    height: "50px",*/}
+                        {/*                    overflow: "hidden",*/}
+                        {/*                    "&:hover .logo1": {*/}
+                        {/*                        transform: "translateY(50%)",*/}
+                        {/*                        opacity: 0,*/}
+                        {/*                    },*/}
+                        {/*                    "&:hover .logo11": {*/}
+                        {/*                        transform: "translateY(0)",*/}
+                        {/*                        opacity: 1,*/}
+                        {/*                    },*/}
+                        {/*                }}*/}
+                        {/*            >*/}
+                        {/*                <Typography*/}
+                        {/*                    component="img"*/}
+                        {/*                    src={logo.logo11}*/}
+                        {/*                    className="logo11"*/}
+                        {/*                    sx={{*/}
+                        {/*                        position: "absolute",*/}
+                        {/*                        top: 0,*/}
+                        {/*                        left: 0,*/}
+                        {/*                        width: "80%",*/}
+                        {/*                        height: "80%",*/}
+                        {/*                        opacity: 0,*/}
+                        {/*                        transform: "translateY(-50%)",*/}
+                        {/*                        transition: "transform 0.3s ease, opacity 0.3s ease",*/}
+                        {/*                    }}*/}
+                        {/*                />*/}
+                        {/*                <Typography*/}
+                        {/*                    component="img"*/}
+                        {/*                    src={logo.logo1}*/}
+                        {/*                    className="logo1"*/}
+                        {/*                    sx={{*/}
+                        {/*                        position: "absolute",*/}
+                        {/*                        top: 0,*/}
+                        {/*                        left: 0,*/}
+                        {/*                        width: "80%",*/}
+                        {/*                        height: "80%",*/}
+                        {/*                        opacity: 1,*/}
+                        {/*                        transform: "translateY(0)",*/}
+                        {/*                        transition: "transform 0.3s ease, opacity 0.3s ease",*/}
+                        {/*                    }}*/}
+                        {/*                />*/}
+                        {/*            </Box>*/}
+                        {/*        </Box>*/}
+                        {/*    ))}*/}
+                        {/*</Slider>*/}
                     </Box>
                 </Container>
             </Box>

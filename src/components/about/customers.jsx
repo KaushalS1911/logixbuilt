@@ -58,7 +58,7 @@ const Customers = () => {
         },
     }));
     return (
-        <Box sx={{ pt: 5 }}>
+        <Box sx={{ pt: 5, padding:"120px 0" }}>
             <Container maxWidth="xl">
                 <Box sx={{ px: { xs: 2, sm: 5, md: 8 } }}>
                     <Grid
@@ -69,7 +69,7 @@ const Customers = () => {
                         <Grid item xs={12} sm={12} md={6} lg={5}>
                             <Box>
                                 <img
-                                    src={ab4}
+                                    src={ab4.src}
                                     alt="Testimonial"
                                     style={{
                                         height: "100%",

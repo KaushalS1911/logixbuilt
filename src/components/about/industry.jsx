@@ -49,7 +49,7 @@ const features = [
 const Industry = () => {
     return (
         <Container>
-            <Box sx={{my:'22px'}}>
+            <Box sx={{my:'22px',padding:"60px 0"}}>
                 <Grid container spacing={4}>
                     {features.map((feature, index) => (
                         <Grid item xs={12} sm={6} lg={4} key={index} sx={{mb:3}}>

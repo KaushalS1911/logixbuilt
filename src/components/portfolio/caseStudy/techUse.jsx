@@ -1,33 +1,33 @@
 import React from 'react';
 import {Box, Container, Typography} from "@mui/material";
-import img1 from '../../../assets/images/portfolio/techuse/tech-figma.svg'
-import img2 from '../../../assets/images/portfolio/techuse/tech-nativescript.svg'
-import img3 from '../../../assets/images/portfolio/techuse/tech-node-js.svg'
-import img4 from '../../../assets/images/portfolio/techuse/tech.mongodb.svg'
-import img5 from '../../../assets/images/portfolio/techuse/tech-express-js.svg'
+// import img1 from '../../../assets/images/portfolio/techuse/tech-figma.svg'
+// import img2 from '../../../assets/images/portfolio/techuse/tech-nativescript.svg'
+// import img3 from '../../../assets/images/portfolio/techuse/tech-node-js.svg'
+// import img4 from '../../../assets/images/portfolio/techuse/tech.mongodb.svg'
+// import img5 from '../../../assets/images/portfolio/techuse/tech-express-js.svg'
 import Image from "next/image";
 
 
 const app = [
     {
         name:"SOCIAL MEDIA",
-        image: img1,
+        // image: img1,
     },
     {
         name:"FINTECH",
-        image: img2,
+        // image: img2,
     },
     {
         name:"FINTECH",
-        image: img3,
+        // image: img3,
     },
     {
         name:"FINTECH",
-        image: img4,
+        // image: img4,
     },
     {
         name:"FINTECH",
-        image: img5,
+        // image: img5,
     },
 
 ];

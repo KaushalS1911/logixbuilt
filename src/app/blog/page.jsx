@@ -28,9 +28,9 @@ const Page = () => {
             {/*<Posts/>*/}
 
 
-            <Experiences/>
-            <TechUse/>
-            <MediaProject/>
+            {/*<Experiences/>*/}
+            {/*<TechUse/>*/}
+            {/*<MediaProject/>*/}
 
 
 

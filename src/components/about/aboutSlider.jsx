@@ -44,11 +44,11 @@ const AboutSlider = () => {
     return (
         <>
             <Box>
-                {/* Image */}
+
                 <Box>
                     <Typography
                         component={"img"}
-                        src={image}
+                        src={image.src}
                         sx={{
                             backgroundSize: "cover",
                             backgroundPosition: "center",
@@ -58,7 +58,7 @@ const AboutSlider = () => {
                         }}
                     />
                 </Box>
-                {/* Timeline Section */}
+
                 <Box>
                     <Box
                         sx={{

@@ -7,7 +7,7 @@ const Collab = () => {
         <Box>
             <Box
                 sx={{
-                    backgroundImage: `url(${image})`,
+                    backgroundImage: `url(${image.src})`,
                     height: { xs: "60vh", sm: "70vh", md: "75vh", lg: "80vh" },
                     width: "100%",
                     backgroundSize: "cover",
