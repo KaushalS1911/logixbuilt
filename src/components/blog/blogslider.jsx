@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography, Button, Stack, Container, Divider, Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules"; // Import Autoplay module
+import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import bg1 from "../../assets/images/blog/blogslider/bs-2.webp";
@@ -94,7 +94,7 @@ function Blogslider() {
                                 >
                                     <Stack direction="row" spacing={1} alignItems="center" sx={{ pb: "10px" }}>
                                         <Grid container >
-                                            {/* Date Section */}
+
                                             <Grid item xs={12} sm={6}>
                                                 <Box sx={{ display: "flex", alignItems: "center" }}>
                                                     <DateRangeIcon sx={{ mr: 1 }} />
@@ -102,7 +102,7 @@ function Blogslider() {
                                                 </Box>
                                             </Grid>
 
-                                            {/* Admin Section */}
+
                                             <Grid item xs={12} sm={6} md={2}>
                                                 <Box sx={{ display: "flex", alignItems: "center" }}>
                                                     <Image
@@ -172,7 +172,8 @@ function Blogslider() {
                                     <Typography variant="body2" sx={{
                                         mt: 1,
                                         textWrap: "wrap",
-                                        fontSize: { sm: "15px", xs: "13px" }
+                                        fontSize: { sm: "15px", xs: "13px" },
+                                        color:"#c4c4c4"
                                     }}>
                                         {item.description}
                                     </Typography>
