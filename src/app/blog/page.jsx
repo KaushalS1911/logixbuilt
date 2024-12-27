@@ -8,6 +8,7 @@ import Blogslider from "../../components/blog/blogslider";
 import Experiences from "../../components/portfolio/caseStudy/experiences";
 import TechUse from "../../components/portfolio/caseStudy/techUse";
 import MediaProject from "../../components/portfolio/caseStudy/mediaProject";
+import Socialmedia from "../../components/portfolio/socialmedia";
 
 const breadCrumbs = [
     {label:'Home',route: '/'},
@@ -21,10 +22,15 @@ const Page = () => {
             {/*<Blogslider/>*/}
             {/*<Posts/>*/}
 
+            <Socialmedia/>
+            {/*<Newsletter />*/}
+            {/*<Blogslider/>*/}
+            {/*<Posts/>*/}
 
-            <Experiences/>
-            <TechUse/>
-            <MediaProject/>
+
+            {/*<Experiences/>*/}
+            {/*<TechUse/>*/}
+            {/*<MediaProject/>*/}
 
 
 

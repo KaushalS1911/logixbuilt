@@ -23,7 +23,7 @@ const TeamPage = () => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                        backgroundColor: '#000',
                         zIndex: -1,
                     },
                 }}
@@ -110,7 +110,7 @@ const TeamPage = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                <Box sx={{ border: '0.2px solid #FFF', my: 7 }}></Box>
+                <Box sx={{ border: '0.2px solid #FFF', my: 7 }}/>
                 <Container maxWidth={'xl'}>
                     <Grid container spacing={4} sx={{ marginTop: '3rem' }}>
                         {[
@@ -138,8 +138,8 @@ const TeamPage = () => {
             >
                 <Typography
                     component={'img'}
-                    src={Team}
-                    sx={{ width: '100%', height: '100%' }}
+                    src={Team.src}
+                    sx={{ width: '100%', height: '550px',objectFit:"cover" }}
                 />
                 <Typography
                     sx={{
