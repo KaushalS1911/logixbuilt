@@ -113,7 +113,6 @@ function Ourmission() {
                                         padding: "3px 20px",
                                         background: "#5F6D72",
                                         color: "#fff",
-                                        // display: "inline-block",
                                         borderRadius: "50px",
                                         lineHeight: "50px",
                                         fontWeight: 400,

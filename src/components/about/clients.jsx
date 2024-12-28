@@ -101,10 +101,10 @@ const Clients = () => {
                                         fontSize: { xs: "30px", md: "35px", lg: "45px" },
                                         fontWeight: "500",
                                         lineHeight: { xs: "40px", sm: "55px" },
-                                        mb: "0px",
+                                        mt:"10px"
                                     }}
                                 >
-                                    Clients Trust Herrington.
+                                    Clients Trust Beyond.
                                 </Typography>
                             </Box>
                         </Grid>

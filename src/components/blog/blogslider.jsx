@@ -59,7 +59,7 @@ const slides = [
 
 function Blogslider() {
     return (
-        <Box sx={{ width: "100%", height: "100%", position: "relative", padding: "110px 0" }}>
+        <Box sx={{ width: "100%", height: "100%", position: "relative", padding: "0 0 110px 0" }}>
             <Container maxWidth={'xl'}>
                 <Swiper
                     modules={[EffectFade, Autoplay]}

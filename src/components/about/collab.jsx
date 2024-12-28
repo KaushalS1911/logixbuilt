@@ -45,7 +45,7 @@ const Collab = () => {
                             </Typography>
                             <Typography
                                 sx={{
-                                    fontSize: { xs: "14px", sm: "16px", md: "18px", lg: "20px" },
+                                    fontSize:"17px",
                                     width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" },
                                     color: "black",
                                 }}

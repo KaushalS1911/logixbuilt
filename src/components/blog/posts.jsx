@@ -65,7 +65,7 @@ function Posts() {
     return (
         <Box>
             <Container maxWidth={"xl"}>
-                <Typography variant="h3" component="h3" sx={{ fontWeight: 500, marginBottom: "120px" }}>
+                <Typography variant="h3" component="h3" sx={{ fontWeight: 500, marginBottom: "70px",paddingLeft:"15px" }}>
                     Recent Posts
                 </Typography>
                 <Grid container spacing={3}>
