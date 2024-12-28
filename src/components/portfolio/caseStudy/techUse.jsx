@@ -9,23 +9,23 @@ import Image from "next/image";
 
 const app = [
     {
-        name: "SOCIAL MEDIA",
+        name: "Figma",
         image: img1,
     },
     {
-        name: "FINTECH",
+        name: "NativeScript",
         image: img2,
     },
     {
-        name: "FINTECH",
+        name: "Node.js",
         image: img3,
     },
     {
-        name: "FINTECH",
+        name: "MongoDB",
         image: img4,
     },
     {
-        name: "FINTECH",
+        name: "Express.js",
         image: img5,
     },
 ];
@@ -49,7 +49,7 @@ function TechUse() {
                 </Typography>
                 <Grid container spacing={2} justifyContent="center">
                     {app.map((item, index) => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                        <Grid item xs={6} sm={3} md={2}  key={index}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -70,6 +70,7 @@ function TechUse() {
                                         color: "#0F72A",
                                         fontSize: { xs: "14px", md: "16px" },
                                         fontWeight: 500,
+                                        textWrap:"nowrap"
                                     }}
                                 >
                                     {item.name}

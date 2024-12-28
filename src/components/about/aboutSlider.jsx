@@ -64,7 +64,7 @@ const AboutSlider = () => {
                         sx={{
                             backgroundColor: "#121C27",
                             color: "#fff",
-                            padding: { xs: "20px 2pc", md: "40px 5pc" },
+                            padding: { xs: "20px 2px", md: "40px 5px" },
                             position: "relative",
                         }}
                     >

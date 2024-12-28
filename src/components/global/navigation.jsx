@@ -39,7 +39,7 @@ function Navigation() {
         { name: 'Pages', route: '/pages' },
         { name: 'About', route: '/about' },
         { name: 'Services', route: '/services' },
-        { name: 'Case', route: '/case' },
+        { name: 'Portfolio', route: '/portfolio' },
         { name: 'Blog', route: '/blog' },
         { name: 'Contact', route: '/contact' },
     ];

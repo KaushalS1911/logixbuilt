@@ -112,8 +112,8 @@ function MediaProject() {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Box sx={{ margin: { xs: '0', md: '0 0 0 40px' } }}>
-                            <Image src={Img1} alt="About the Client" style={{ maxWidth: '100%', height: 'auto' }} />
+                        <Box sx={{ margin: { xs: '0', md: '0 0 0 40px' , display:"flex" , justifyContent:"center" } }}>
+                            <Image src={Img1} alt="About the Client" style={{ Width: '100%', height: 'auto'}} />
                         </Box>
                     </Grid>
                 </Grid>
@@ -127,7 +127,9 @@ function MediaProject() {
                             direction={index % 2 === 0 ? 'row' : 'row-reverse'}
                         >
                             <Grid item xs={12} md={6}>
-                                <Image src={item.image} alt={`Slide ${item.number}`} style={{ maxWidth: '100%', height: 'auto' }} />
+                                <Box sx={{display:"flex" , justifyContent:"center"}}>
+                                    <Image src={item.image} alt={`Slide ${item.number}`} style={{ maxWidth: '100%', height: 'auto' }} />
+                                </Box>
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
