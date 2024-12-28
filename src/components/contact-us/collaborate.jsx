@@ -49,7 +49,7 @@ function Collaborate(props) {
         }
     ]
     return (
-        <Box>
+        <Box sx={{padding:"85px 15px"}}>
             <Container maxWidth={"xl"}>
                 <Grid container>
                     <Grid item={12}>
@@ -319,9 +319,7 @@ function Collaborate(props) {
 
                     {/*......image.....*/}
                     <Grid item={12}>
-                        <Box sx={{
-                            height:{xs:"auto" , sm:"510px"}
-                        }}>
+                        <Box>
                         <Image
                             src={Img1}
                             alt={Img1}

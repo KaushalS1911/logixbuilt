@@ -1,19 +1,34 @@
-import TechnologyFirm from "../../components/about/TechnologyFirm";
+import Modification from "../../components/about/modification";
+import AboutSlider from "../../components/about/aboutSlider";
+import Business from "../../components/about/business";
+import Industry from "../../components/about/industry";
+import ProgecksRets from "../../components/about/progecksRets";
+import TeamPage from "../../components/about/teamPage";
+import Customers from "../../components/about/customers";
+import Clients from "../../components/about/clients";
+import Collab from "../../components/about/collab";
+import HeadingPage from "../../components/global/headingPage";
+import bg1 from "../../assets/images/blog/b-1.webp";
 
-import Feature from "../../components/about/Feature";
-import Faqs from "../../components/about/Faqs";
 
-import Aboutcompany from "../../components/about/Aboutcompany";
+const breadCrumbs = [
+    {label:'Home',route: '/'},
+    {label:'About',route: '/about'},
+]
 
 const Page = () => {
     return (
         <>
-            <Aboutcompany/>
-            <TechnologyFirm/>
-            <Feature/>
-            <Faqs/>
-
-
+            <HeadingPage bgImg={bg1.src} heading={'About'} breadcrumbs={breadCrumbs}/>
+            <Modification/>
+            <AboutSlider/>
+            <Business/>
+            <Industry/>
+            <ProgecksRets/>
+            <TeamPage/>
+            <Customers/>
+            <Clients/>
+            <Collab/>
         </>
     );
 }

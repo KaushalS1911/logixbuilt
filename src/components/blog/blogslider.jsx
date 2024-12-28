@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography, Button, Stack, Container, Divider, Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules"; // Import Autoplay module
+import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import bg1 from "../../assets/images/blog/blogslider/bs-2.webp";
@@ -38,7 +38,8 @@ const slides = [
         comments: "Comments",
         title: "Revolutionizing the Future of Financial Services",
         description:
-            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis,…",
+            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis. Pellentesque leo eros," +
+            " sollicitudin vel lacinia non,…",
         button: "Continue Reading",
     },
     {
@@ -50,15 +51,16 @@ const slides = [
         comments: "Comments",
         title: "A Guide to Embracing Meaningful Change in Banking",
         description:
-            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis,…",
+            "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis. Pellentesque leo eros," +
+            " sollicitudin vel lacinia non,…",
         button: "Continue Reading",
     },
 ];
 
 function Blogslider() {
     return (
-        <Box sx={{ width: "100%", height: "100%", position: "relative", padding: "110px 0" }}>
-            <Container>
+        <Box sx={{ width: "100%", height: "100%", position: "relative", padding: "0 0 110px 0" }}>
+            <Container maxWidth={'xl'}>
                 <Swiper
                     modules={[EffectFade, Autoplay]}
                     autoplay={{
@@ -94,7 +96,7 @@ function Blogslider() {
                                 >
                                     <Stack direction="row" spacing={1} alignItems="center" sx={{ pb: "10px" }}>
                                         <Grid container >
-                                            {/* Date Section */}
+
                                             <Grid item xs={12} sm={6}>
                                                 <Box sx={{ display: "flex", alignItems: "center" }}>
                                                     <DateRangeIcon sx={{ mr: 1 }} />
@@ -102,7 +104,7 @@ function Blogslider() {
                                                 </Box>
                                             </Grid>
 
-                                            {/* Admin Section */}
+
                                             <Grid item xs={12} sm={6} md={2}>
                                                 <Box sx={{ display: "flex", alignItems: "center" }}>
                                                     <Image
@@ -161,7 +163,7 @@ function Blogslider() {
                                         </Grid>
                                     </Stack>
 
-                                    <Divider sx={{ backgroundColor: "gray" }} />
+                                    <Divider sx={{ backgroundColor: "gray" , width:"100%"}} />
                                     <Typography variant="h5" sx={{
                                         p: "25px 0 15px",
                                         fontWeight: "500",
@@ -172,7 +174,8 @@ function Blogslider() {
                                     <Typography variant="body2" sx={{
                                         mt: 1,
                                         textWrap: "wrap",
-                                        fontSize: { sm: "15px", xs: "13px" }
+                                        fontSize: { sm: "15px", xs: "13px" },
+                                        color:"#c4c4c4"
                                     }}>
                                         {item.description}
                                     </Typography>

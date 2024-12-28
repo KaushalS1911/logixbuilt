@@ -2,6 +2,10 @@ import {Box, Grid, Typography, Container} from "@mui/material";
 import CloudOutlinedIcon from "@mui/icons-material/CloudOutlined";
 import FolderOutlinedIcon from "@mui/icons-material/FolderOutlined";
 import OpenInFullOutlinedIcon from "@mui/icons-material/OpenInFullOutlined";
+// import img1 from '../../assets/images/home/value-proposition/wallet.png'
+// import img2 from '../../assets/images/home/value-proposition/network.png'
+// import img3 from '../../assets/images/home/value-proposition/file.png'
+// import img4 from '../../assets/images/home/value-proposition/scale.png'
 
 const valuePropositions = [
     {
@@ -83,6 +87,12 @@ const ValuePropositions = () => {
                                 >
                                     {item.icon}
                                 </Box>
+                                {/*<Image className="icon"*/}
+                                {/*    src={item.icon.src}*/}
+                                {/*    width={100} // Adjust width as needed*/}
+                                {/*    height={100} // Adjust height as needed*/}
+                                {/*    alt="Icon"*/}
+                                {/*/>*/}
                                 <Typography
                                     className="title"
                                     fontWeight="bold"
