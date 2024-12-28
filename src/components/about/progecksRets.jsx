@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 const stats = [
     {
         icon: (
-            <FavoriteIcon sx={{ fontSize: { xs: "20px", sm: "30px", md: "40px" } }} />
+            <FavoriteIcon sx={{ fontSize: { xs: "20px", sm: "22px", md: "25px" } }} />
         ),
         value: 4152,
         label: "Customer Satisfaction",
@@ -18,7 +18,7 @@ const stats = [
     {
         icon: (
             <InventoryIcon
-                sx={{ fontSize: { xs: "20px", sm: "30px", md: "40px" } }}
+                sx={{ fontSize: { xs: "20px", sm: "22px", md: "25px" } }}
             />
         ),
         value: 26,
@@ -26,14 +26,14 @@ const stats = [
     },
     {
         icon: (
-            <FolderIcon sx={{ fontSize: { xs: "20px", sm: "30px", md: "40px" } }} />
+            <FolderIcon sx={{ fontSize: { xs: "20px", sm: "22px", md: "25px" } }} />
         ),
         value: 983,
         label: "Projects We Have Completed",
     },
     {
         icon: (
-            <StarIcon sx={{ fontSize: { xs: "20px", sm: "30px", md: "40px" } }} />
+            <StarIcon sx={{ fontSize: { xs: "20px", sm: "22px", md: "25px" } }} />
         ),
         value: 18,
         label: "Honorary Consulting Award",
@@ -52,7 +52,7 @@ const ProgecksRets = () => {
         >
             <Grid container spacing={4} justifyContent="center">
                 {stats.map((stat, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
+                    <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
                         <Box
                             sx={{
                                 display: "flex",

@@ -78,21 +78,21 @@ const Business = () => {
                                 <Typography sx={{ fontSize: '14px' }}>{progress1}%</Typography>
                             </Box>
                             <Box sx={{ mt: '10px' }}>
-                                <LinearProgress variant="determinate" value={progress1} sx={{ height: '2px', backgroundColor: '#999999', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
+                                <LinearProgress variant="determinate" value={progress1} sx={{ height: '3px', backgroundColor: 'rgba(10, 19, 32, 8%)', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
                             </Box>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: '20px',pt:"10px" }}>
                                 <Typography sx={{ fontSize: '14px' }}>Development Experience</Typography>
                                 <Typography sx={{ fontSize: '14px' }}>{progress2}%</Typography>
                             </Box>
                             <Box sx={{ mt: '10px' }}>
-                                <LinearProgress variant="determinate" value={progress2} sx={{ height: '2px', backgroundColor: '#999999', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
+                                <LinearProgress variant="determinate" value={progress2} sx={{ height: '3px', backgroundColor: 'rgba(10, 19, 32, 8%)', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
                             </Box>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: '25px',pt:"10px"  }}>
                                 <Typography sx={{ fontSize: '14px' }}>Enterprise Solutions</Typography>
                                 <Typography sx={{ fontSize: '14px' }}>{progress3}%</Typography>
                             </Box>
                             <Box sx={{ mt: '10px' }}>
-                                <LinearProgress variant="determinate" value={progress3} sx={{ height: '2px', backgroundColor: '#999999', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
+                                <LinearProgress variant="determinate" value={progress3} sx={{ height: '3px', backgroundColor: 'rgba(10, 19, 32, 8%)', '& .MuiLinearProgress-bar': { backgroundColor: 'black' } }} />
                             </Box>
                             <button style={{color:"white",backgroundColor:"black",height:"50px",width:"160px",marginTop:"40px",borderRadius:"30px"}}>Discovery More</button>
                         </Grid>

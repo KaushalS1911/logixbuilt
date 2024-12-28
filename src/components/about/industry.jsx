@@ -59,8 +59,8 @@ const Industry = () => {
                                         backgroundColor: '#FFF',
                                         color: '#121212',
                                         border: '0.5px solid #000',
-                                        width: '68px',
-                                        height: '68px',
+                                        width: '64px',
+                                        height: '62px',
                                         transition: 'background-color 0.3s ease, color 0.3s ease',
                                         '&:hover': {
                                             backgroundColor: '#121212',

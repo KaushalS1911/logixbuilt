@@ -124,8 +124,8 @@ function Socialmedia() {
                                             sx={{
                                                 display: 'block',
                                                 margin: '0 auto',
-                                                width: { lg: '1000px', md: '911px', sm: '796px', xs: '420px' },
-                                                height: { lg: '720px', md: '500px', sm: '450px', xs: '311px' },
+                                                width: { lg: '880px', md: '711px', sm: '656px', xs: '520px' },
+                                                height: { lg: '450px', md: '400px', sm: '350px', xs: '311px' },
                                             }}
                                         />
                                     </Grid>
@@ -150,7 +150,9 @@ function Socialmedia() {
 
 
                                     <Grid item md={6} sm={12}>
-                                        <Box>
+                                        <Box sx={{
+                                            marginBottom:"60px",
+                                        }}>
                                             <Box
                                                 sx={{
                                                     color: '#0fa4ea',
@@ -200,7 +202,6 @@ function Socialmedia() {
                                             >
                                                 {item.button}
                                             </Box>
-
                                         </Box>
                                     </Grid>
                                 </>
