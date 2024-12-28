@@ -53,8 +53,11 @@ const Industry = () => {
                 <Grid container spacing={4}>
                     {features.map((feature, index) => (
                         <Grid item xs={12} sm={6} lg={4} key={index} sx={{mb:3}}>
-                            <Box sx={{ display: 'flex', alignItems: 'start', gap: '1rem' }}>
-                                <Avatar
+                            <Box sx={{ display: 'flex', alignItems: 'start', gap: '1rem','&:hover .icon': {
+                                    backgroundColor: '#121212',
+                                    color: '#FFF',
+                                }, }}>
+                                <Avatar className={'icon'}
                                     sx={{
                                         backgroundColor: '#FFF',
                                         color: '#121212',
@@ -62,10 +65,7 @@ const Industry = () => {
                                         width: '64px',
                                         height: '62px',
                                         transition: 'background-color 0.3s ease, color 0.3s ease',
-                                        '&:hover': {
-                                            backgroundColor: '#121212',
-                                            color: '#FFF',
-                                        },
+
                                     }}
                                 >
                                     {feature.icon}

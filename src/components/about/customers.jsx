@@ -24,6 +24,7 @@ import aw9 from "../../assets/images/about/customers/aw9.webp";
 import aw10 from "../../assets/images/about/customers/aw10.webp";
 import aw11 from "../../assets/images/about/customers/aw11.webp";
 import aw12 from "../../assets/images/about/customers/aw12.webp";
+
 const review = [
     {
         logo: aw9,
@@ -154,7 +155,7 @@ const Customers = () => {
                                                             textAlign: { xs: "start", md: "left" },
                                                         }}
                                                     >
-                                                        Giles and his team at Herrington Business Consulting
+                                                        Giles and his team at BEYOND Business Consulting
                                                         have been absolutely great to work with and they
                                                         definitely have gone above and beyond for us by
                                                         streamlining all of our accounts so that we can

@@ -22,15 +22,15 @@ const Page = () => {
             {/*<Blogslider/>*/}
             {/*<Posts/>*/}
 
+            <Newsletter />
+            <Blogslider/>
+            <Posts/>
+
+
             {/*<Socialmedia/>*/}
-            {/*<Newsletter />*/}
-            {/*<Blogslider/>*/}
-            {/*<Posts/>*/}
-
-
-            <Experiences/>
-            <TechUse/>
-            <MediaProject/>
+            {/*<Experiences/>*/}
+            {/*<TechUse/>*/}
+            {/*<MediaProject/>*/}
 
 
 

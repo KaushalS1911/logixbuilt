@@ -14,16 +14,17 @@ import ListItemText from '@mui/material/ListItemText';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
 import Image from 'next/image';
-import img1 from '../../assets/images/navigation/Png-04.png';
+import imgBlack from '../../assets/images/navigation/Png-04.png';
+import imgWhite from '../../assets/images/navigation/Png-03.png';
 import EastIcon from '@mui/icons-material/East';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
-import {usePathname, useRouter} from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
 function Navigation() {
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false); // State to track if scrolled
+    const [scrolled, setScrolled] = useState(false);
     const router = useRouter();
     const path = usePathname();
 
@@ -44,7 +45,6 @@ function Navigation() {
         { name: 'Contact', route: '/contact' },
     ];
 
-    // Scroll event listener
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -63,14 +63,14 @@ function Navigation() {
     return (
         <>
             <AppBar
-                position={(!scrolled && path ==='/') ?  "static" :"fixed" }
+                position={(!scrolled && path === '/') ? "static" : "fixed"}
                 sx={{
-                    backgroundColor: (scrolled || path ==='/') ? 'white' : 'transparent',
-                    color: (scrolled || path ==='/') ? '#000' : '#fff',
+                    backgroundColor: (scrolled || path === '/') ? 'white' : 'transparent',
+                    color: (scrolled || path === '/') ? '#000' : '#fff',
                     borderBottom: '1px solid #ddd',
                     padding: '10px 0',
-                    boxShadow: (scrolled || path ==='/') ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
-                    top: (scrolled || path ==='/') ? '0' : '10px',
+                    boxShadow: (scrolled || path === '/') ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
+                    top: (scrolled || path === '/') ? '0' : '10px',
                     transition: 'all 0.3s ease',
                 }}
             >
@@ -78,7 +78,7 @@ function Navigation() {
                     <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <Box onClick={() => router.push('/')}>
                             <Image
-                                src={img1}
+                                src={(scrolled || path === '/') ? imgBlack : imgWhite} // Switch logo based on condition
                                 alt="Logo"
                                 style={{ width: '230px', height: '90px', objectFit: 'cover' }}
                             />
@@ -92,11 +92,11 @@ function Navigation() {
                                     <Button
                                         sx={{
                                             textTransform: 'capitalize',
-                                            color: (scrolled || path === '/') ? '#000' : '#fff', // Update color on scroll
+                                            color: (scrolled || path === '/') ? '#000' : '#fff',
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
-                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline'},
+                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline' },
                                         }}
                                         onClick={() => router.push(route)}
                                     >
@@ -139,7 +139,7 @@ function Navigation() {
                                     borderRadius: '50%',
                                 }}
                             >
-                                <PhoneCallbackIcon  />
+                                <PhoneCallbackIcon />
                             </Box>
                             <Typography
                                 variant="subtitle1"
@@ -221,7 +221,7 @@ function Navigation() {
 
                     <Box onClick={() => router.push('/')}>
                         <Image
-                            src={img1}
+                            src={(scrolled || path === '/') ? imgBlack : imgWhite}
                             alt="Logo"
                             style={{ width: '230px', height: '90px', objectFit: 'cover' }}
                         />
@@ -263,8 +263,6 @@ function Navigation() {
             </Drawer>
 
         </>
-
-
     );
 }
 

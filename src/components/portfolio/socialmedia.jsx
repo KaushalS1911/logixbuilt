@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 import bg1 from '../../assets/images/portfolio/img1.png';
 import bg2 from '../../assets/images/portfolio/img2.png';
 import bg3 from '../../assets/images/portfolio/img3.png';
 import { Box, Grid } from '@mui/material';
+import {useRouter} from "next/navigation";
 
 const slides = [
     {
@@ -37,6 +39,9 @@ const slides = [
 ];
 
 function Socialmedia() {
+
+    const router = useRouter();
+
     return (
         <Box
             sx={{
@@ -103,6 +108,7 @@ function Socialmedia() {
                                                     border: '2px solid #c36',
                                                     display: 'inline-block',
                                                     fontWeight: '700',
+                                                    cursor: 'pointer',
                                                     lineHeight: '1',
                                                     borderRadius: '500px 500px',
                                                     mt: '23px',
@@ -110,6 +116,7 @@ function Socialmedia() {
                                                         background: '#c36',
                                                     },
                                                 }}
+                                                onClick={() => router.push('/portfolio/1')}
                                             >
                                                 {item.button}
                                             </Box>
@@ -193,12 +200,14 @@ function Socialmedia() {
                                                     display: 'inline-block',
                                                     fontWeight: '700',
                                                     lineHeight: '1',
+                                                    cursor: 'pointer',
                                                     borderRadius: '500px 500px',
                                                     mt: '23px',
                                                     ':hover': {
                                                         background: '#c36',
                                                     },
                                                 }}
+                                                onClick={() => router.push('/portfolio/1')}
                                             >
                                                 {item.button}
                                             </Box>

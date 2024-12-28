@@ -20,7 +20,7 @@ const Modification = () => {
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "center",
-                            padding: "20px",
+                            padding: "80px 20px",
                             overflow: "hidden",
                         }}
                     >
@@ -48,7 +48,7 @@ const Modification = () => {
                                     pt: 2,
                                 }}
                             >
-                                W E L C O M E <span>T O</span> H E R R I N G T O N
+                                W E L C O M E <span>T O</span> B E Y O N D
                             </Typography>
                             <Image
                                 src={circleimg}
@@ -141,7 +141,7 @@ const Modification = () => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box>
-                        <Box sx={{ padding: "20px" }}>
+                        <Box sx={{ padding: "80px 20px" }}>
                             <Box sx={{ borderBottom: "1px solid #D3D5D6" }}>
                                 <Typography
                                     sx={{
@@ -151,7 +151,7 @@ const Modification = () => {
                                         py: 2,
                                     }}
                                 >
-                                    At Herrington, we are a renowned global consulting firm
+                                    At Beyond, we are a renowned global consulting firm
                                     committed to collaborating with business and societal leaders
                                     in overcoming their most critical challenges and seizing their
                                     greatest opportunities. Our achievements are rooted in

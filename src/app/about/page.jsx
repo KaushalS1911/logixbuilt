@@ -1,9 +1,3 @@
-// import TechnologyFirm from "../../components/about/TechnologyFirm";
-//
-// import Feature from "../../components/about/Feature";
-// import Faqs from "../../components/about/Faqs";
-//
-// import Aboutcompany from "../../components/about/Aboutcompany";
 import Modification from "../../components/about/modification";
 import AboutSlider from "../../components/about/aboutSlider";
 import Business from "../../components/about/business";
@@ -13,15 +7,19 @@ import TeamPage from "../../components/about/teamPage";
 import Customers from "../../components/about/customers";
 import Clients from "../../components/about/clients";
 import Collab from "../../components/about/collab";
+import HeadingPage from "../../components/global/headingPage";
+import bg1 from "../../assets/images/blog/b-1.webp";
+
+
+const breadCrumbs = [
+    {label:'Home',route: '/'},
+    {label:'About',route: '/about'},
+]
 
 const Page = () => {
     return (
         <>
-            {/*<Aboutcompany/>*/}
-            {/*<TechnologyFirm/>*/}
-            {/*<Feature/>*/}
-            {/*<Faqs/>*/}
-
+            <HeadingPage bgImg={bg1.src} heading={'About'} breadcrumbs={breadCrumbs}/>
             <Modification/>
             <AboutSlider/>
             <Business/>
@@ -31,9 +29,6 @@ const Page = () => {
             <Customers/>
             <Clients/>
             <Collab/>
-
-
-
         </>
     );
 }

@@ -60,7 +60,7 @@ const Business = () => {
                         <Grid item xs={12} sm={8} md={6} lg={6}>
                             <Box display="flex">
                                 <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', fontSize: '12px', color: '#505558', pt:{lg:"40px",sm:"10px",md:"30px",xs:"0px"}, letterSpacing: '5px' }}>
-                                    WHY CHOOSE HERRINGTON
+                                    WHY CHOOSE BEYOND
                                 </Typography>
                             </Box>
                             <Box>
