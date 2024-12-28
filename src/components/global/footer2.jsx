@@ -99,7 +99,7 @@ function Footer2() {
                                 return Icon ? (
                                     <Icon
                                         key={index}
-                                        sx={{ fontSize: 25, cursor: "pointer" }}
+                                        sx={{ fontSize: 20, cursor: "pointer" }}
                                         onClick={() => window.open(social.link, "_blank")}
                                     />
                                 ) : null;
@@ -113,11 +113,11 @@ function Footer2() {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={4}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3, }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
                                 {footerData.contact.title}
                             </Typography>
                             {footerData.contact.details.map((detail, index) => (
-                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color:"#C4C4C4"}}>
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
                                     {detail}
                                 </Typography>
                             ))}
@@ -126,44 +126,31 @@ function Footer2() {
 
                     <Grid item xs={12} sm={6} md={3}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3,color:"#C4C4C4",marginLeft:"23px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3,color:"#C4C4C4" }}>
                                 {footerData.services.title}
                             </Typography>
                             {footerData.services.links.map((service, index) => (
-                                <Typography
-                                    key={index}
-                                    variant="body2"
-                                    sx={{
-                                        mb: 2,
-                                        display: "flex",
-                                        alignItems: "center",
-                                        transition: "color 0.5s, transform 0.5s",
-                                        color: "#C4C4C4",
-                                        '&:hover': {
-                                            color: "#fff",
-                                            transform: "translateX(10px)",
-                                        },
-                                        '&:hover .icon': {
-                                            opacity: "1",
-                                            display:"flex"
-                                        },
-                                    }}
-                                >
-                                    <Box
-                                        className={"icon"}
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            padding: "0 10px 0 0",
-                                            opacity: "0",
-                                            transition: "opacity 0.5s",
-                                        }}
-                                    >
-                                        <EastIcon fontSize={"xx-large"} />
-                                    </Box>
+                                <Typography  key={index} variant="body2" sx={{
+                                    mb: 2 ,
+
+                                    display:"flex",
+                                    alignItems:"center",
+                                    transition:"1s ",
+                                    color:"#C4C4C4",
+                                    '&:hover .icon ':{
+                                        display:"flex",
+                                        color:"#fff"
+                                    }
+                                }}>
+                                   <Box className={"icon "} sx={{
+                                       display:"none",
+                                       alignItems:"center",
+                                       padding:"0 10px 0 0",
+                                   }}>
+                                       <EastIcon fontSize={"xx-large"}/>
+                                   </Box>
                                     {service}
                                 </Typography>
-
                             ))}
                         </Box>
                     </Grid>
@@ -204,12 +191,14 @@ function Footer2() {
                                         height: "32px",
                                         display: "flex",
                                         alignItems: "center",
+                                        justifyContent: "center",
+                                        marginLeft: "8px",
                                         color: "white",
                                         fontSize: "18px",
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <EastIcon/>
+                                    ➔
                                 </Box>
                             </Box>
                             <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>
@@ -226,7 +215,7 @@ function Footer2() {
                                         <CircleNotificationsIcon sx={{ fontSize: "30px" }} />
                                     </Box>
                                 </Box>
-                                <Typography variant="body2" sx={{ color:"#C4C4C4" }}>
+                                <Typography variant="body2" sx={{ color: "textGray" }}>
                                     Please sign up to follow the latest news and events from us, we
                                     promise not to spam your inbox.
                                 </Typography>
@@ -238,7 +227,7 @@ function Footer2() {
                 <Divider sx={{ my: 4, backgroundColor: "gray" }} />
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
-                        <Typography variant="body2" sx={{ fontSize: "12px" ,color:"#C4C4C4" }}>
+                        <Typography variant="body2" sx={{ fontSize: "12px" }}>
                             {footerData.footerBottom.left}
                         </Typography>
                     </Grid>
@@ -252,7 +241,7 @@ function Footer2() {
                             }}
                         >
                             {footerData.footerBottom.links.map((link, index) => (
-                                <Typography key={index} variant="body2" sx={{ fontSize: "12px",color:"#C4C4C4" }}>
+                                <Typography key={index} variant="body2" sx={{ fontSize: "12px" }}>
                                     {link}
                                 </Typography>
                             ))}
