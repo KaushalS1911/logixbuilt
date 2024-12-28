@@ -49,7 +49,7 @@ function Posts() {
             img: Img6,
             smallImg: Img1,
             btn: "Startup Consulting",
-            title: "Providing better service for customers",
+            title: "Providing bettest service for customers",
             describtion: "Quisque consectetur purus ut suscipit faucibus. Sed at ornare ligula. Quisque dignissim justo arcu, ut viverra elit venenatis, Pellentesque leo…",
         },
         {
