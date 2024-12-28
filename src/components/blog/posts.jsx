@@ -78,7 +78,7 @@ function Posts() {
                                     overflow: "hidden",
                                     position: "relative",
                                     transition: "transform 0.3s ease-in-out",
-                                    '&:hover img': {
+                                    '&:hover .image': {
                                         transform: "scale(1.1)",
                                     },
                                 }}
@@ -93,8 +93,8 @@ function Posts() {
                                     <Image
                                         src={item.smallImg}
                                         alt="Admin"
-                                        width={30}
-                                        height={30}
+                                        width={50}
+                                        height={50}
                                         style={{
                                             borderRadius: "50%",
                                             marginRight: "10px",
@@ -105,14 +105,13 @@ function Posts() {
                                     </Typography>
                                 </Box>
 
-                                {/* Image with Date and Button Overlay */}
                                 <Box
                                     sx={{
                                         position: "relative",
                                         overflow: "hidden",
                                     }}
                                 >
-                                    <Image
+                                    <Image className={'image'}
                                         src={item.img}
                                         alt={item.title}
                                         style={{
@@ -123,20 +122,19 @@ function Posts() {
                                         }}
                                     />
 
-                                    {/* Date Overlay */}
                                     <Box
                                         sx={{
                                             position: "absolute",
-                                            top: "10px",
-                                            right: "10px",
-                                            background: "rgba(255, 255, 255, 0.25)", // Increased opacity for better visibility
-                                            backdropFilter: "blur(2px)", // Increased blur effect
-                                            WebkitBackdropFilter: "blur(2px)", // Cross-browser compatibility
-                                            borderRadius: "10px", // Rounded corners for aesthetics
-                                            color: "#fff", // Text color for better contrast
+                                            top: "20px",
+                                            right: "20px",
+                                            background: "rgba(255, 255, 255, 0.25)",
+                                            backdropFilter: "blur(6px)",
+                                            WebkitBackdropFilter: "blur(6px)",
+                                            borderRadius: "10px",
+                                            color: "#fff",
                                             textAlign: "center",
                                             padding: "20px 25px",
-                                            fontSize: "35px", // Set to 35px
+                                            fontSize: "35px",
                                             fontWeight: 600,
                                             lineHeight: "1.2",
                                         }}
@@ -144,28 +142,27 @@ function Posts() {
                                         <Typography
                                             variant="h6"
                                             component="div"
-                                            sx={{ fontSize: "35px", lineHeight: "1.2" }} // Updated font size
+                                            sx={{ fontSize: "35px", lineHeight: "1.2" }}
                                         >
-                                            {item.date.split(" ")[0]} {/* Extracts day */}
+                                            {item.date.split(" ")[0]}
                                         </Typography>
                                         <Typography
                                             variant="body2"
                                             component="div"
-                                            sx={{ fontSize: "15px", lineHeight: "1.2" }} // Updated font size
+                                            sx={{ fontSize: "15px", lineHeight: "1.2" }}
                                         >
-                                            {item.date.split(" ")[1]} {/* Extracts month */}
+                                            {item.date.split(" ")[1]}
                                         </Typography>
                                     </Box>
 
 
 
 
-                                    {/* Button Overlay */}
                                     <Box
                                         sx={{
                                             position: "absolute",
-                                            bottom: "10px",
-                                            left: "10px",
+                                            bottom: "20px",
+                                            left: "20px",
                                             backgroundColor: "#fff",
                                             color: "#000",
                                             textTransform: "uppercase",
@@ -212,6 +209,7 @@ function Posts() {
                                         marginTop: "20px",
                                         display: "flex",
                                         alignItems: "center",
+                                        fontWeight:500,
                                         '&:hover .icon': {
                                             marginLeft: "20px",
                                         },
