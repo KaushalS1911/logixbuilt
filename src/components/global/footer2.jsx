@@ -203,14 +203,12 @@ function Footer2() {
                                         height: "32px",
                                         display: "flex",
                                         alignItems: "center",
-                                        justifyContent: "center",
-                                        marginLeft: "8px",
                                         color: "white",
                                         fontSize: "18px",
                                         cursor: "pointer",
                                     }}
                                 >
-                                    ➔
+                                    <EastIcon/>
                                 </Box>
                             </Box>
                             <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>
