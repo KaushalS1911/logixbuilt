@@ -28,6 +28,7 @@ const TeamPage = () => {
                     },
                 }}
             >
+                <Container maxWidth={'xl'}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} lg={7} >
                         <Typography
@@ -110,7 +111,8 @@ const TeamPage = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                <Box sx={{ border: '0.2px solid #FFF', my: 7 }}/>
+                <Box sx={{ border: '0.1px solid #4b535d ', my: 7 }}/>
+                </Container>
                 <Container maxWidth={'xl'}>
                     <Grid container spacing={4} sx={{ marginTop: '3rem' }}>
                         {[
@@ -150,7 +152,7 @@ const TeamPage = () => {
                         textAlign: 'center',
                     }}
                 >
-                    The Family Herrington
+                    The Family Beyond
                 </Typography>
             </Box>
         </Box>
