@@ -1,332 +1,237 @@
-import {Box, Button, Grid, Typography, useTheme} from "@mui/material";
-import img1 from "../../assets/images/footer/left-1.png";
-import img2 from "../../assets/images/logo/logo-white.png";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import background from "../../assets/images/footer/footer-3.jpg";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+'use client';
+import React from "react";
+import {
+    Box,
+    Typography,
+    TextField,
+    Divider,
+    Container,
+    Grid,
+} from "@mui/material";
+import { Facebook, Twitter, Instagram, Telegram } from "@mui/icons-material";
+import img1 from "../../assets/images/fotter2/Png-03.png";
+import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
+import Image from "next/image";
 
-const Footer = () => {
+function Footer() {
+    const footerData = {
+        logo: img1,
+        socialLinks: [
+            { name: "Facebook", link: "https://facebook.com" },
+            { name: "Twitter", link: "https://twitter.com" },
+            { name: "Instagram", link: "https://instagram.com" },
+            { name: "Telegram", link: "https://telegram.org" },
+        ],
+        contact: {
+            title: "Get in Touch!",
+            details: [
+                "s-25/26 Satyam Plaza Raspaan Cross Road Nikol Ahemdabad,Gujarat",
+                "Call us: +91 9016402670",
+                "Email: beyondtech.official@gmail.com",
+                "Mon–Sat: 8.00am–18.00pm / Holiday: Closed",
+            ],
+        },
+        services: {
+            title: "Our Services",
+            links: [
+                "Web Development",
+                "SEO",
+                "IT Consulting",
+                "Conversion Optimization",
+            ],
+        },
+        newsletter: {
+            title: "Stay Updated!",
+            placeholder: "Enter your email",
+            description: "Sign up for updates and exclusive content.",
+        },
+        footerBottom: {
+            left: "© 2024 Custom Company. All rights reserved.",
+            links: ["Privacy Policy", "Terms of Use", "Support"],
+        },
+    };
+
     return (
-        <>
-            <Box sx={{mt: "50px"}}>
-                <Grid container>
-                    <Grid item xs={12} md={6}>
-                        <Box
-                            sx={{
-                                p: {sm:"40px 130px",xs: '40px 0'},
-                                background: `linear-gradient(90deg, #F61B10aa, #EF0963aa) , url(${img1.src})center/cover`,
-                                height: {md: "540px", sm: "327px" },
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: {xs: "center", sm: "unset", md: "center"},
-                                color: "white",
-                                position: "relative",
-                                "&::before": {
-                                    content: '""',
-                                    position: "absolute",
-                                    top: {sm:"15%",xs: "100%"},
-                                    right:{sm : 0 , xs: 10,md: -50},
-                                    width: {sm: "350px", xs: "230px",md: '300px'},
-                                    height: {sm: "350px", xs: "230px",md: '300px'},
-                                    zIndex: "0",
-                                    backgroundImage: `url(${img2.src})`,
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                },
+        <Box
+            sx={{
+                backgroundColor: "#1A1F26",
+                color: "white",
+                padding: "60px 0",
+            }}
+        >
+            <Container maxWidth="xl">
+                <Grid container alignItems="center" spacing={2}>
+                    <Grid  item xs={12} md={4}>
+                        <Box  sx={{ display: "flex", justifyContent: { xs: "center" , md: "left" }}}>
+                        <Image
+                            src={footerData.logo}
+                            alt="Logo"
+                            style={{
+                                width: '75%',
+                                height: '150px',
+                                objectFit: 'cover'
                             }}
-                        >
-                            <Box sx={{zIndex: "50"}}>
-                                <Typography sx={{fontSize: "16px", letterSpacing: "4px"}}>
-                                    READY TO DO THIS
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontWeight: "bold",
-                                        fontSize: {sm: "50px", xs: "30px",md: "60px"},
-                                        lineHeight: {sm: "90px", xs: "60px"},
-                                        maxWidth:{sm:400}
-                                    }}
-                                >
-                                    Let's get to work
-                                </Typography>
-                                {/*<NavLink style={{ color: "unset" }} to={"/contact"}>*/}
-                                <Button
-                                    variant="outlined"
-                                    sx={{
-                                        color: "white ",
-                                        border: "2px solid white ",
-                                        fontSize: "17px",
-                                        letterSpacing: "2px",
-                                        textWrap: 'nowrap',
-                                        ml: "0 ",
-                                        p: {
-                                            md: "15px 40px ",
-                                            sm: "10px 30px ",
-                                        },
-                                        mt: {md: "40px", xs: "20px" },
-                                        cursor: "pointer",
-                                        "&:hover": {
-                                            backgroundColor: "white ",
-                                            color: `crimson`,
-                                            border: "2px solid white ",
-                                        },
-                                    }}
-                                >
-                                    CONTACT US
-                                </Button>
-                                {/*</NavLink>*/}
-                            </Box>
+                        />
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}
+                    >
                         <Box
                             sx={{
-                                height: "100%",
                                 display: "flex",
-                                justifyContent: "center",
-                                alignItems: "end",
+                                alignItems: "center",
+                                gap: 3,
                             }}
                         >
+                            {footerData.socialLinks.map((social, index) => {
+                                const Icon = {
+                                    Facebook: Facebook,
+                                    Twitter: Twitter,
+                                    Instagram: Instagram,
+                                    Telegram: Telegram,
+                                }[social.name];
+                                return Icon ? (
+                                    <Icon
+                                        key={index}
+                                        sx={{ fontSize: 20, cursor: "pointer" }}
+                                        onClick={() => window.open(social.link, "_blank")}
+                                    />
+                                ) : null;
+                            })}
+                        </Box>
+                    </Grid>
+                </Grid>
+
+                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
+
+                <Grid container spacing={4}>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.contact.title}
+                            </Typography>
+                            {footerData.contact.details.map((detail, index) => (
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
+                                    {detail}
+                                </Typography>
+                            ))}
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.services.title}
+                            </Typography>
+                            {footerData.services.links.map((service, index) => (
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
+                                    {service}
+                                </Typography>
+                            ))}
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sm={12} md={5}>
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                                {footerData.newsletter.title}
+                            </Typography>
                             <Box
                                 sx={{
-                                    height: {md: "454px"},
-                                    background: `linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(${background.src})`,
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    width: "100%",
-                                    py: {md: "0px", xs: "40px"},
+                                    display: "flex",
+                                    alignItems: "center",
+                                    backgroundColor: "#353E47",
+                                    borderRadius: "0px",
+                                    padding: "10px",
+                                    mb: 2,
                                 }}
                             >
-                                <Grid
-                                    container
-                                    sx={{color: 'textGray', height: "100%"}}
+                                <TextField
+                                    placeholder={footerData.newsletter.placeholder}
+                                    variant="standard"
+                                    fullWidth
+                                    InputProps={{
+                                        disableUnderline: true,
+                                        style: {
+                                            color: "white",
+                                            fontSize: "14px",
+                                            backgroundColor: "transparent",
+                                            paddingRight: "10px",
+                                        },
+                                    }}
+                                    sx={{ flex: 1 }}
+                                />
+                                <Box
+                                    sx={{
+                                        width: "32px",
+                                        height: "32px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        marginLeft: "8px",
+                                        color: "white",
+                                        fontSize: "18px",
+                                        cursor: "pointer",
+                                    }}
                                 >
-                                    <Grid item sm={6} xs={12}>
-                                        <Box
-                                            sx={{
-                                                height: "100%",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: {sm: "center"},
-                                                px: {xs: "30px"},
-                                                cursor: "pointer",
-                                            }}
-                                        >
-                                            <Box>
-                                                <Typography
-                                                    variant="h5"
-                                                    sx={{
-                                                        fontWeight: "500",
-                                                        mb: {sm: "30px", xs: "25px"},
-                                                    }}
-                                                >
-                                                    Company
-                                                </Typography>
-                                                <Box
-                                                    variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    Home
-                                                </Box>
-                                                <Box
-                                                    variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    About
-                                                </Box>
-                                                <Box
-                                                    variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    Portfolio
-                                                </Box>
-                                                <Box
-                                                    variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    Service
-                                                </Box>
-                                                <Box
-                                                    variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    Contact Us
-                                                </Box>
-                                            </Box>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item sm={6} xs={12}>
-                                        <Box
-                                            sx={{
-                                                height: "100%",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: {sm: "center"},
-                                                // px: {xs: "30px"},
-                                                cursor: "pointer",
-                                            }}
-                                        >
-                                            <Box>
-                                                <Typography
-                                                    variant="h5"
-                                                    sx={{
-                                                        fontWeight: "500",
-                                                        mb: {sm: "30px", xs: "25px"},
-                                                        mt: {sm: "0", xs: "30px"},
-                                                    }}
-                                                >
-                                                    Address
-                                                </Typography>
-                                                <Box
-                                                    // variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        display: 'flex',
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    <LocationOnIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 0.5}}>
-                                                        S-25/26 Satyam Plaza Raspaan Cross Road Nikol Ahmedabad,Gujarat
-                                                    </Typography>
-                                                </Box>
-                                                <Box
-                                                    // variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        display: 'flex',
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    <EmailIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 0.5}}>
-                                                        beyondtech.official@gmail.com
-                                                    </Typography>
-                                                </Box>
-                                                <Box
-                                                    // variant="li"
-                                                    sx={{
-                                                        fontSize: "17px",
-                                                        mb: "10px",
-                                                        display: 'flex',
-                                                        transition: ".5s",
-                                                        "&:hover": {color: 'crimson'},
-                                                    }}
-                                                >
-                                                    <LocalPhoneIcon fontSize={'14px'}/>
-                                                    <Typography sx={{ml: 0.5}}>
-                                                        +91 9016402670
-                                                    </Typography>
-                                                </Box>
-                                                <Box variant="li" sx={{fontSize: "17px", mt: 3}}>
-                                                    <FacebookIcon
-                                                        sx={{
-                                                            marginRight: "10px",
-                                                            fontSize: "30px",
-                                                            transition: ".3s",
-                                                            "&:hover": {
-                                                                transform: "translateY(-4px)",
-                                                                color: "white",
-                                                            },
-                                                        }}
-                                                    />{" "}
-                                                    <LinkedInIcon
-                                                        sx={{
-                                                            marginRight: "10px",
-                                                            fontSize: "30px",
-                                                            transition: ".3s",
-                                                            "&:hover": {
-                                                                transform: "translateY(-4px)",
-                                                                color: "white",
-                                                            },
-                                                        }}
-                                                    />{" "}
-                                                    <InstagramIcon
-                                                        sx={{
-                                                            marginRight: "10px",
-                                                            fontSize: "30px",
-                                                            transition: ".3s",
-                                                            "&:hover": {
-                                                                transform: "translateY(-4px)",
-                                                                color: "white",
-                                                            },
-                                                        }}
-                                                    />{" "}
-                                                    <TwitterIcon
-                                                        sx={{
-                                                            fontSize: "30px",
-                                                            transition: ".3s",
-                                                            "&:hover": {
-                                                                transform: "translateY(-4px)",
-                                                                color: "white",
-                                                            },
-                                                        }}
-                                                    />
-                                                </Box>
-                                            </Box>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12}
+                                    ➔
+                                </Box>
+                            </Box>
+                            <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>
+                                <Box
+
+                                >
+                                    <Box
                                         sx={{
-                                            width: "100%",
-                                            px: "20px",
-                                            alignSelf: "center",
-                                            mt: "30px",
+                                            mr: 1,
+                                            fontWeight: "900",
+                                            alignItems: "center",
                                         }}
                                     >
-                                        <Box
-                                            sx={{
-                                                alignSelf: {xs: "center"},
-                                                textAlign: {sm: "center"},
-                                            }}
-                                        >
-                                            Copyright © 2022 Rainbow-Themes. All Rights Reserved.
-                                        </Box>
-                                    </Grid>
-                                </Grid>
+                                        <CircleNotificationsIcon sx={{ fontSize: "30px" }} />
+                                    </Box>
+                                </Box>
+                                <Typography variant="body2" sx={{ color: "textGray" }}>
+                                    Please sign up to follow the latest news and events from us, we
+                                    promise not to spam your inbox.
+                                </Typography>
                             </Box>
                         </Box>
                     </Grid>
                 </Grid>
-            </Box>
-        </>
+
+                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
+                        <Typography variant="body2" sx={{ fontSize: "12px" }}>
+                            {footerData.footerBottom.left}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "right" } }}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                gap: "20px",
+                                flexWrap: "wrap",
+                                justifyContent: "center",
+                            }}
+                        >
+                            {footerData.footerBottom.links.map((link, index) => (
+                                <Typography key={index} variant="body2" sx={{ fontSize: "12px" }}>
+                                    {link}
+                                </Typography>
+                            ))}
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
     );
-};
+}
 
 export default Footer;
