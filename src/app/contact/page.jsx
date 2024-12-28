@@ -12,6 +12,8 @@ function Page() {
             <HeadingPage bgImg={bg1.src} heading={'Contact Us'} breadcrumbs={breadCrumbs}/>
             <Collaborate/>
             <Offices/>
+
+
         </>
     );
 }
