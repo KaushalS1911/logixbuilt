@@ -145,6 +145,7 @@ function Footer2() {
                                         },
                                         '&:hover .icon': {
                                             opacity: "1",
+                                            display:"flex"
                                         },
                                     }}
                                 >
