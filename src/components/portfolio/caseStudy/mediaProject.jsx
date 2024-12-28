@@ -7,6 +7,8 @@ import phoneimg2 from '../../../assets/images/portfolio/mediaProject/phone-02.pn
 import phoneimg3 from '../../../assets/images/portfolio/mediaProject/phone-03.png';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
+import  img2 from '../../../assets/images/portfolio/mediaProject/women.jpeg'
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const slides = [
     {
@@ -180,11 +182,120 @@ function MediaProject() {
                     </Box>
                 ))}
 
-                <Box>
+                <Box sx={{ padding: "96px 0" }}>
+                        <Box
+                            sx={{
+                                background: "#F4FAFE",
+                                borderRadius: "15px",
+                                position:"relative",
+                                padding: "32px",
+                                width: "100%",
+                            }}
+                        >
+                            <Grid container alignItems="center">
+                                {/* Image */}
+                                <Grid item xs={12} md={3}  display="flex" justifyContent="center">
+                                    <Box>
+                                        <Image
+                                            src={img2}
+                                            alt="Jacquelle Amankonah Horton"
+                                            style={{
+                                                borderRadius: "10px",
+                                                height:"280px",
+                                                width:"280px"
+                                            }}
+                                        />
+                                    </Box>
+                                </Grid>
 
+                                <Grid item xs={12} md={9}>
+                                    <Box
+                                        sx={{
+                                            margin: { md: "30px 80px", xs: "30px 10px" },
+                                        }}
+                                    >
+                                        <Typography
+                                            variant="h5"
+                                            sx={{
+                                                fontWeight: 700,
+                                                color: "#0F172A",
+                                                paddingBottom: "10px",
+                                            }}
+                                        >
+                                            Jacquelle Amankonah Horton
+                                        </Typography>
+                                        <Typography
+                                            variant="body1"
+                                            sx={{
+                                                fontWeight: 500,
+                                                color: "#4A4A68",
+                                                paddingBottom: "20px",
+                                            }}
+                                        >
+                                            Founder & CEO
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            sx={{
+                                                fontWeight: 500,
+                                                color: "#4A4A68",
+                                                lineHeight: "25px",
+                                            }}
+                                        >
+                                            Altar.io added value to the project far beyond the intended scope of work. Their advice
+                                            and guidance about running a new business have been invaluable. The team is clearly
+                                            passionate about the work and shares innovative ideas and solutions to drive the project
+                                            forward.
+                                        </Typography>
+                                    </Box>
+                                    <Box
+                                        sx={{
+                                            position: "absolute",
+                                            top:"0",
+                                            right:"0"
+                                        }}
+                                    >
+                                        <FormatQuoteIcon
+                                            sx={{
+                                                fontSize: {sm:"150px" , xs:"100px"},
+                                                color:"#16A5E3"
+                                            }}
+                                        />
+                                    </Box>
+
+                                </Grid>
+                            </Grid>
+                        </Box>
                 </Box>
 
             </Container>
+
+            <Box>
+                <Grid container>
+                    <Grid item xs={12} md={6}>
+                        <Box sx={{
+                            background:"#F4FAFE",
+                            padding: {md:"100px" , xs:"40px 16px"},
+                            display:"flex",
+                            justifyContent:{md:"end" , xs:"start"}
+                        }}>
+                            <Box>
+                                <Box sx={{fontSize:"18px" , fontWeight:"500",color:"#0FA4EA"}}>Privious Project</Box>
+                                <Box sx={{fontSize:"24px",fontWeight:"700",color:"#0F172A"}}>Apiax</Box>
+                            </Box>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Box sx={{
+                            background:"#E8F4FD",
+                            padding: {md:"100px" , xs:"40px 16px"},
+                        }}>
+                                <Box sx={{fontSize:"18px" ,fontWeight:"500", color:"#0FA4EA"}}>Next Project</Box>
+                                <Box sx={{fontSize:"24px",fontWeight:"700",color:"#0F172A"}}>Movie Me!</Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
         </Box>
     );
 }
