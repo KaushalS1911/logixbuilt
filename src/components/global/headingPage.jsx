@@ -30,7 +30,6 @@ function HeadingPage({bgImg , heading , breadcrumbs}) {
                     zIndex: 1,
                 }} />
 
-
                 <Box sx={{
                     fontWeight: "400",
                     fontSize: { md: "60px", xs: "40px" },
@@ -59,7 +58,8 @@ function HeadingPage({bgImg , heading , breadcrumbs}) {
                         margin: "0 0 25px",
                         display:"flex",
                         alignItems:"center",
-                    }} />
+                    }}
+                    />
 
                     <Box sx={{
                         fontWeight: "500",
@@ -85,7 +85,7 @@ function HeadingPage({bgImg , heading , breadcrumbs}) {
                                 </Box>
                                 {index < breadcrumbs.length - 1 && (
                                     <Box sx={{
-                                        padding: "0 5px",
+                                        padding: "0 15px",
                                         display: "flex",
                                         alignItems: "center",
                                     }}>

@@ -164,11 +164,9 @@ function Footer2() {
                                     </Box>
                                     {service}
                                 </Typography>
-
                             ))}
                         </Box>
                     </Grid>
-
 
                     <Grid item xs={12} sm={12} md={5}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
