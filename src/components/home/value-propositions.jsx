@@ -37,7 +37,7 @@ const valuePropositions = [
 const ValuePropositions = () => {
     return (
         <Container maxWidth="xl" sx={{paddingY: 6}}>
-            <Grid container spacing={4} justifyContent="center">
+            <Grid container spacing={0} justifyContent="center">
                 {valuePropositions.map((item, index) => (
                     <Grid
                         item

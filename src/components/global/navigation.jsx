@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -18,8 +18,8 @@ import imgBlack from '../../assets/images/navigation/Png-04.png';
 import imgWhite from '../../assets/images/navigation/Png-03.png';
 import EastIcon from '@mui/icons-material/East';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
-import { usePathname, useRouter } from "next/navigation";
-import { Typography } from "@mui/material";
+import {usePathname, useRouter} from "next/navigation";
+import {Typography} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
 function Navigation() {
@@ -36,13 +36,13 @@ function Navigation() {
     };
 
     const navItems = [
-        { name: 'Home', route: '/' },
-        { name: 'Pages', route: '/pages' },
-        { name: 'About', route: '/about' },
-        { name: 'Services', route: '/services' },
-        { name: 'Portfolio', route: '/portfolio' },
-        { name: 'Blog', route: '/blog' },
-        { name: 'Contact', route: '/contact' },
+        {name: 'Home', route: '/'},
+        {name: 'Pages', route: '/pages'},
+        {name: 'About', route: '/about'},
+        {name: 'Services', route: '/services'},
+        {name: 'Portfolio', route: '/portfolio'},
+        {name: 'Blog', route: '/blog'},
+        {name: 'Contact', route: '/contact'},
     ];
 
     useEffect(() => {
@@ -74,20 +74,20 @@ function Navigation() {
                     transition: 'all 0.3s ease',
                 }}
             >
-                <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Toolbar sx={{justifyContent: 'space-between'}}>
+                    <Box sx={{height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                         <Box onClick={() => router.push('/')}>
                             <Image
                                 src={(scrolled || path === '/') ? imgBlack : imgWhite} // Switch logo based on condition
                                 alt="Logo"
-                                style={{ width: '230px', height: '90px', objectFit: 'cover' }}
+                                style={{width: '230px', height: '90px', objectFit: 'cover'}}
                             />
                         </Box>
                     </Box>
 
-                    <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center' }}>
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: '15px', marginLeft: '20px' }}>
-                            {navItems.map(({ name, route }) => (
+                    <Box sx={{display: {xs: 'none', lg: 'flex'}, alignItems: 'center'}}>
+                        <Box sx={{display: {xs: 'none', sm: 'flex'}, gap: '15px', marginLeft: '20px'}}>
+                            {navItems.map(({name, route}) => (
                                 <Box key={name}>
                                     <Button
                                         sx={{
@@ -96,7 +96,7 @@ function Navigation() {
                                             cursor: 'pointer',
                                             transition: '0.5s',
                                             fontSize: 15,
-                                            ':hover': { backgroundColor: 'unset', textDecoration: 'underline' },
+                                            ':hover': {backgroundColor: 'unset', textDecoration: 'underline'},
                                         }}
                                         onClick={() => router.push(route)}
                                     >
@@ -107,7 +107,7 @@ function Navigation() {
                         </Box>
                     </Box>
 
-                    <Box sx={{ display: { lg: 'flex', xs: 'none' } }}>
+                    <Box sx={{display: {lg: 'flex', xs: 'none'}}}>
                         <Button
                             variant="outlined"
                             sx={{
@@ -117,20 +117,20 @@ function Navigation() {
                                 borderColor: (scrolled || path === '/') ? '#000' : '#fff',
                                 color: (scrolled || path === '/') ? '#000' : '#fff',
                                 textWrap: 'nowrap',
-                                ':hover': { backgroundColor: '#000', color: '#fff' },
+                                ':hover': {backgroundColor: '#000', color: '#fff'},
                             }}
                         >
                             Plan With Us
-                            <Box sx={{ marginLeft: '10px', display: 'flex', alignItems: 'center' }}>
-                                <EastIcon />
+                            <Box sx={{marginLeft: '10px', display: 'flex', alignItems: 'center'}}>
+                                <EastIcon/>
                             </Box>
                         </Button>
                     </Box>
-                    <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexDirection: 'column', alignItems: 'flex-start' }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Box sx={{display: {xs: 'none', sm: 'flex'}, flexDirection: 'column', alignItems: 'flex-start'}}>
+                        <Box sx={{display: 'flex', alignItems: 'center'}}>
                             <Box
                                 sx={{
-                                    display: { lg: 'flex', xs: 'none' },
+                                    display: {lg: 'flex', xs: 'none'},
                                     alignItems: 'center',
                                     mr: 2,
                                     background: '#000',
@@ -139,14 +139,14 @@ function Navigation() {
                                     borderRadius: '50%',
                                 }}
                             >
-                                <PhoneCallbackIcon />
+                                <PhoneCallbackIcon/>
                             </Box>
                             <Typography
                                 variant="subtitle1"
                                 sx={{
                                     fontWeight: '500',
                                     fontSize: '18px',
-                                    display: { xl: 'flex', xs: 'none' },
+                                    display: {xl: 'flex', xs: 'none'},
                                     alignItems: 'center',
                                     color: (scrolled || path === '/') ? '#000' : "#fff"
                                 }}
@@ -156,28 +156,28 @@ function Navigation() {
                         </Box>
                     </Box>
 
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: '15px'}}>
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
                                 color: (scrolled || path === '/') ? '#000' : '#fff',
-                                display: { lg: 'flex', xs: 'none' },
-                                ':hover': { backgroundColor: '#000', color: '#fff' },
+                                display: {lg: 'flex', xs: 'none'},
+                                ':hover': {backgroundColor: '#000', color: '#fff'},
                             }}
                         >
-                            <SearchIcon style={{ fontSize: '26px' }} />
+                            <SearchIcon style={{fontSize: '26px'}}/>
                         </IconButton>
 
                         <IconButton
                             sx={{
                                 border: '1px solid #8E8E8EFF',
                                 color: (scrolled || path === '/') ? '#000' : '#fff',
-                                display: { lg: 'flex', xs: 'flex' },
-                                ':hover': { backgroundColor: '#000', color: '#fff' },
+                                display: {lg: 'flex', xs: 'flex'},
+                                ':hover': {backgroundColor: '#000', color: '#fff'},
                             }}
                             onClick={toggleDrawer(true)}
                         >
-                            <MenuIcon style={{ fontSize: '26px' }} />
+                            <MenuIcon style={{fontSize: '26px'}}/>
                         </IconButton>
                     </Box>
                 </Toolbar>
@@ -189,7 +189,7 @@ function Navigation() {
                 onClose={toggleDrawer(false)}
                 sx={{
                     '& .MuiDrawer-paper': {
-                        width: { xs: '100%', sm: 300 },
+                        width: {xs: '100%', sm: 300},
                         height: '100%',
                     },
                 }}
@@ -212,23 +212,23 @@ function Navigation() {
                             right: '10px',
                             background: '#000',
                             color: '#fff',
-                            ':hover': { backgroundColor: '#333' },
+                            ':hover': {backgroundColor: '#333'},
                         }}
                         onClick={toggleDrawer(false)}
                     >
-                        <CloseIcon />
+                        <CloseIcon/>
                     </IconButton>
 
                     <Box onClick={() => router.push('/')}>
                         <Image
                             src={(scrolled || path === '/') ? imgBlack : imgWhite}
                             alt="Logo"
-                            style={{ width: '230px', height: '90px', objectFit: 'cover' }}
+                            style={{width: '230px', height: '90px', objectFit: 'cover'}}
                         />
                     </Box>
 
                     <List>
-                        {navItems.map(({ name, route }) => (
+                        {navItems.map(({name, route}) => (
                             <ListItem key={name} disablePadding>
                                 <Box
                                     onClick={() => router.push(route)}
