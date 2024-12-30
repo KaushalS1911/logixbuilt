@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid } from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 import Img1 from "../../../assets/images/services/businessventure/Img1.png";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
@@ -21,74 +21,76 @@ function Businessventure(props) {
 
     return (
         <Box sx={{ paddingTop: "68px", padding: "0px 32px" }}>
-            <Grid container spacing={3}>
-                <Grid item lg={5}>
-                    <Box sx={{
-                        fontSize: "36px",
-                        fontWeight: "700",
-                        lineHeight: "45px"
-                    }}>
-                        Why choose Altar for your <br /> next business venture?
-                    </Box>
-                    <Box sx={{
-                        fontSize: "16px",
-                        padding: "20px 0 25px 0"
-                    }}>
-                        Our company was formed by ex-startup founders that learned <br /> how to bring new innovative products to market by doing it.
-                    </Box>
-                    {Data.map((item, index) => (
+            <Container maxWidth={"xl"}>
+                <Grid container spacing={3}>
+                    <Grid item lg={5}>
                         <Box sx={{
-                            background: "#FFFFFF",
-                            borderRadius: "10px",
-                            padding: "32px",
-                            margin: "20px 0",
-                            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)"
-                        }} key={index}>
-                            <Box sx={{ display: "flex", textAlign: "center", alignItems: "center", paddingBottom: "20px" }}>
-                                <Box sx={{
-                                    bgcolor: "#F2EEF8",
-                                    height: "32px",
-                                    width: "32px",
-                                    borderRadius: "5px",
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    color: "#B6A4D6"
-                                }}>
-                                    {item.icon}
-                                </Box>
-                                <Box sx={{
-                                    color: "#000",
-                                    fontWeight: "bold",
-                                    paddingLeft: "15px"
-                                }}>
-                                    {item.title}
-                                </Box>
-                            </Box>
-                            <Box sx={{
-                                color: "#555571",
-                                lineHeight: "25px"
-                            }}>
-                                {item.des}
-                            </Box>
+                            fontSize: "36px",
+                            fontWeight: "700",
+                            lineHeight: "45px"
+                        }}>
+                            Why choose Altar for your <br /> next business venture?
                         </Box>
-                    ))}
-                </Grid>
-                <Grid item lg={7}>
-                    <Box sx={{ display: 'flex', justifyContent: 'flex-end',paddingLeft:"30px" }}>
-                        <Image
-                            src={Img1}
-                            alt="#"
-                            style={{
-                                objectFit: "cover",
-                                width: "100%",
-                                height: "950px",
+                        <Box sx={{
+                            fontSize: "16px",
+                            padding: "20px 0 25px 0"
+                        }}>
+                            Our company was formed by ex-startup founders that learned <br /> how to bring new innovative products to market by doing it.
+                        </Box>
+                        {Data.map((item, index) => (
+                            <Box sx={{
+                                background: "#FFFFFF",
                                 borderRadius: "10px",
-                            }}
-                        />
-                    </Box>
+                                padding: "32px",
+                                margin: "20px 0",
+                                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)"
+                            }} key={index}>
+                                <Box sx={{ display: "flex", textAlign: "center", alignItems: "center", paddingBottom: "20px" }}>
+                                    <Box sx={{
+                                        bgcolor: "#F2EEF8",
+                                        height: "32px",
+                                        width: "32px",
+                                        borderRadius: "5px",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        color: "#B6A4D6"
+                                    }}>
+                                        {item.icon}
+                                    </Box>
+                                    <Box sx={{
+                                        color: "#000",
+                                        fontWeight: "bold",
+                                        paddingLeft: "15px"
+                                    }}>
+                                        {item.title}
+                                    </Box>
+                                </Box>
+                                <Box sx={{
+                                    color: "#555571",
+                                    lineHeight: "25px"
+                                }}>
+                                    {item.des}
+                                </Box>
+                            </Box>
+                        ))}
+                    </Grid>
+                    <Grid item lg={7}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end',paddingLeft:"30px" }}>
+                            <Image
+                                src={Img1}
+                                alt="#"
+                                style={{
+                                    objectFit: "cover",
+                                    width: "100%",
+                                    height: "950px",
+                                    borderRadius: "10px",
+                                }}
+                            />
+                        </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Container>
         </Box>
     );
 }

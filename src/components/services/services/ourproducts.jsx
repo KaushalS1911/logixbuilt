@@ -1,41 +1,37 @@
 import React from 'react';
 import {Box, Button, Container} from "@mui/material";
 import { Grid, Typography, Card, CardContent } from '@mui/material';
+import Img1 from "../../../assets/images/services/ourproducts/tech-figma.svg"
+import Img2 from "../../../assets/images/services/ourproducts/tech-nativescript.svg"
+import Img3 from "../../../assets/images/services/ourproducts/tech-node-js.svg"
+import Img4 from "../../../assets/images/services/ourproducts/tech-express-js.svg"
+import Image from "next/image";
 
 function Ourproducts(props) {
-    const data = {
-        "Front-End": ["Angular", "React", "Vue", "Next.js", "Single-Spa", "Alpine.js", "Flutter"],
-        "Back-End & Databases": [
-            "Node.js",
-            "Express.js",
-            "NestJS",
-            "Python",
-            "FastAPI",
-            "MongoDB",
-            "PostgreSQL",
-            "Redis",
-            "AWS",
-            "Cloudflare",
-            "RabbitMQ",
-        ],
-        Infrastructure: ["Amazon EKS", "Google Cloud", "AWS", "Microsoft Azure", "Digital Ocean", "Kubernetes", "Red Hat", "Cloudflare"],
-        "AI Data Frameworks": [
-            "LlamaIndex",
-            "AutoGen",
-            "Langchain",
-            "Hugging Face Transformers",
-            "DeepSpeed",
-            "AutoGPT",
-            "Semantic Kernel",
-            "Haystack",
-            "PrivateGPT",
-        ],
-    };
+
+
+        const data = {
+            "FRONT-END": [
+                { name: "Figma", image: Img1 },
+                { name: "NativeScript", image: Img2 },
+
+            ],
+            "BACK-END & DATABASES": [
+                { name: "Node.js", image: Img3 },
+
+            ],
+            "INFRASTRUCTURE": [
+                { name: "MongoDB", image: Img4 },
+
+            ]
+
+        };
+
     return (
         <Box sx={{padding:"100px 0 160px"}}>
            <Container maxWidth={"xl"}>
                <Box sx={{
-                   fontSize:"62px",
+                   fontSize: {md:"62px",sm:"48px"},
                    fontWeight:"bold",
 
                }}>
@@ -53,7 +49,7 @@ function Ourproducts(props) {
                            {/* Category Title */}
                            <Typography variant="h5" sx={{
                                color:"#4A4A68",
-                               fontSize:"17px",
+                               fontSize:"16px",
                                fontWeight:"500",
                                padding:"20px 50px 20px 0",
                                display:"inline-block"
@@ -70,19 +66,23 @@ function Ourproducts(props) {
                                }}
                            >
                                {data[category].map((tech) => (
-                                   <Box
-                                       key={tech}
-                                       sx={{
-                                           padding: '10px 24px',
-                                           borderRadius: 2,
-                                           backgroundColor: '#f5f5f5',
-                                           fontSize: '14px',
-                                           fontWeight: 400,
-                                           whiteSpace: 'nowrap',
-                                       }}
-                                   >
-                                       {tech}
-                                   </Box>
+                                  <Box sx={{display:"flex",padding: '10px 24px',
+                                      borderRadius: 2,
+                                      backgroundColor: '#f5f5f5',}}>
+                                      <Image src={tech.image} alt={"#"} ></Image>
+                                          <Box
+                                              key={tech.name + 1}
+                                              sx={{
+                                                  marginLeft:"15px",
+                                                  fontSize: '14px',
+                                                  fontWeight: 400,
+                                                  whiteSpace: 'nowrap',
+                                              }}
+                                          >
+                                              {tech.name}
+                                          </Box>
+
+                                  </Box>
                                ))}
                            </Box>
                        </Box>

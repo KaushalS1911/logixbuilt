@@ -216,6 +216,8 @@ function Service(props) {
                     }}
                 />
             </Box>
+            <Container maxWidth={"xl"}>
+
 
             {/* Main Content Section */}
             <Grid container>
@@ -296,8 +298,7 @@ function Service(props) {
                     </Box>
                 </Grid>
             </Grid>
-
-
+            </Container>
             {/* Key Benefits Section */}
             <Box sx={{background: "#141C25", width: "100%"}}>
                 <Container maxWidth={"xl"}>
