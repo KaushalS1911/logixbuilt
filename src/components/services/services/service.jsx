@@ -154,7 +154,6 @@ function Service(props) {
         },
     ];
 
-
     const handleNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slideNext();
@@ -170,7 +169,7 @@ function Service(props) {
         <Box>
             <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',paddingTop:"30px"}}>
                 <Container maxWidth={"xl"}>
-                    {/* Header Section */}
+
                     <Box sx={{ width: '80%', mx: {xs:'auto',md:"0"} }}>
                         <Box
                             sx={{
@@ -178,9 +177,9 @@ function Service(props) {
                                 fontWeight: "700",
                                 lineHeight: "80px",
                                 display: "flex",
-                                justifyContent: { xs: "center", lg: "flex-start" }, // Center on small screens, start on large
+                                justifyContent: { xs: "center", lg: "flex-start" },
                                 alignItems: "center",
-                                textAlign: { xs: "center", lg: "left" }, // Center text for smaller screens
+                                textAlign: { xs: "center", lg: "left" },
                             }}
                         >
                             Custom Software Development
@@ -189,7 +188,7 @@ function Service(props) {
                             sx={{
                                 fontSize: "24px",
                                 paddingTop: "10px",
-                                 // Center-align text for smaller screens
+
                             }}
                         >
                             Whatever problem you’re solving, choose the right tech and build the right User Experience
@@ -219,58 +218,60 @@ function Service(props) {
             <Container maxWidth={"xl"}>
 
 
-            {/* Main Content Section */}
             <Grid container>
-                {/* Image Section */}
                 <Grid
                     item
                     lg={5}
                     xs={12}
                     sx={{
-                        // Image below text on smaller screens, and at the top on large screens
+
                         position: "relative",
                         width:"100%"
-                        // Responsive height for the image
                     }}
                 >
-
                     <Box sx={{}}>
                         <Typography component="img" src={Img2.src} alt="description"
-                                    sx={{maxHeight: "100%", maxWidth: "100%",position:{xs:'unset',lg:'absolute'},bottom:{xs:'unset',lg:'-64px'}, display:"flex",justifyContent:"center",textAlign:"center"}}/>
+                                    sx={{
+                                        maxHeight: "100%",
+                                        maxWidth: "100%",
+                                        position:{xs:'unset',lg:'absolute'},
+                                        bottom:{xs:'unset',lg:'-64px'},
+                                        display:"flex",
+                                        justifyContent:"center",
+                                        textAlign:"center"
+                                    }}
+                        />
                     </Box>
                 </Grid>
 
-                {/* Text Section */}
                 <Grid
                     item
                     md={7}
                     xs={12}
                     sx={{
-                        padding: {xs: "20px 15px", sm: "30px 20px", lg: "250px 20px 50px 50px"}, // Responsive padding
+                        padding: {xs: "20px 15px", sm: "30px 20px", lg: "250px 20px 50px 50px"},
                     }}
                 >
                     <Box>
-                        {/* Heading */}
                         <Box
                             sx={{
-                                fontSize: {xs: "24px", sm: "28px", lg: "36px"}, // Responsive font size
+                                fontSize: {xs: "24px", sm: "28px", lg: "36px"},
                                 fontWeight: "700",
                                 display: "flex",
                                 justifyContent: {xs: "center", lg: "flex-start"},
                                 alignItems: "center",
                                 lineHeight: {xs: "30px", sm: "38px", lg: "45px"},
-                                textAlign: {xs: "center", lg: "left"}, // Center-align on smaller screens
+                                textAlign: {xs: "center", lg: "left"},
                             }}
                         >
                             What is custom software development?
                         </Box>
 
-                        {/* Paragraphs */}
                         <Box
                             sx={{
                                 fontSize: {xs: "14px", sm: "16px"},
                                 padding: {xs: "10px 0", lg: "15px 0"},
-                                textAlign: {xs: "center", lg: "left"}, // Center-align text for smaller screens
+                                textAlign: {xs: "center", lg: "left"},
                             }}
                         >
                             Custom software development allows you to design, build, and launch a solution tailored
@@ -298,8 +299,10 @@ function Service(props) {
                     </Box>
                 </Grid>
             </Grid>
+
+
             </Container>
-            {/* Key Benefits Section */}
+
             <Box sx={{background: "#141C25", width: "100%"}}>
                 <Container maxWidth={"xl"}>
                     <Box
@@ -347,7 +350,6 @@ function Service(props) {
 
                     <Box sx={{backgroundColor: "#141C25", padding: "140px 0 140px 0"}}>
 
-                        {/* Title Section */}
                         <Grid container>
                             <Grid item lg={9}>
                                 <Box sx={{color: "#fff", marginBottom: "40px"}}>
@@ -404,7 +406,6 @@ function Service(props) {
                             </Grid>
                         </Grid>
 
-                        {/* Swiper Slider */}
                         <Swiper
                             modules={[Navigation, Autoplay]}
                             loop={true}
@@ -435,7 +436,7 @@ function Service(props) {
                                             height: "770px",
                                             display: "flex",
                                             flexDirection: "column",
-                                            justifyContent: "space-between", // Distributes space between content and button
+                                            justifyContent: "space-between",
                                         }}
                                     >
                                         <Box sx={{
@@ -446,7 +447,6 @@ function Service(props) {
                                         }}>
                                             {project.title}
                                         </Box>
-                                        {/* Image Section */}
                                         <Box
                                             sx={{
                                                 height: "320px",
@@ -456,7 +456,6 @@ function Service(props) {
                                                 borderRadius: "10px",
                                             }}
                                         />
-                                        {/* Text Section */}
                                         <Box sx={{padding: "20px 0"}}>
                                             <Box sx={{
                                                 fontSize: "12px",
@@ -470,7 +469,6 @@ function Service(props) {
                                                 {project.description}
                                             </Box>
                                         </Box>
-                                        {/* Button Section */}
                                         <Box sx={{paddingBottom: "10px", marginTop: "auto"}}>
                                             <Button
                                                 sx={{
@@ -485,7 +483,7 @@ function Service(props) {
                                                         backgroundColor: "#e7107e",
                                                         color: "#fff",
                                                     },
-                                                    transition: "background-color 0.3s, color 0.3s", // Smooth transition
+                                                    transition: "background-color 0.3s, color 0.3s",
                                                 }}
                                             >
                                                 {project.btn}
@@ -506,7 +504,7 @@ function Service(props) {
                             fontWeight: "700",
                             paddingBottom: "30px",
                             textAlign: "center",
-                            paddingLeft:"20px"// Center the title
+                            paddingLeft:"20px"
                         }}
                     >
                         How it works
@@ -551,7 +549,6 @@ function Service(props) {
                                     >
                                         {section.description}
                                     </Typography>
-                                    {/* Phase Deliverables Heading */}
                                     <Typography
                                         variant="h6"
                                         sx={{
@@ -563,7 +560,6 @@ function Service(props) {
                                     >
                                         Phase deliverables:
                                     </Typography>
-                                    {/* Two-Column Layout for Deliverables */}
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} sm={6}>
                                             <List>
@@ -602,8 +598,6 @@ function Service(props) {
                     ))}
                 </Grid>
             </Container>
-
-
         </Box>
     );
 }

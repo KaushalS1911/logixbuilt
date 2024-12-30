@@ -110,7 +110,7 @@ function Capabilities() {
                                         transition: "filter 0.3s ease", // Smooth transition for hover effect
                                         zIndex: 1,
                                     }}
-                                ></Box>
+                                />
 
                                 <Box
                                     sx={{

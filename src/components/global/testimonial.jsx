@@ -128,7 +128,7 @@ function Testimonial() {
                                     <Typography
                                         variant="p"
                                         sx={{
-                                            fontSize: {md: "36px", sm: "30px", xs: "20px"},
+                                            fontSize: {md: "32px", sm: "28px", xs: "20px"},
                                             fontWeight: "500",
                                             position: "relative",
                                             zIndex: "11",

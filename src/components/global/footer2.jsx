@@ -126,7 +126,7 @@ function Footer2() {
 
                     <Grid item xs={12} sm={6} md={3}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3,color:"#C4C4C4",marginLeft:"23px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3, marginLeft: "23px" }}>
                                 {footerData.services.title}
                             </Typography>
                             {footerData.services.links.map((service, index) => (
@@ -139,30 +139,31 @@ function Footer2() {
                                         alignItems: "center",
                                         transition: "color 0.5s, transform 0.5s",
                                         color: "#C4C4C4",
+                                        cursor: "pointer",
                                         '&:hover': {
                                             color: "#fff",
                                             transform: "translateX(10px)",
                                         },
                                         '&:hover .icon': {
-                                            opacity: "1",
+                                            opacity: 1,
+                                            transform: "translateX(5px)",
                                         },
                                     }}
                                 >
                                     <Box
-                                        className={"icon"}
+                                        className="icon"
                                         sx={{
                                             display: "flex",
                                             alignItems: "center",
-                                            padding: "0 10px 0 0",
-                                            opacity: "0",
-                                            transition: "opacity 0.5s",
+                                            marginRight: "10px",
+                                            opacity: 0,
+                                            transition: "opacity 0.5s, transform 0.5s",
                                         }}
                                     >
-                                        <EastIcon fontSize={"xx-large"} />
+                                        <EastIcon fontSize="small"/>
                                     </Box>
                                     {service}
                                 </Typography>
-
                             ))}
                         </Box>
                     </Grid>
@@ -203,14 +204,12 @@ function Footer2() {
                                         height: "32px",
                                         display: "flex",
                                         alignItems: "center",
-                                        justifyContent: "center",
-                                        marginLeft: "8px",
                                         color: "white",
                                         fontSize: "18px",
                                         cursor: "pointer",
                                     }}
                                 >
-                                    ➔
+                                    <EastIcon/>
                                 </Box>
                             </Box>
                             <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>

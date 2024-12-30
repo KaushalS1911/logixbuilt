@@ -117,7 +117,10 @@ const Clients = () => {
                                     768: {
                                         slidesPerView: 3,
                                     },
-                                    480: {
+                                    425: {
+                                        slidesPerView: 2,
+                                    },
+                                    320: {
                                         slidesPerView: 1,
                                     },
                                 }}
