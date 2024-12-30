@@ -3,7 +3,7 @@ import React, {useRef} from 'react';
 import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import bgImg from '../../assets/images/home/ourmission/overvision.webp';
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Autoplay , Navigation} from "swiper/modules"; // Include Autoplay module
+import {  Autoplay , Navigation} from "swiper/modules";
 import "swiper/css";
 import img1 from '../../assets/images/home/ourmission/overmission.png'
 import Image from "next/image";

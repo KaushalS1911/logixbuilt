@@ -44,7 +44,6 @@ const AboutSlider = () => {
     return (
         <>
             <Box>
-
                 <Box>
                     <Typography
                         component={"img"}
@@ -58,7 +57,6 @@ const AboutSlider = () => {
                         }}
                     />
                 </Box>
-
                 <Box>
                     <Box
                         sx={{
