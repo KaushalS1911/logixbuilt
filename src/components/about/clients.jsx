@@ -126,7 +126,7 @@ const Clients = () => {
                                 }}
                             >
                                 {logoData.map((logo) => (
-                                    <SwiperSlide key={logo.id}>
+                                    <SwiperSlide key={logo}>
                                         <Box
                                             sx={{
                                                 border: "1px solid #D2D4D5",

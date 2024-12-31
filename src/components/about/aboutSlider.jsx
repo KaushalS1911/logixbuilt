@@ -46,8 +46,9 @@ const AboutSlider = () => {
             <Box>
                 <Box>
                     <Typography
-                        component={"img"}
+                        component="img"
                         src={image.src}
+                        alt={image.alt || "Image description"}
                         sx={{
                             backgroundSize: "cover",
                             backgroundPosition: "center",
@@ -56,6 +57,7 @@ const AboutSlider = () => {
                             objectFit: "cover",
                         }}
                     />
+
                 </Box>
                 <Box>
                     <Box
@@ -83,7 +85,7 @@ const AboutSlider = () => {
                             }}
                         >
                             {timelineData.map((item, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={index + 1}>
                                     <Box
                                         sx={{
                                             ":hover .dot": {

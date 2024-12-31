@@ -121,7 +121,7 @@ const TeamPage = () => {
                             'Say No to Laziness',
                             'We are One Big Family',
                         ].map((text, index) => (
-                            <List>
+                            <List key={index}>
                                 <ListItem>
                                     <CheckIcon sx={{ color: '#00E676', mr: '16px' }} />
                                     <ListItemText primary={text} sx={{ color: '#FFF', fontSize: '17px', fontWeight: '400' }} />

@@ -65,7 +65,6 @@ function MediaProject() {
     return (
         <Box>
             <Container maxWidth="lg" sx={{ padding: { xs: '16px', sm: '32px' } }}>
-                {/* Client Section */}
                 <Grid container spacing={4} alignItems="center">
                     <Grid item xs={12} md={6}>
                         <Box sx={{ padding: { xs: '8px 0', md: '10px 0' } }}>
@@ -119,7 +118,7 @@ function MediaProject() {
                 </Grid>
 
                 {slides.map((item, index) => (
-                    <Box key={index} sx={{ padding: '64px 0px' }}>
+                    <Box key={index + 1} sx={{ padding: '64px 0px' }}>
                         <Grid
                             container
                             spacing={4}
@@ -195,7 +194,6 @@ function MediaProject() {
                             }}
                         >
                             <Grid container alignItems="center">
-                                {/* Image */}
                                 <Grid item xs={12} md={3}  display="flex" justifyContent="center">
                                     <Box>
                                         <Image

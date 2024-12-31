@@ -24,9 +24,11 @@ import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined
 import EastIcon from "@mui/icons-material/East";
 import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import Image from "next/image";
+import {useRouter} from "next/navigation";
 
 function Industries() {
     const swiperRef = useRef(null);
+    const router = useRouter();
     const allIndustries = [
         {
             title: "Private Equity",
@@ -179,13 +181,14 @@ function Industries() {
                             alignItems: "center",
                         }}
                     >
-                        <Box sx={{
-                            width: '100%',
-                            transition: '0.5s',
-                            overflow: 'hidden',
-                            ':hover img': {filter: 'grayscale(0%) !important'},
-                            ':hover ': {transform: 'scaleX(1.05)'},
-                        }}>
+                        <Box onClick={() => router.push('/home/industries')}
+                             sx={{
+                                 width: '100%',
+                                 transition: '0.5s',
+                                 overflow: 'hidden',
+                                 ':hover img': {filter: 'grayscale(0%) !important'},
+                                 ':hover ': {transform: 'scaleX(1.05)'},
+                             }}>
                             <Box sx={{
                                 position: 'relative',
                                 display: 'flex',

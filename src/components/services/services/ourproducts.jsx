@@ -7,7 +7,7 @@ import Img3 from "../../../assets/images/services/ourproducts/tech-node-js.svg"
 import Img4 from "../../../assets/images/services/ourproducts/tech-express-js.svg"
 import Image from "next/image";
 
-function Ourproducts(props) {
+function Ourproducts() {
 
 
         const data = {
@@ -28,7 +28,7 @@ function Ourproducts(props) {
         };
 
     return (
-        <Box sx={{padding:"100px 0 160px"}}>
+        <Box sx={{padding:"0 0 160px"}}>
            <Container maxWidth={"xl"}>
                <Box sx={{
                    fontSize: {md:"62px",sm:"48px"},
@@ -45,8 +45,7 @@ function Ourproducts(props) {
                </Box>
                <Box sx={{ padding: 4 }}>
                    {Object.keys(data).map((category) => (
-                       <Box key={category} sx={{ marginBottom: 6 }}>
-                           {/* Category Title */}
+                       <Box key={category} sx={{ marginBottom: 3 }}>
                            <Typography variant="h5" sx={{
                                color:"#4A4A68",
                                fontSize:"16px",
@@ -57,7 +56,6 @@ function Ourproducts(props) {
                                {category}
                            </Typography>
 
-                           {/* Tech List */}
                            <Box
                                sx={{
                                    display: 'flex',
@@ -69,7 +67,7 @@ function Ourproducts(props) {
                                   <Box sx={{display:"flex",padding: '10px 24px',
                                       borderRadius: 2,
                                       backgroundColor: '#f5f5f5',}}>
-                                      <Image src={tech.image} alt={"#"} ></Image>
+                                      <Image src={tech.image} alt={"#"} />
                                           <Box
                                               key={tech.name + 1}
                                               sx={{
@@ -101,7 +99,7 @@ function Ourproducts(props) {
                                    backgroundColor: "#e7107e",
                                    color: "#fff",
                                },
-                               transition: "background-color 0.3s, color 0.3s", // Smooth transition
+                               transition: "background-color 0.3s, color 0.3s",
                            }}
                        >
                            MORE ABOUT OUR TECH STACK

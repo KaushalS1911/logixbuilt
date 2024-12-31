@@ -1,14 +1,15 @@
 import React from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
+import {Box, Container, Typography, Button} from "@mui/material";
 import aboutData from "../../components/global/aboutProps";
+
 const Collab = () => {
-    const { image, title, description } = aboutData;
+    const {image, title, description} = aboutData;
     return (
         <Box>
             <Box
                 sx={{
                     backgroundImage: `url(${image.src})`,
-                    height: { xs: "60vh", sm: "70vh", md: "75vh", lg: "80vh" },
+                    height: "460px",
                     width: "100%",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -28,13 +29,13 @@ const Collab = () => {
                     <Container maxWidth="xl">
                         <Box
                             sx={{
-                                px: { xs: 2, sm: 4, md: 8, lg: 12 },
+                                px: {xs: 2, sm: 4, md: 8, lg: 12},
                             }}
                         >
                             <Typography
                                 variant="h2"
                                 sx={{
-                                    fontSize: { xs: "22px", sm: "28px", md: "36px", lg: "42px" },
+                                    fontSize: {xs: "22px", sm: "28px", md: "36px", lg: "42px"},
                                     color: "black",
                                     fontWeight: "500",
                                     fontFamily: "Poppins, sans-serif",
@@ -45,8 +46,8 @@ const Collab = () => {
                             </Typography>
                             <Typography
                                 sx={{
-                                    fontSize:"17px",
-                                    width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" },
+                                    fontSize: "17px",
+                                    width: {xs: "100%", sm: "90%", md: "80%", lg: "60%"},
                                     color: "black",
                                 }}
                             >
@@ -56,11 +57,11 @@ const Collab = () => {
                                 sx={{
                                     color: "white",
                                     backgroundColor: "black",
-                                    height: { xs: "40px", sm: "45px", md: "50px" },
-                                    width: { xs: "180px", sm: "200px", md: "220px" },
+                                    height: {xs: "40px", sm: "45px", md: "50px"},
+                                    width: {xs: "180px", sm: "200px", md: "220px"},
                                     marginTop: "40px",
                                     borderRadius: "30px",
-                                    fontSize: { xs: "12px", sm: "14px" },
+                                    fontSize: {xs: "12px", sm: "14px"},
                                     textTransform: "unset",
                                 }}
                             >
