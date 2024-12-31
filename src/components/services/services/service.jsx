@@ -24,8 +24,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Image from "next/image";
-import WestIcon from "@mui/icons-material/West";
-import EastIcon from "@mui/icons-material/East";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
 
 function Service(props) {
     const swiperRef = useRef(null);
@@ -166,7 +167,7 @@ function Service(props) {
         }
     };
     return (
-        <Box>
+        <Box className={"services"}>
             <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',paddingTop:"30px"}}>
                 <Container maxWidth={"xl"}>
 
@@ -366,41 +367,52 @@ function Service(props) {
                             <Grid item lg={3}>
                                 <Box sx={{position: 'relative'}}>
                                     <Button
+                                        className={"swiper-button-prev"}
                                         sx={{
                                             color: '#fff',
                                             position: 'absolute',
-                                            top: {lg: 15, md: 15},
-                                            left: {lg: 120, md: 20},
-                                            borderRadius: '50%',
-                                            height: '40px',
-                                            width: '40px',
-                                            background: "#e7107e",
+                                            top: { lg: 15, md: 15 },
+                                            left: { lg: 145, md: 20 },
+                                            borderRadius: '50%', // Ensures the button is round
+                                            height: '40px', // Equal height
+                                            width: '40px', // Equal width
+                                            minWidth: '40px', // Prevents Material-UI default styling
+
+                                            background: "#e7107e", // Button color
+                                            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             transition: '0.5s',
 
-                                            display: {xs: 'none', sm: 'none', md: 'none', lg: 'block'},
                                         }}
                                         onClick={handlePrev}
                                     >
-                                        <WestIcon/>
+                                        <KeyboardArrowLeftIcon fontSize="small" />
                                     </Button>
+
                                     <Button
+                                        className={"swiper-button-next"}
                                         sx={{
                                             color: '#fff',
                                             position: 'absolute',
-                                            top: {lg: 15, md: 15},
-                                            right: {lg: 35, md: -160},
-                                            background: "#e7107e",
-                                            borderRadius: '50%',
-                                            height: '40px',
-                                            width: '40px',
+                                            top: { lg: 15, md: 15 },
+                                            right: { lg: 55, md: -160 },
+                                            borderRadius: '50%', // Ensures the button is round
+                                            height: '40px', // Equal height
+                                            width: '40px', // Equal width
+                                            minWidth: '40px', // Prevents Material-UI default styling
+                                            background: "#e7107e", // Button color
+                                            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             transition: '0.5s',
 
-                                            display: {xs: 'none', sm: 'none', md: 'none', lg: 'block'},
                                         }}
                                         onClick={handleNext}
                                     >
-                                        <EastIcon/>
+                                        <KeyboardArrowRightIcon fontSize="small" />
                                     </Button>
+
                                 </Box>
 
                             </Grid>
