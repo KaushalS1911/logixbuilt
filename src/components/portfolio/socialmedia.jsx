@@ -55,6 +55,9 @@ function Socialmedia() {
                         padding: { md: '0 32px', sm: '0' },
                         backgroundColor: index % 2 === 0 ? '#fff' : '#000',
                         color: index % 2 === 0 ? '#000' : '#fff',
+                        height:{md:"600px"},
+                        display:"flex",
+                        alignItems:"center"
                     }}
                 >
                     <Box
@@ -123,20 +126,17 @@ function Socialmedia() {
                                             component="img"
                                             src={item.image.src}
                                             sx={{
-                                                display: 'block',
+                                                display: 'flex',
                                                 margin: '0 auto',
-                                                width: { lg: '880px', md: '711px', sm: '656px', xs: '520px' },
+                                                width: { lg: '880px', md: '711px', sm: '656px', xs: '410px' },
                                                 height: { lg: '450px', md: '400px', sm: '350px', xs: '311px' },
+
                                             }}
                                         />
                                     </Grid>
                                 </>
                             ) : (
-                                <Box sx={{
-                                    display:"flex",
-                                    height:"500px",
-                                    alignItems:"center"
-                                }}>
+                                <>
                                     <Grid item md={6} sm={12}>
                                         <Box
                                             component="img"
@@ -150,7 +150,7 @@ function Socialmedia() {
                                         />
                                     </Grid>
                                     <Grid item md={6} sm={12}>
-                                        <Box sx={{ marginBottom: '60px' }}>
+                                        <Box sx={{padding:"0 20px" }}>
                                             <Box
                                                 sx={{
                                                     color: '#0fa4ea',
@@ -201,7 +201,7 @@ function Socialmedia() {
                                             </Box>
                                         </Box>
                                     </Grid>
-                                </Box>
+                                </>
                             )}
                         </Grid>
                     </Box>
