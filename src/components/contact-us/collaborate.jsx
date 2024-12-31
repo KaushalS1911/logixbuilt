@@ -50,7 +50,7 @@ function Collaborate(props) {
     ]
     return (
         <Box sx={{padding:"85px 15px"}}>
-            <Container maxWidth={"xl"}>
+            <Container maxWidth={"xxl"}>
                 <Grid container>
                     <Grid item={12}>
 
@@ -155,9 +155,6 @@ function Collaborate(props) {
                                         }}/>
                                     </Box>
                                     <Box  sx={{paddingRight:"35px",transition:".2s"}}>
-                                        Skype
-                                    </Box>
-                                    <Box  sx={{paddingRight:"35px",transition:".2s"}}>
                                         <TelegramIcon sx={{
                                             "&:hover":{
                                                 color:"#28A5E5"
@@ -169,149 +166,197 @@ function Collaborate(props) {
                             </Box>
                         </Grid>
                             <Grid item lg={6} xs={12}>
-                        <Box >
-                                <Box sx={{ padding: {lg:"100px 30px 100px 15px"} }}>
-                                    <Grid container>
-                                        {/* Full Name Input */}
-                                        <Grid item xs={12} sm={6}>
-                                            <Box sx={{padding:"10px"}}>
+                                <Box>
+                                    <Box sx={{ padding: { lg: "100px 30px 100px 15px" } }}>
+                                        <Grid container>
+                                            {/* Full Name Input */}
+                                            <Grid item xs={12} sm={6}>
+                                                <Box sx={{ padding: "10px" }}>
+                                                    <TextField
+                                                        fullWidth
+                                                        placeholder="*Full Name"
+                                                        variant="outlined"
+                                                        InputProps={{
+                                                            sx: {
+                                                                color: "black", // Set font color to black
+                                                                borderRadius: "50px",
+                                                                background: "#f2f2f2",
+                                                                height: "50px",
+                                                                fontSize: "15px",
+                                                                padding: "6px 15px",
+                                                                "& .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "none", // Remove border
+                                                                },
+                                                                "&:hover .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "1px solid #000", // Add border on hover
+                                                                },
+                                                                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "2px solid #000", // Add border on focus
+                                                                },
+                                                            },
+                                                        }}
+                                                    />
+                                                </Box>
+                                            </Grid>
 
+                                            {/* Email Address Input */}
+                                            <Grid item xs={12} sm={6}>
+                                                <Box sx={{ padding: "10px" }}>
+                                                    <TextField
+                                                        fullWidth
+                                                        placeholder="*Email Address"
+                                                        variant="outlined"
+                                                        InputProps={{
+                                                            sx: {
+                                                                color: "black", // Set font color to black
+                                                                borderRadius: "50px",
+                                                                background: "#f2f2f2",
+                                                                height: "50px",
+                                                                fontSize: "15px",
+                                                                padding: "6px 15px",
+                                                                "& .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "none",
+                                                                },
+                                                                "&:hover .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "1px solid #000",
+                                                                },
+                                                                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "2px solid #000",
+                                                                },
+                                                            },
+                                                        }}
+                                                    />
+                                                </Box>
+                                            </Grid>
+
+                                            {/* Phone Number Input */}
+                                            <Grid item xs={12} sm={6}>
+                                                <Box sx={{ padding: "10px" }}>
+                                                    <TextField
+                                                        fullWidth
+                                                        placeholder="*Phone Number"
+                                                        variant="outlined"
+                                                        InputProps={{
+                                                            sx: {
+                                                                color: "black", // Set font color to black
+                                                                borderRadius: "50px",
+                                                                background: "#f2f2f2",
+                                                                height: "50px",
+                                                                fontSize: "15px",
+                                                                padding: "6px 15px",
+                                                                "& .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "none",
+                                                                },
+                                                                "&:hover .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "1px solid #000",
+                                                                },
+                                                                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "2px solid #000",
+                                                                },
+                                                            },
+                                                        }}
+                                                    />
+                                                </Box>
+                                            </Grid>
+
+                                            {/* Select Dropdown */}
+                                            <Grid item xs={12} sm={6}>
+                                                <Box sx={{ padding: "10px" }}>
+                                                    <FormControl fullWidth>
+                                                        <InputLabel
+                                                            shrink={false}
+                                                            sx={{
+                                                                color: "#8a8a8a",
+                                                                pl: 2,
+                                                                background: "#f2f2f2",
+                                                                borderRadius: "50px",
+                                                            }}
+                                                        >
+                                                            What are your needs?
+                                                        </InputLabel>
+                                                        <Select
+                                                            defaultValue=""
+                                                            variant="outlined"
+                                                            sx={{
+                                                                color: "black", // Set font color to black
+                                                                borderRadius: "50px",
+                                                                background: "#f2f2f2",
+                                                                height: "50px",
+                                                                "& .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "none",
+                                                                },
+                                                                "&:hover .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "1px solid #000",
+                                                                },
+                                                                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                                                    border: "2px solid #000",
+                                                                },
+                                                                "& .MuiSelect-select": {
+                                                                    padding: "10px 20px",
+                                                                },
+                                                            }}
+                                                        >
+                                                            <MenuItem value="Express Delivery">Express Delivery</MenuItem>
+                                                            <MenuItem value="Insurance">Insurance</MenuItem>
+                                                            <MenuItem value="Packaging">Packaging</MenuItem>
+                                                        </Select>
+                                                    </FormControl>
+                                                </Box>
+                                            </Grid>
+                                        </Grid>
+                                        <Box sx={{ padding: "10px" }}>
                                             <TextField
                                                 fullWidth
-                                                placeholder="*Full Name"
+                                                multiline
+                                                rows={9}
+                                                placeholder="Write Message..."
                                                 variant="outlined"
                                                 InputProps={{
                                                     sx: {
-                                                        borderRadius: "50px",
+                                                        color: "black", // Set font color to black
+                                                        borderRadius: "20px",
                                                         background: "#f2f2f2",
-                                                        height: "50px",
-                                                        fontSize:"15px",
-                                                        padding:"6px 15px"
+                                                        padding: "20px 25px",
+                                                        fontSize: "15px",
+                                                        "& .MuiOutlinedInput-notchedOutline": {
+                                                            border: "none",
+                                                        },
+                                                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                                                            border: "1px solid #000",
+                                                        },
+                                                        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                                            border: "2px solid #000",
+                                                        },
                                                     },
                                                 }}
                                             />
-                                            </Box>
-                                        </Grid>
-
-                                        {/* Email Address Input */}
-                                        <Grid item xs={12} sm={6}>
-                                            <Box sx={{padding:"10px"}}>
-                                                <TextField
-                                                    fullWidth
-                                                    placeholder="*Email Address"
-                                                    variant="outlined"
-                                                    InputProps={{
-                                                        sx: {
-                                                            borderRadius: "50px",
-                                                            background: "#f2f2f2",
-                                                            height: "50px",
-                                                            fontSize:"15px",
-                                                            padding:"6px 15px"
-                                                        },
-                                                    }}
-                                                />
-                                            </Box>
-                                        </Grid>
-
-                                        {/* Phone Number Input */}
-                                        <Grid item xs={12} sm={6}>
-                                            <Box sx={{padding:"10px"}}>
-                                                <TextField
-                                                    fullWidth
-                                                    placeholder="*Phone Number"
-                                                    variant="outlined"
-                                                    InputProps={{
-                                                        sx: {
-                                                            borderRadius: "50px",
-                                                            background: "#f2f2f2",
-                                                            height: "50px",
-                                                            fontSize:"15px",
-                                                            padding:"6px 15px"
-                                                        },
-                                                    }}
-                                                />
-                                            </Box>
-                                        </Grid>
-
-                                        {/* Select Dropdown */}
-                                        <Grid item xs={12} sm={6}>
-                                            <Box sx={{padding:"10px"}}>
-                                                <FormControl fullWidth>
-                                                    <InputLabel
-                                                        shrink={false}
-                                                        sx={{
-                                                            color: "#8a8a8a",
-                                                            pl: 2,
-                                                            background: "#f2f2f2",
-                                                            borderRadius: "50px",
-                                                        }}
-                                                    >
-                                                        What are your needs?
-                                                    </InputLabel>
-                                                    <Select
-                                                        defaultValue=""
-                                                        variant="outlined"
-                                                        sx={{
-                                                            borderRadius: "50px",
-                                                            background: "#f2f2f2",
-                                                            height: "50px",
-                                                            "& .MuiSelect-select": {
-                                                                padding: "10px 20px",
-                                                            },
-                                                        }}
-                                                    >
-                                                        <MenuItem value="Express Delivery">Express Delivery</MenuItem>
-                                                        <MenuItem value="Insurance">Insurance</MenuItem>
-                                                        <MenuItem value="Packaging">Packaging</MenuItem>
-                                                    </Select>
-                                                </FormControl>
-                                            </Box>
-                                        </Grid>
-                                    </Grid>
-                                    <Box sx={{padding:"10px"}}>
-                                        <TextField
-                                            fullWidth
-                                            multiline
-                                            rows={9}
-                                            placeholder="Write Message..."
-                                            variant="outlined"
-                                            InputProps={{
-                                                sx: {
-                                                    borderRadius: "20px",
-                                                    background: "#f2f2f2",
-                                                    padding:"20px 25px",
-                                                    fontSize:"15px"
-
+                                        </Box>
+                                        <Button
+                                            variant="contained"
+                                            color="primary"
+                                            sx={{
+                                                backgroundColor: "#000",
+                                                color: "#fff",
+                                                textTransform: "none",
+                                                fontSize: "15px",
+                                                fontWeight: "400",
+                                                marginTop: "26px",
+                                                padding: "0px 55px 0px 25px",
+                                                position: "relative",
+                                                lineHeight: "50px",
+                                                borderRadius: "11110px 11110px 11110px 11110px",
+                                                "&:hover  .icon": {
+                                                    position: "absolute",
+                                                    left: "82%",
                                                 },
                                             }}
-                                        />
+                                        >
+                                            Submit Require <SendIcon className={"icon"} sx={{ fontSize: "15px", transition: "0.3s", position: "absolute", left: "80%" }} />
+                                        </Button>
                                     </Box>
-                                    <Button
-                                        // fullWidth
-                                        variant="contained"
-                                        color="primary"
-                                        sx={{
-                                            backgroundColor: "#000",
-                                            color: "#fff",
-                                            textTransform: "none",
-                                            fontSize: "15px",
-                                            fontWeight:"400",
-                                            marginTop:"26px",
-                                            padding: "0px 55px 0px 25px",
-                                            position:"relative",
-                                            lineHeight:"50px",
-                                            borderRadius:"11110px 11110px 11110px 11110px",
-                                            "&:hover  .icon":{
-                                               position:"absolute",
-                                                left:"82%"
-
-                                            }
-                                        }}
-                                    >
-                                        Submit Require <SendIcon className={"icon"} sx={{fontSize:"15px",transition:"0.3s",position:"absolute",left:"80%"}}/>
-                                    </Button>
                                 </Box>
-                        </Box>
+
+
                             </Grid>
                     </Grid>
                     </Box>

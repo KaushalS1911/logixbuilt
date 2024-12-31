@@ -64,7 +64,7 @@ function Ourproducts() {
                                }}
                            >
                                {data[category].map((tech) => (
-                                  <Box sx={{display:"flex",padding: '10px 24px',
+                                  <Box key={index + 1} sx={{display:"flex",padding: '10px 24px',
                                       borderRadius: 2,
                                       backgroundColor: '#f5f5f5',}}>
                                       <Image src={tech.image} alt={"#"} />
