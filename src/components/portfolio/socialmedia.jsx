@@ -4,7 +4,7 @@ import bg1 from '../../assets/images/portfolio/img1.png';
 import bg2 from '../../assets/images/portfolio/img2.png';
 import bg3 from '../../assets/images/portfolio/img3.png';
 import { Box, Grid } from '@mui/material';
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const slides = [
     {
@@ -39,14 +39,12 @@ const slides = [
 ];
 
 function Socialmedia() {
-
     const router = useRouter();
 
     return (
         <Box
             sx={{
                 padding: { md: '40px 0 100px', xs: '72px 18px' },
-                background: '#000',
                 overflow: 'hidden',
             }}
         >
@@ -55,6 +53,8 @@ function Socialmedia() {
                     key={index}
                     sx={{
                         padding: { md: '0 32px', sm: '0' },
+                        backgroundColor: index % 2 === 0 ? '#fff' : '#000',
+                        color: index % 2 === 0 ? '#000' : '#fff',
                     }}
                 >
                     <Box
@@ -66,8 +66,7 @@ function Socialmedia() {
                         <Grid container spacing={4} alignItems="center">
                             {index % 2 === 0 ? (
                                 <>
-
-                                    <Grid item md={6} sm={12} >
+                                    <Grid item md={6} sm={12}>
                                         <Box>
                                             <Box
                                                 sx={{
@@ -80,7 +79,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: { sm: '48px', xs: '36px' },
                                                     fontWeight: '500',
                                                     paddingLeft: '0',
@@ -91,7 +89,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: '16px',
                                                     fontWeight: '400',
                                                     marginTop: '16px',
@@ -101,7 +98,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: '14px',
                                                     textDecoration: 'none',
                                                     padding: '15px 30px',
@@ -122,8 +118,6 @@ function Socialmedia() {
                                             </Box>
                                         </Box>
                                     </Grid>
-
-
                                     <Grid item md={6} sm={12}>
                                         <Box
                                             component="img"
@@ -138,11 +132,14 @@ function Socialmedia() {
                                     </Grid>
                                 </>
                             ) : (
-                                <>
-
+                                <Box sx={{
+                                    display:"flex",
+                                    height:"500px",
+                                    alignItems:"center"
+                                }}>
                                     <Grid item md={6} sm={12}>
                                         <Box
-                                            component={'img'}
+                                            component="img"
                                             src={item.image.src}
                                             sx={{
                                                 display: 'flex',
@@ -150,16 +147,10 @@ function Socialmedia() {
                                                 alignItems: 'center',
                                                 width: '100%',
                                             }}
-                                        >
-                                        </Box>
-
+                                        />
                                     </Grid>
-
-
                                     <Grid item md={6} sm={12}>
-                                        <Box sx={{
-                                            marginBottom:"60px",
-                                        }}>
+                                        <Box sx={{ marginBottom: '60px' }}>
                                             <Box
                                                 sx={{
                                                     color: '#0fa4ea',
@@ -171,7 +162,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: { sm: '48px', xs: '36px' },
                                                     fontWeight: '500',
                                                     paddingLeft: '0',
@@ -182,7 +172,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: '16px',
                                                     fontWeight: '400',
                                                     marginTop: '16px',
@@ -192,7 +181,6 @@ function Socialmedia() {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    color: '#fff',
                                                     fontSize: '14px',
                                                     textDecoration: 'none',
                                                     padding: '15px 30px',
@@ -213,7 +201,7 @@ function Socialmedia() {
                                             </Box>
                                         </Box>
                                     </Grid>
-                                </>
+                                </Box>
                             )}
                         </Grid>
                     </Box>

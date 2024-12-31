@@ -46,7 +46,7 @@ function Ourproducts(props) {
                <Box sx={{ padding: 4 }}>
                    {Object.keys(data).map((category) => (
                        <Box key={category} sx={{ marginBottom: 6 }}>
-                           {/* Category Title */}
+
                            <Typography variant="h5" sx={{
                                color:"#4A4A68",
                                fontSize:"16px",
@@ -57,7 +57,6 @@ function Ourproducts(props) {
                                {category}
                            </Typography>
 
-                           {/* Tech List */}
                            <Box
                                sx={{
                                    display: 'flex',
@@ -66,10 +65,10 @@ function Ourproducts(props) {
                                }}
                            >
                                {data[category].map((tech) => (
-                                  <Box sx={{display:"flex",padding: '10px 24px',
+                                  <Box key={index + 1} sx={{display:"flex",padding: '10px 24px',
                                       borderRadius: 2,
                                       backgroundColor: '#f5f5f5',}}>
-                                      <Image src={tech.image} alt={"#"} ></Image>
+                                      <Image src={tech.image} alt={"#"} />
                                           <Box
                                               key={tech.name + 1}
                                               sx={{
@@ -81,7 +80,6 @@ function Ourproducts(props) {
                                           >
                                               {tech.name}
                                           </Box>
-
                                   </Box>
                                ))}
                            </Box>
@@ -101,7 +99,7 @@ function Ourproducts(props) {
                                    backgroundColor: "#e7107e",
                                    color: "#fff",
                                },
-                               transition: "background-color 0.3s, color 0.3s", // Smooth transition
+                               transition: "background-color 0.3s, color 0.3s",
                            }}
                        >
                            MORE ABOUT OUR TECH STACK

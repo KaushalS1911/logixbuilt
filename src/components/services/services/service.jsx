@@ -575,8 +575,8 @@ function Service(props) {
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} sm={6}>
                                             <List>
-                                                {section.items.slice(0, Math.ceil(section.items.length / 2)).map((item, idx) => (
-                                                    <ListItem key={idx} sx={{pl: 0}}>
+                                                {section.items.slice(0, Math.ceil(section.items.length / 2)).map((item, index) => (
+                                                    <ListItem key={index} sx={{pl: 0}}>
                                                         <ListItemText
                                                             primary={`• ${item}`}
                                                             primaryTypographyProps={{
@@ -590,8 +590,8 @@ function Service(props) {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <List>
-                                                {section.items.slice(Math.ceil(section.items.length / 2)).map((item, idx) => (
-                                                    <ListItem key={idx} sx={{pl: 0}}>
+                                                {section.items.slice(Math.ceil(section.items.length / 2)).map((item, index) => (
+                                                    <ListItem key={index} sx={{pl: 0}}>
                                                         <ListItemText
                                                             primary={`• ${item}`}
                                                             primaryTypographyProps={{
