@@ -124,12 +124,12 @@ function Socialmedia() {
                                         <Box
                                             component="img"
                                             src={item.image.src}
+                                            alt={`${item.title} - ${item.name}`}
                                             sx={{
                                                 display: 'flex',
                                                 margin: '0 auto',
                                                 width: { lg: '880px', md: '711px', sm: '656px', xs: '410px' },
                                                 height: { lg: '450px', md: '400px', sm: '350px', xs: '311px' },
-
                                             }}
                                         />
                                     </Grid>
