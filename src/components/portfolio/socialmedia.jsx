@@ -44,7 +44,6 @@ function Socialmedia() {
     return (
         <Box
             sx={{
-                padding: { md: '40px 0 100px', xs: '72px 18px' },
                 overflow: 'hidden',
             }}
         >
