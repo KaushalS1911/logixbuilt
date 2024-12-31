@@ -83,15 +83,12 @@ const AboutSlider = () => {
                             }}
                         >
                             {timelineData.map((item, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={index+1}>
                                     <Box
                                         sx={{
                                             ":hover .dot": {
                                                 border: "1px solid #fff",
-                                                borderRadius: "50%",
-                                                padding: "6px",
-                                                transition: "0.3s",
-                                                overflow: "hidden",
+                                                transition: "1s",
                                             },
                                         }}
                                     >
@@ -121,7 +118,11 @@ const AboutSlider = () => {
                                                 alignItems: "center",
                                             }}
                                         >
-                                            <Box className="dot">
+                                            <Box className="dot" sx={{
+                                                border: "1px solid #121C27",
+                                                borderRadius: "50%",
+                                                padding: "6px",
+                                            }}>
                                                 <Typography
                                                     sx={{
                                                         width: "10px",
@@ -153,7 +154,7 @@ const AboutSlider = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        {/* Custom Swiper Navigation */}
+
                         <ArrowForwardIcon
                             className="swiper-button-next"
                             sx={{
