@@ -132,7 +132,11 @@ function Socialmedia() {
                                     </Grid>
                                 </>
                             ) : (
-                                <>
+                                <Box sx={{
+                                    display:"flex",
+                                    height:"500px",
+                                    alignItems:"center"
+                                }}>
                                     <Grid item md={6} sm={12}>
                                         <Box
                                             component="img"
@@ -197,7 +201,7 @@ function Socialmedia() {
                                             </Box>
                                         </Box>
                                     </Grid>
-                                </>
+                                </Box>
                             )}
                         </Grid>
                     </Box>
