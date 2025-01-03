@@ -44,8 +44,8 @@ function Ourproducts() {
                    Our team of developers has a range of experience in cutting-edge <br/> technologies. This allows us to create a tailor-made tech stack that will <br/> best support your project’s needs.
                </Box>
                <Box sx={{ padding: 4 }}>
-                   {Object.keys(data).map((category) => (
-                       <Box key={category} sx={{ marginBottom: 3 }}>
+                   {Object.keys(data).map((category,index) => (
+                       <Box key={index} sx={{ marginBottom: 3 }}>
                            <Typography variant="h5" sx={{
                                color:"#4A4A68",
                                fontSize:"16px",
