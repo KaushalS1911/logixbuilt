@@ -19,7 +19,7 @@ export default function Home() {
             <ValuePropositions />
             <Capabilities/>
             <Ourmission  />
-            <Industries />
+            <Industries/>
             <FunFactCounter
                 gap={true}
                 color={false}
@@ -37,7 +37,7 @@ export default function Home() {
             />
             <Testimonial />
             <AboutBrand />
-            {/*<Industries />*/}
+            {/*<Enterprise />*/}
             {/*<Herosection />*/}
             {/*<Services />*/}
             {/*<Testimonial />*/}

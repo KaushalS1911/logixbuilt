@@ -7,7 +7,7 @@ import Img3 from "../../../assets/images/services/ourproducts/tech-node-js.svg"
 import Img4 from "../../../assets/images/services/ourproducts/tech-express-js.svg"
 import Image from "next/image";
 
-function Ourproducts(props) {
+function Ourproducts() {
 
 
         const data = {
@@ -28,7 +28,7 @@ function Ourproducts(props) {
         };
 
     return (
-        <Box sx={{padding:"100px 0 160px"}}>
+        <Box sx={{padding:"0 0 160px"}}>
            <Container maxWidth={"xl"}>
                <Box sx={{
                    fontSize: {md:"62px",sm:"48px"},
@@ -44,9 +44,8 @@ function Ourproducts(props) {
                    Our team of developers has a range of experience in cutting-edge <br/> technologies. This allows us to create a tailor-made tech stack that will <br/> best support your project’s needs.
                </Box>
                <Box sx={{ padding: 4 }}>
-                   {Object.keys(data).map((category) => (
-                       <Box key={category} sx={{ marginBottom: 6 }}>
-
+                   {Object.keys(data).map((category,index) => (
+                       <Box key={index} sx={{ marginBottom: 3 }}>
                            <Typography variant="h5" sx={{
                                color:"#4A4A68",
                                fontSize:"16px",
@@ -80,6 +79,7 @@ function Ourproducts(props) {
                                           >
                                               {tech.name}
                                           </Box>
+
                                   </Box>
                                ))}
                            </Box>

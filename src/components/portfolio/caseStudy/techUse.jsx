@@ -23,12 +23,6 @@ const app = [
     {
         name: "MongoDB",
         image: img4,
-
-
-
-
-
-
     },
     {
         name: "Express.js",
@@ -55,7 +49,7 @@ function TechUse() {
                 </Typography>
                 <Grid container spacing={2} justifyContent="center">
                     {app.map((item, index) => (
-                        <Grid item xs={6} sm={3} md={2}  key={index}>
+                        <Grid item xs={6} sm={3} md={2}  key={index + 1}>
                             <Box
                                 sx={{
                                     display: "flex",

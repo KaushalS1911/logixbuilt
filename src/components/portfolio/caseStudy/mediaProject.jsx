@@ -119,7 +119,7 @@ function MediaProject() {
                 </Grid>
 
                 {slides.map((item, index) => (
-                    <Box key={index} sx={{ padding: '64px 0px' }}>
+                    <Box key={index + 1} sx={{ padding: '64px 0px' }}>
                         <Grid
                             container
                             spacing={4}
@@ -195,7 +195,6 @@ function MediaProject() {
                             }}
                         >
                             <Grid container alignItems="center">
-                                {/* Image */}
                                 <Grid item xs={12} md={3}  display="flex" justifyContent="center">
                                     <Box>
                                         <Image

@@ -13,8 +13,10 @@ import img1 from "../../assets/images/fotter2/Png-03.png";
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import Image from "next/image";
 import EastIcon from '@mui/icons-material/East';
+import {useRouter} from "next/navigation";
 
 function Footer2() {
+    const router = useRouter();
     const footerData = {
         logo: img1,
         socialLinks: [
@@ -40,6 +42,12 @@ function Footer2() {
                 "IT Consulting",
                 "Conversion Optimization",
             ],
+            path: [
+                '/webdevelopment',
+                '/seo',
+                '/itconsulting',
+                '/conversionoptimization'
+            ]
         },
         newsletter: {
             title: "Stay Updated!",
@@ -111,19 +119,6 @@ function Footer2() {
                 <Divider sx={{ my: 4, backgroundColor: "gray" }} />
 
                 <Grid container spacing={4}>
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3, }}>
-                                {footerData.contact.title}
-                            </Typography>
-                            {footerData.contact.details.map((detail, index) => (
-                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color:"#C4C4C4"}}>
-                                    {detail}
-                                </Typography>
-                            ))}
-                        </Box>
-                    </Grid>
-
                     <Grid item xs={12} sm={6} md={3}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
                             <Typography variant="h6" sx={{ fontWeight: 500, mb: 3, marginLeft: "23px" }}>
@@ -131,6 +126,7 @@ function Footer2() {
                             </Typography>
                             {footerData.services.links.map((service, index) => (
                                 <Typography
+                                    onClick={() => router.push(footerData.services.path[index])}
                                     key={index}
                                     variant="body2"
                                     sx={{
@@ -167,6 +163,19 @@ function Footer2() {
                             ))}
                         </Box>
                     </Grid>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
+                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3, }}>
+                                {footerData.contact.title}
+                            </Typography>
+                            {footerData.contact.details.map((detail, index) => (
+                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color:"#C4C4C4"}}>
+                                    {detail}
+                                </Typography>
+                            ))}
+                        </Box>
+                    </Grid>
+
 
                     <Grid item xs={12} sm={12} md={5}>
                         <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Img1 from "../../assets/images/blog/posts/Img1.jpg";
@@ -9,8 +10,12 @@ import Img6 from "../../assets/images/blog/posts/Img6.webp";
 import Img7 from "../../assets/images/blog/posts/Img7.webp";
 import Image from "next/image";
 import EastIcon from '@mui/icons-material/East';
+import {useRouter} from "next/navigation";
 
 function Posts() {
+
+    const router = useRouter();
+
     const Data = [
         {
             date: "23 April 2024",
@@ -204,12 +209,13 @@ function Posts() {
                                     {item.describtion}
                                 </Box>
 
-                                <Box
+                                <Box onClick={() => router.push('/blog/singleBlog')}
                                     sx={{
                                         marginTop: "20px",
                                         display: "flex",
                                         alignItems: "center",
                                         fontWeight:500,
+                                        cursor:"pointer",
                                         '&:hover .icon': {
                                             marginLeft: "20px",
                                         },
