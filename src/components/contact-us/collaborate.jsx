@@ -229,7 +229,6 @@ function Collaborate(props) {
                                                 </Box>
                                             </Grid>
 
-                                            {/* Phone Number Input */}
                                             <Grid item xs={12} sm={6}>
                                                 <Box sx={{ padding: "10px" }}>
                                                     <TextField
@@ -238,7 +237,7 @@ function Collaborate(props) {
                                                         variant="outlined"
                                                         InputProps={{
                                                             sx: {
-                                                                color: "black", // Set font color to black
+                                                                color: "black",
                                                                 borderRadius: "50px",
                                                                 background: "#f2f2f2",
                                                                 height: "50px",
@@ -278,7 +277,6 @@ function Collaborate(props) {
                                                             defaultValue=""
                                                             variant="outlined"
                                                             sx={{
-                                                                color: "black", // Set font color to black
                                                                 borderRadius: "50px",
                                                                 background: "#f2f2f2",
                                                                 height: "50px",
@@ -293,6 +291,16 @@ function Collaborate(props) {
                                                                 },
                                                                 "& .MuiSelect-select": {
                                                                     padding: "10px 20px",
+                                                                    color: "black",
+                                                                },
+                                                                "&.Mui-focused .MuiSelect-select": {
+                                                                    color: "black",
+                                                                },
+                                                                "&.Mui-selected .MuiSelect-select": {
+                                                                    color: "black",
+                                                                },
+                                                                "& .MuiMenuItem-root": {
+                                                                    color: "black",
                                                                 },
                                                             }}
                                                         >
@@ -303,6 +311,7 @@ function Collaborate(props) {
                                                     </FormControl>
                                                 </Box>
                                             </Grid>
+
                                         </Grid>
                                         <Box sx={{ padding: "10px" }}>
                                             <TextField
@@ -313,7 +322,7 @@ function Collaborate(props) {
                                                 variant="outlined"
                                                 InputProps={{
                                                     sx: {
-                                                        color: "black", // Set font color to black
+                                                        color: "black",
                                                         borderRadius: "20px",
                                                         background: "#f2f2f2",
                                                         padding: "20px 25px",
@@ -362,7 +371,6 @@ function Collaborate(props) {
                     </Box>
                     </Grid>
 
-                    {/*......image.....*/}
                     <Grid item={12}>
                         <Box>
                         <Image

@@ -38,7 +38,7 @@ function Businessventure(props) {
                             Our company was formed by ex-startup founders that learned <br /> how to bring new innovative products to market by doing it.
                         </Box>
                         {Data.map((item, index) => (
-                            <Box sx={{
+                            <Box  sx={{
                                 background: "#FFFFFF",
                                 borderRadius: "10px",
                                 padding: "32px",

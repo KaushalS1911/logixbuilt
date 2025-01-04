@@ -48,7 +48,7 @@ const features = [
 ];
 const Industry = () => {
     return (
-        <Container>
+        <Container maxWidth={"xl"}>
             <Box sx={{my:'22px',padding:"60px 0"}}>
                 <Grid container spacing={4}>
                     {features.map((feature, index) => (

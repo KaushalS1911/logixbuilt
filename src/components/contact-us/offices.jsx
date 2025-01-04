@@ -7,56 +7,56 @@ import Image from "next/image";
 
 function Offices(props) {
 
-    const Data =[
+    const Data = [
         {
             img: Img2,
-            title:'Washington, D.C.',
-            place:"headquarters",
-            address:"Old Westbury 256, New York, USA",
-            call:"+ 123 4567 89 000",
-            email:"Herringtonconsulting@example.com",
-            time:"Working Hours: 07am to 5pm",
+            title: 'Washington, D.C.',
+            place: "headquarters",
+            address: "Old Westbury 256, New York, USA",
+            call: "+ 123 4567 89 000",
+            email: "Herringtonconsulting@example.com",
+            time: "Working Hours: 07am to 5pm",
         },
         {
             img: Img3,
-            title:'Los Angeles City',
-            place:"branch office",
-            address:"Old Westbury 256, New York, USA",
-            call:"+ 123 4567 89 000",
-            email:"Herringtonconsulting@example.com",
-            time:"Working Hours: 07am to 5pm",
+            title: 'Los Angeles City',
+            place: "branch office",
+            address: "Old Westbury 256, New York, USA",
+            call: "+ 123 4567 89 000",
+            email: "Herringtonconsulting@example.com",
+            time: "Working Hours: 07am to 5pm",
         },
         {
             img: Img4,
-            title:'New York City',
-            place:"branch office",
-            address:"Old Westbury 256, New York, USA",
-            call:"+ 123 4567 89 000",
-            email:"Herringtonconsulting@example.com",
-            time:"Working Hours: 07am to 5pm",
+            title: 'New York City',
+            place: "branch office",
+            address: "Old Westbury 256, New York, USA",
+            call: "+ 123 4567 89 000",
+            email: "Herringtonconsulting@example.com",
+            time: "Working Hours: 07am to 5pm",
         }
 
     ]
     return (
-        <Box sx={{padding:"100px 0"}}>
+        <Box sx={{padding: "100px 0"}}>
             <Container maxWidth={"lg"}>
                 <Box sx={{
-                    display:"flex",
-                    justifyContent:"center",
-                    textAlign:"center",
-                    fontSize: {md:"45px",sm:"40px",xs:"30"},
-                    fontWeight:"500",
-                    paddingBottom:"15px"
+                    display: "flex",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    fontSize: {md: "45px", sm: "40px", xs: "30"},
+                    fontWeight: "500",
+                    paddingBottom: "15px"
                 }}>
                     Our World Offices
                 </Box>
                 <Box sx={{
-                    color:"#4B535D",
-                    fontSize: {md:"17px",xs:"15px"},
-                    lineHeight:"27px",
-                    display:"flex",
-                    justifyContent:"center",
-                    textAlign:"center",
+                    color: "#4B535D",
+                    fontSize: {md: "17px", xs: "15px"},
+                    lineHeight: "27px",
+                    display: "flex",
+                    justifyContent: "center",
+                    textAlign: "center",
 
                 }}>
                     Sed at nulla vel elit molestie rutrum non nec orci. Mauris varius, odio rutrum iaculis sagittis
@@ -66,13 +66,13 @@ function Offices(props) {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        paddingTop:"65px"
+                        paddingTop: "65px"
                     }}
                 >
                     <Box
                         style={{
                             width: "100%",
-                            maxWidth: "400px", // Adjust maximum width
+                            maxWidth: "400px",
                             position: "relative",
                         }}
                     >
@@ -82,7 +82,7 @@ function Offices(props) {
                                 alignItems: "center",
                                 position: "relative",
                                 width: "100%",
-                                height: "1px", // Thickness of the line
+                                height: "1px",
                                 backgroundColor: "lightgray",
                             }}
                         >
@@ -100,7 +100,7 @@ function Offices(props) {
                         </Box>
                     </Box>
                 </Box>
-                <Box sx={{ paddingTop: "90px" }}>
+                <Box sx={{paddingTop: "90px"}}>
                     <Grid container spacing={4} justifyContent="center">
                         {Data.map((item, index) => (
                             <Grid
@@ -113,7 +113,7 @@ function Offices(props) {
                                     padding: "15px",
                                 }}
                             >
-                                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                                <Box sx={{display: "flex", justifyContent: "center"}}>
                                     <Image
                                         src={item.img}
                                         alt={"#"}
@@ -122,9 +122,9 @@ function Offices(props) {
                                             justifyContent: "center",
                                             alignItems: "center",
                                             width: "100%",
-                                            maxWidth: "300px", // Ensures consistency across different screens
+                                            maxWidth: "300px",
                                             height: "auto",
-                                            borderRadius: "10px", // Optional for rounded corners
+                                            borderRadius: "10px",
                                         }}
                                     />
                                 </Box>
@@ -136,7 +136,7 @@ function Offices(props) {
                                         fontSize: "26px",
                                         fontWeight: "500",
                                         paddingTop: "25px",
-                                        textAlign: "center", // Ensures text is centered on small screens
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.title}
@@ -150,7 +150,7 @@ function Offices(props) {
                                         textTransform: "uppercase",
                                         letterSpacing: "4.8px",
                                         paddingTop: "10px",
-                                        textAlign: "center", // Responsive alignment
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.place}
@@ -178,7 +178,7 @@ function Offices(props) {
                                         color: "#4B535D",
                                         lineHeight: "25px",
                                         margin: "0 0 35px",
-                                        textAlign: "center", // Responsive text alignment
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.address}
@@ -190,7 +190,7 @@ function Offices(props) {
                                         fontSize: "15px",
                                         color: "#4B535D",
                                         margin: "0 0 35px",
-                                        textAlign: "center", // Responsive text alignment
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.call}
@@ -202,7 +202,7 @@ function Offices(props) {
                                         fontSize: "15px",
                                         color: "#4B535D",
                                         margin: "0 0 40px",
-                                        textAlign: "center", // Responsive text alignment
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.email}
@@ -214,7 +214,7 @@ function Offices(props) {
                                         fontSize: "15px",
                                         color: "#4B535D",
                                         margin: "0 0 35px",
-                                        textAlign: "center", // Responsive text alignment
+                                        textAlign: "center",
                                     }}
                                 >
                                     {item.time}
@@ -224,7 +224,7 @@ function Offices(props) {
                     </Grid>
                 </Box>
 
-                                            </Container>
+            </Container>
         </Box>
     );
 }

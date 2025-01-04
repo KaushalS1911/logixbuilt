@@ -33,7 +33,7 @@ const Clients = () => {
     return (
         <>
             <Box>
-                <Container>
+                <Container maxWidth={"xl"}>
                     <Box sx={{ borderTop: "1px solid #4B535D", mt: 8 }}>
                         <Grid container spacing={2} sx={{ mt: 8 }}>
                             <Grid item xs={12} sm={6}>

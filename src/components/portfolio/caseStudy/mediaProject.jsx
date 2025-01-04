@@ -64,7 +64,7 @@ const slides = [
 function MediaProject() {
     return (
         <Box>
-            <Container maxWidth="lg" sx={{ padding: { xs: '16px', sm: '32px' } }}>
+            <Container maxWidth="xl" sx={{ padding: { xs: '16px', sm: '32px' } }}>
                 {/* Client Section */}
                 <Grid container spacing={4} alignItems="center">
                     <Grid item xs={12} md={6}>

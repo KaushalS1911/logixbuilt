@@ -110,6 +110,7 @@ function Socialmedia() {
                                                     mt: '23px',
                                                     ':hover': {
                                                         background: '#c36',
+                                                        color: '#fff',
                                                     },
                                                 }}
                                                 onClick={() => router.push('/portfolio/1')}

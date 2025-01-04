@@ -39,7 +39,7 @@ const app = [
 function TechUse() {
     return (
         <Box sx={{ padding: "96px 0" }}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <Typography
                     variant="h2"
                     component="h2"
