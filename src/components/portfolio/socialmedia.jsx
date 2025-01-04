@@ -109,7 +109,7 @@ function Socialmedia() {
                                                     borderRadius: '500px 500px',
                                                     mt: '23px',
                                                     ':hover': {
-                                                        background: '#c36',
+                                                       background: '#c36',
                                                         color: '#fff',
                                                     },
                                                 }}
