@@ -5,6 +5,11 @@ import Img1 from "../../../assets/images/services/ourproducts/tech-figma.svg"
 import Img2 from "../../../assets/images/services/ourproducts/tech-nativescript.svg"
 import Img3 from "../../../assets/images/services/ourproducts/tech-node-js.svg"
 import Img4 from "../../../assets/images/services/ourproducts/tech-express-js.svg"
+import Img5 from "../../../assets/images/services/ourproducts/js.webp"
+import Img6 from "../../../assets/images/services/ourproducts/sql.jpg"
+import Img7 from "../../../assets/images/services/ourproducts/html.png"
+import Img8 from "../../../assets/images/services/ourproducts/php.png"
+import Img9 from "../../../assets/images/services/ourproducts/gpt.png"
 import Image from "next/image";
 
 function Ourproducts() {
@@ -14,14 +19,19 @@ function Ourproducts() {
             "FRONT-END": [
                 { name: "Figma", image: Img1 },
                 { name: "NativeScript", image: Img2 },
+                { name:"JavaScript", image: Img5 },
+                { name:"HTML 5", image: Img7 },
 
             ],
             "BACK-END & DATABASES": [
                 { name: "Node.js", image: Img3 },
+                { name: "SQL" , image: Img6},
+                { name: "PHP" , image: Img8}
 
             ],
             "INFRASTRUCTURE": [
                 { name: "MongoDB", image: Img4 },
+                { name: "MongoDB", image: Img9 },
 
             ]
 
@@ -31,7 +41,7 @@ function Ourproducts() {
         <Box sx={{padding:"0 0 160px"}}>
            <Container maxWidth={"xl"}>
                <Box sx={{
-                   fontSize: {md:"62px",sm:"48px"},
+                   fontSize: {md:"55px",sm:"44px"},
                    fontWeight:"bold",
 
                }}>
@@ -40,6 +50,7 @@ function Ourproducts() {
                <Box sx={{
                    fontSize:"18px",
                    paddingTop:"30px",
+                   color:"#4B535D"
                }}>
                    Our team of developers has a range of experience in cutting-edge <br/> technologies. This allows us to create a tailor-made tech stack that will <br/> best support your project’s needs.
                </Box>
@@ -67,7 +78,10 @@ function Ourproducts() {
                                   <Box key={tech + 1} sx={{display:"flex",padding: '10px 24px',
                                       borderRadius: 2,
                                       backgroundColor: '#f5f5f5',}}>
-                                      <Image src={tech.image} alt={"#"} />
+                                      <Image src={tech.image} alt={"#"} style={{
+                                          height:"22px",
+                                          width:"22px",
+                                      }}/>
                                           <Box
                                               key={tech.name + 1}
                                               sx={{

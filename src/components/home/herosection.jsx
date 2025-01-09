@@ -63,7 +63,7 @@ function Herosection() {
                                     alignItems: "center",
                                     height: "100%",
                                     width: "100%",
-                                    p: { xs: '70px 15px', md: '0px 15px'},
+                                    p: { xs: '70px 15px', md: '0px 35px'},
                                 }}
                             >
                                 <Box
@@ -117,6 +117,7 @@ function Herosection() {
                                             color: "#000",
                                             display: "inline-block",
                                             borderRadius: "1e3px",
+                                            cursor:"pointer",
                                         }}
                                     >
                                         {item.button}
