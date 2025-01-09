@@ -174,9 +174,9 @@ function Service(props) {
                     <Box sx={{ width: '80%', mx: {xs:'auto',md:"0"} }}>
                         <Box
                             sx={{
-                                fontSize: { lg: "60px", sm: "48px" },
+                                fontSize: { lg: "50px", sm: "45px" },
                                 fontWeight: "700",
-                                lineHeight: "80px",
+                                lineHeight: "75px",
                                 display: "flex",
                                 justifyContent: { xs: "center", lg: "flex-start" },
                                 alignItems: "center",
@@ -187,8 +187,9 @@ function Service(props) {
                         </Box>
                         <Box
                             sx={{
-                                fontSize: "24px",
+                                fontSize: "20px",
                                 paddingTop: "10px",
+                                color:"#4B535D"
 
                             }}
                         >
