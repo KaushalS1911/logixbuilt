@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import circleimg from "../../assets/images/about/modification/Ellipse-797.png"
 import Image from "next/image";
+import {Span} from "next/dist/server/lib/trace/tracer";
 const Modification = () => {
     return (
         <Box>
@@ -48,7 +49,7 @@ const Modification = () => {
                                     pt: 2,
                                 }}
                             >
-                                W E L C O M E <span>T O</span> B E Y O N D
+                                W E L C O M E <span>T O</span> B E Y O N D <span>T E C H</span> S O L U T I O N
                             </Typography>
                             <Image
                                 src={circleimg}
@@ -149,9 +150,10 @@ const Modification = () => {
                                         color: "#4B535D",
                                         lineHeight: "25px",
                                         py: 2,
+                                        width:"90%"
                                     }}
                                 >
-                                    At Beyond, we are a renowned global consulting firm
+                                    At Beyond tech solution, we are a renowned global consulting firm
                                     committed to collaborating with business and societal leaders
                                     in overcoming their most critical challenges and seizing their
                                     greatest opportunities. Our achievements are rooted in
@@ -164,6 +166,7 @@ const Modification = () => {
                                         color: "#4B535D",
                                         lineHeight: "25px",
                                         py: 2,
+                                        width:"90%"
                                     }}
                                 >
                                     We have highly skilled engineers with excellent technical
@@ -198,6 +201,7 @@ const Modification = () => {
                                                 fontSize: "17px",
                                                 lineHeight: "28px",
                                                 color: "#0A1119",
+                                                width: "99%",
                                             }}
                                         >
                                             We embarked on our journey with a distinct approach.
@@ -220,6 +224,7 @@ const Modification = () => {
                                                 fontSize: "17px",
                                                 lineHeight: "28px",
                                                 color: "#0A1119",
+                                                width: "99%",
                                             }}
                                         >
                                             We embarked on our journey with a distinct approach.
