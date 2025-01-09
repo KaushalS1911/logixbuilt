@@ -8,7 +8,7 @@ import {
     Container,
     Grid,
 } from "@mui/material";
-import { Facebook, Twitter, Instagram, Telegram } from "@mui/icons-material";
+import {Facebook, Twitter, Instagram, Telegram} from "@mui/icons-material";
 import img1 from "../../assets/images/fotter2/Png-03.png";
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import Image from "next/image";
@@ -17,10 +17,10 @@ function Footer() {
     const footerData = {
         logo: img1,
         socialLinks: [
-            { name: "Facebook", link: "https://facebook.com" },
-            { name: "Twitter", link: "https://twitter.com" },
-            { name: "Instagram", link: "https://instagram.com" },
-            { name: "Telegram", link: "https://telegram.org" },
+            {name: "Facebook", link: "https://facebook.com"},
+            {name: "Twitter", link: "https://twitter.com"},
+            {name: "Instagram", link: "https://instagram.com"},
+            {name: "Telegram", link: "https://telegram.org"},
         ],
         contact: {
             title: "Get in Touch!",
@@ -61,17 +61,17 @@ function Footer() {
         >
             <Container maxWidth="xl">
                 <Grid container alignItems="center" spacing={2}>
-                    <Grid  item xs={12} md={4}>
-                        <Box  sx={{ display: "flex", justifyContent: { xs: "center" , md: "left" }}}>
-                        <Image
-                            src={footerData.logo}
-                            alt="Logo"
-                            style={{
-                                width: '75%',
-                                height: '150px',
-                                objectFit: 'cover'
-                            }}
-                        />
+                    <Grid item xs={12} md={4}>
+                        <Box sx={{display: "flex", justifyContent: {xs: "center", md: "left"}}}>
+                            <Image
+                                src={footerData.logo}
+                                alt="Logo"
+                                style={{
+                                    width: '75%',
+                                    height: '150px',
+                                    objectFit: 'cover'
+                                }}
+                            />
                         </Box>
                     </Grid>
 
@@ -79,7 +79,7 @@ function Footer() {
                         item
                         xs={12}
                         md={6}
-                        sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}
+                        sx={{display: "flex", justifyContent: {xs: "center", md: "flex-end"}}}
                     >
                         <Box
                             sx={{
@@ -98,7 +98,7 @@ function Footer() {
                                 return Icon ? (
                                     <Icon
                                         key={index}
-                                        sx={{ fontSize: 20, cursor: "pointer" }}
+                                        sx={{fontSize: 20, cursor: "pointer"}}
                                         onClick={() => window.open(social.link, "_blank")}
                                     />
                                 ) : null;
@@ -107,16 +107,16 @@ function Footer() {
                     </Grid>
                 </Grid>
 
-                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
+                <Divider sx={{my: 4, backgroundColor: "gray"}}/>
 
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                        <Box sx={{padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px"}}>
+                            <Typography variant="h6" sx={{fontWeight: 500, mb: 3}}>
                                 {footerData.contact.title}
                             </Typography>
                             {footerData.contact.details.map((detail, index) => (
-                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
+                                <Typography key={index} variant="body2" sx={{mb: 2, color: 'textGray'}}>
                                     {detail}
                                 </Typography>
                             ))}
@@ -124,12 +124,12 @@ function Footer() {
                     </Grid>
 
                     <Grid item xs={12} sm={6} md={3}>
-                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                        <Box sx={{padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px"}}>
+                            <Typography variant="h6" sx={{fontWeight: 500, mb: 3}}>
                                 {footerData.services.title}
                             </Typography>
                             {footerData.services.links.map((service, index) => (
-                                <Typography key={index} variant="body2" sx={{ mb: 2 ,color: 'textGray'}}>
+                                <Typography key={index} variant="body2" sx={{mb: 2, color: 'textGray'}}>
                                     {service}
                                 </Typography>
                             ))}
@@ -137,8 +137,8 @@ function Footer() {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={5}>
-                        <Box sx={{ padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 500, mb: 3 }}>
+                        <Box sx={{padding: "20px", backgroundColor: "#1A1F26", borderRadius: "8px"}}>
+                            <Typography variant="h6" sx={{fontWeight: 500, mb: 3}}>
                                 {footerData.newsletter.title}
                             </Typography>
                             <Box
@@ -164,7 +164,7 @@ function Footer() {
                                             paddingRight: "10px",
                                         },
                                     }}
-                                    sx={{ flex: 1 }}
+                                    sx={{flex: 1}}
                                 />
                                 <Box
                                     sx={{
@@ -182,7 +182,7 @@ function Footer() {
                                     ➔
                                 </Box>
                             </Box>
-                            <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>
+                            <Box sx={{display: "flex", alignItems: "center", mt: 2}}>
                                 <Box
 
                                 >
@@ -193,10 +193,10 @@ function Footer() {
                                             alignItems: "center",
                                         }}
                                     >
-                                        <CircleNotificationsIcon sx={{ fontSize: "30px" }} />
+                                        <CircleNotificationsIcon sx={{fontSize: "30px"}}/>
                                     </Box>
                                 </Box>
-                                <Typography variant="body2" sx={{ color: "textGray" }}>
+                                <Typography variant="body2" sx={{color: "textGray"}}>
                                     Please sign up to follow the latest news and events from us, we
                                     promise not to spam your inbox.
                                 </Typography>
@@ -205,14 +205,14 @@ function Footer() {
                     </Grid>
                 </Grid>
 
-                <Divider sx={{ my: 4, backgroundColor: "gray" }} />
+                <Divider sx={{my: 4, backgroundColor: "gray"}}/>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
-                        <Typography variant="body2" sx={{ fontSize: "12px" }}>
+                    <Grid item xs={12} md={6} sx={{textAlign: {xs: "center", md: "left"}}}>
+                        <Typography variant="body2" sx={{fontSize: "12px"}}>
                             {footerData.footerBottom.left}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "right" } }}>
+                    <Grid item xs={12} md={6} sx={{textAlign: {xs: "center", md: "right"}}}>
                         <Box
                             sx={{
                                 display: "flex",
@@ -222,7 +222,7 @@ function Footer() {
                             }}
                         >
                             {footerData.footerBottom.links.map((link, index) => (
-                                <Typography key={index} variant="body2" sx={{ fontSize: "12px" }}>
+                                <Typography key={index} variant="body2" sx={{fontSize: "12px"}}>
                                     {link}
                                 </Typography>
                             ))}

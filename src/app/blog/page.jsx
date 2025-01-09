@@ -18,15 +18,9 @@ const Page = () => {
     return (
         <>
             <HeadingPage bgImg={bg1.src} heading={'Blogs'} breadcrumbs={breadCrumbs}/>
-            {/*<Newsletter />*/}
-            {/*<Blogslider/>*/}
-            {/*<Posts/>*/}
-
             <Newsletter />
             <Blogslider/>
             <Posts/>
-
-
             {/*<Socialmedia/>*/}
             {/*<Experiences/>*/}
             {/*<TechUse/>*/}

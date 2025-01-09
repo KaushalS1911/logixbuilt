@@ -267,7 +267,7 @@ const BlogSingle = () => {
                   <Typography variant="h4" sx={{ mt: '70px', mb: '30px', fontSize: "35px", fontWeight: 600 }}>
                     3 Comments
                   </Typography>
-                  {comments.map((comment) => (
+                  {comments.map((comment,index) => (
                     <Box key={index + 1} sx={{ mb: 4 }}>
                       <Box>
                         <Box

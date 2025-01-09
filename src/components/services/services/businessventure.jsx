@@ -29,16 +29,17 @@ function Businessventure(props) {
                             fontWeight: "700",
                             lineHeight: "45px"
                         }}>
-                            Why choose Altar for your <br /> next business venture?
+                            Why choose Altar for your next business venture?
                         </Box>
                         <Box sx={{
                             fontSize: "16px",
-                            padding: "20px 0 25px 0"
+                            padding: "20px 0 25px 0",
+                            color:"#4B535D"
                         }}>
-                            Our company was formed by ex-startup founders that learned <br /> how to bring new innovative products to market by doing it.
+                            Our company was formed by ex-startup founders that learned how to bring new innovative products to market by doing it.
                         </Box>
                         {Data.map((item, index) => (
-                            <Box sx={{
+                            <Box  sx={{
                                 background: "#FFFFFF",
                                 borderRadius: "10px",
                                 padding: "32px",
