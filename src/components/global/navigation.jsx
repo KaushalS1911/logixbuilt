@@ -64,7 +64,6 @@ function Navigation() {
                     borderBottom: '1px solid #ddd',
                     padding: '10px 0',
                     boxShadow: (scrolled || path === '/') ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
-                    top: (scrolled || path === '/') ? '0' : '10px',
                     transition: 'all 0.3s ease',
                 }}
             >
