@@ -5,11 +5,11 @@ import Img1 from "../../../assets/images/services/ourproducts/tech-figma.svg"
 import Img2 from "../../../assets/images/services/ourproducts/tech-nativescript.svg"
 import Img3 from "../../../assets/images/services/ourproducts/tech-node-js.svg"
 import Img4 from "../../../assets/images/services/ourproducts/tech-express-js.svg"
-import Img5 from "../../../assets/images/services/ourproducts/js.webp"
-import Img6 from "../../../assets/images/services/ourproducts/sql.jpg"
-import Img7 from "../../../assets/images/services/ourproducts/html.png"
-import Img8 from "../../../assets/images/services/ourproducts/php.png"
-import Img9 from "../../../assets/images/services/ourproducts/gpt.png"
+// import Img5 from "../../../assets/images/services/ourproducts/js.webp"
+// import Img6 from "../../../assets/images/services/ourproducts/sql.jpg"
+// import Img7 from "../../../assets/images/services/ourproducts/html.png"
+// import Img8 from "../../../assets/images/services/ourproducts/php.png"
+// import Img9 from "../../../assets/images/services/ourproducts/gpt.png"
 import Image from "next/image";
 
 function Ourproducts() {
@@ -19,19 +19,19 @@ function Ourproducts() {
             "FRONT-END": [
                 { name: "Figma", image: Img1 },
                 { name: "NativeScript", image: Img2 },
-                { name:"JavaScript", image: Img5 },
-                { name:"HTML 5", image: Img7 },
+                    // { name:"JavaScript", image: Img5 },
+                    // { name:"HTML 5", image: Img7 },
 
             ],
             "BACK-END & DATABASES": [
                 { name: "Node.js", image: Img3 },
-                { name: "SQL" , image: Img6},
-                { name: "PHP" , image: Img8}
+                // { name: "SQL" , image: Img6},
+                // { name: "PHP" , image: Img8}
 
             ],
             "INFRASTRUCTURE": [
                 { name: "MongoDB", image: Img4 },
-                { name: "MongoDB", image: Img9 },
+                // { name: "MongoDB", image: Img9 },
 
             ]
 
@@ -93,7 +93,6 @@ function Ourproducts() {
                                           >
                                               {tech.name}
                                           </Box>
-
                                   </Box>
                                ))}
                            </Box>
