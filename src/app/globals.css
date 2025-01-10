@@ -40,7 +40,7 @@ a {
     }
 }
 
-.industries .swiper-button-next:after, .industries .swiper-button-prev:after, .ourMission .swiper-button-next:after, .ourMission .swiper-button-prev:after, .enterPrise .swiper-button-next:after, .enterPrise .swiper-button-prev:after ,.services .swiper-button-next:after,.services .swiper-button-prev:after{
+.industries .swiper-button-next1:after, .industries .swiper-button-prev1:after, .ourMission .swiper-button-next:after, .ourMission .swiper-button-prev:after, .enterPrise .swiper-button-next:after, .enterPrise .swiper-button-prev:after ,.services .swiper-button-next:after,.services .swiper-button-prev:after{
     display: none;
 }
 /*************services*************/

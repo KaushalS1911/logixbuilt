@@ -155,17 +155,17 @@ function Service(props) {
         },
     ];
 
-    const handleNext = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideNext();
-        }
-    };
-
-    const handlePrev = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slidePrev();
-        }
-    };
+    // const handleNext = () => {
+    //     if (swiperRef.current && swiperRef.current.swiper) {
+    //         swiperRef.current.swiper.slideNext();
+    //     }
+    // };
+    //
+    // const handlePrev = () => {
+    //     if (swiperRef.current && swiperRef.current.swiper) {
+    //         swiperRef.current.swiper.slidePrev();
+    //     }
+    // };
     return (
         <Box className={"services"}>
             <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',paddingTop:"30px"}}>
@@ -386,7 +386,7 @@ function Service(props) {
                                             transition: '0.5s',
 
                                         }}
-                                        onClick={handlePrev}
+                                        // onClick={handlePrev}
                                     >
                                         <KeyboardArrowLeftIcon fontSize="small" />
                                     </Button>
@@ -409,7 +409,7 @@ function Service(props) {
                                             transition: '0.5s',
 
                                         }}
-                                        onClick={handleNext}
+                                        // onClick={handleNext}
                                     >
                                         <KeyboardArrowRightIcon fontSize="small" />
                                     </Button>

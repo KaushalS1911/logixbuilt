@@ -73,7 +73,7 @@ const Clients = () => {
                                             mb: "0px",
                                         }}
                                     >
-                                        Clients Trust Herrington.
+                                        Clients Trust Beyond Tech Solution.
                                     </Typography>
                                 </Box>
                             </Grid>
@@ -133,6 +133,9 @@ const Clients = () => {
                                                 py: 3,
                                                 width: "100%",
                                                 px: 4,
+                                                display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center",
                                             }}
                                         >
                                             <Box
@@ -159,8 +162,7 @@ const Clients = () => {
                                                         position: "absolute",
                                                         top: 0,
                                                         left: 0,
-                                                        width: "80%",
-                                                        height: "80%",
+                                                        width: "100%",
                                                         opacity: 0,
                                                         transform: "translateY(-50%)",
                                                         transition: "transform 0.3s ease, opacity 0.3s ease",
@@ -174,8 +176,7 @@ const Clients = () => {
                                                         position: "absolute",
                                                         top: 0,
                                                         left: 0,
-                                                        width: "80%",
-                                                        height: "80%",
+                                                        width: "100%",
                                                         opacity: 1,
                                                         transform: "translateY(0)",
                                                         transition: "transform 0.3s ease, opacity 0.3s ease",

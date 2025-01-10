@@ -1,5 +1,5 @@
 'use client';
-import { Box, Typography } from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
 import React from "react";
 import image from "../../assets/images/about/aboutSlider/ab2.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -63,10 +63,11 @@ const AboutSlider = () => {
                         sx={{
                             backgroundColor: "#121C27",
                             color: "#fff",
-                            padding: { xs: "20px 2px", md: "40px 5px" },
+                            padding: { xs: "20px 2px 120px",sm:"20px 2px" , md: "40px 5px" },
                             position: "relative",
                         }}
                     >
+                <Container maxWidth={'xl'}>
                         <Swiper
                             modules={[Navigation]}
                             navigation={{
@@ -165,6 +166,9 @@ const AboutSlider = () => {
                                 height: "50px",
                                 borderRadius: "50%",
                                 backgroundColor: "#353E47",
+                                position: "absolute",
+                                top: {md:"53.5%" , xs:"80%"},
+                                right: {md:"5%" , xs:"32%"},
                                 padding: "13px",
                                 ":hover": {
                                     backgroundColor: "white",
@@ -181,6 +185,9 @@ const AboutSlider = () => {
                                 height: "50px",
                                 borderRadius: "50%",
                                 backgroundColor: "#353E47",
+                                position: "absolute",
+                                top: {md:"53.5%" , xs:"80%"},
+                                left: {md:"5%" , xs:"32%"},
                                 padding: "13px",
                                 ":hover": {
                                     backgroundColor: "white",
@@ -188,6 +195,7 @@ const AboutSlider = () => {
                                 },
                             }}
                         />
+                </Container>
                     </Box>
                 </Box>
             </Box>

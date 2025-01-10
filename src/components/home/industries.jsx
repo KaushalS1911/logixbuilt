@@ -99,7 +99,7 @@ function Industries() {
                         <Grid item xs={2} sx={{display:{xs:'none',md:'block'}}}>
                             <Box sx={{position: 'relative'}}>
                                 <Button
-                                    className="swiper-button-prev"
+                                    className="swiper-button-prev1"
                                     sx={{
                                         color: 'cardTextGrey',
                                         position: 'absolute',
@@ -110,7 +110,7 @@ function Industries() {
                                         height: '75px',
                                         width: '75px',
                                         p: 2.5,
-                                        display: {xs: "none", md: "block"},
+                                        display: {xs: "none", md: "flex"},
                                         transition: '0.5s',
                                         "&:hover": {
                                             transform: 'scale(0.8)',
@@ -121,7 +121,7 @@ function Industries() {
                                     <WestIcon/>
                                 </Button>
                                 <Button
-                                    className="swiper-button-next"
+                                    className="swiper-button-next1"
                                     sx={{
                                         color: 'cardTextGrey',
                                         position: 'absolute',
@@ -132,7 +132,7 @@ function Industries() {
                                         height: '75px',
                                         width: '75px',
                                         p: 2.5,
-                                        display: {xs: "none", md: "block"},
+                                        display: {xs: "none", md: "flex"},
                                         transition: '0.5s',
                                         "&:hover": {
                                             transform: 'scale(0.8)',
@@ -153,8 +153,8 @@ function Industries() {
                 modules={[Navigation]}
                 loop={true}
                 navigation={{
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next1",
+                    prevEl: ".swiper-button-prev1",
                 }}
                 centeredSlides={true}
                 pagination={{
