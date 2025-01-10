@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid } from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 import Img1 from "../../assets/images/home/Capabilities/Img1.jpg";
 import Img2 from "../../assets/images/home/Capabilities/Img2.jpg";
 import Img3 from "../../assets/images/home/Capabilities/Img3.jpg";
@@ -55,15 +55,15 @@ function Capabilities() {
 
     return (
         <Container maxWidth={"xl"}>
-            <Box sx={{ marginTop: "120px" }}>
+            <Box sx={{marginTop: "120px"}}>
                 <Grid container spacing={4}>
                     <Grid item lg={6}>
                         <Box
                             sx={{
-                                fontSize:{xs:"24px" , sm:"45px"},
+                                fontSize: {xs: "24px", sm: "45px"},
                                 lineHeight: "55px",
                                 fontWeight: "600",
-                                paddingBottom: {md:"0px" , lg:"80px"}
+                                paddingBottom: {md: "0px", lg: "80px"}
                             }}
                         >
                             Capabilities
@@ -71,9 +71,18 @@ function Capabilities() {
                     </Grid>
                     <Grid item lg={6}>
                         <Box
-                            component={'p'} sx={{color: 'cardTextGrey', fontWeight: 500 , paddingBottom:{xs:"30px", lg:"80px"}}}
+                            component={'p'}
+                            sx={{
+                                color: 'cardTextGrey',
+                                fontWeight: 500,
+                                paddingBottom: {xs: "30px", lg: "80px"},
+                                width: {lg:"80%" , md:"100%"},
+                                marginLeft: {lg: 15, xs: "0"}
+                            }}
                         >
-                            We offer a wide range of digital solutions and best-in-class platforms to deliver meaningful outcomes, enhance customer experiences, and transform industries at scale and with unparalleled speed.
+                            We offer a wide range of digital solutions and best-in-class platforms to deliver meaningful
+                            outcomes, enhance customer experiences, and transform industries at scale and with
+                            unparalleled speed.
                         </Box>
                     </Grid>
                 </Grid>
@@ -82,7 +91,7 @@ function Capabilities() {
                         <Grid item key={index} xs={12} md={3}>
                             <Box
                                 sx={{
-                                    height: { md: "400px", xs: "362px" },
+                                    height: {md: "400px", xs: "362px"},
                                     width: "100%",
                                     position: "relative",
                                     overflow: "hidden",
@@ -106,7 +115,7 @@ function Capabilities() {
                                         backgroundImage: `url(${item.img.src})`,
                                         backgroundSize: "cover",
                                         backgroundPosition: "center",
-                                        filter: {md:"grayscale(1)" ,xs:'"grayscale(.5)"'}, // Default grayscale 1
+                                        filter: {md: "grayscale(1)", xs: '"grayscale(.5)"'}, // Default grayscale 1
                                         transition: "filter 0.3s ease", // Smooth transition for hover effect
                                         zIndex: 1,
                                     }}
@@ -139,7 +148,7 @@ function Capabilities() {
                                             fontSize: "0.95rem",
                                             lineHeight: "22px",
                                             marginTop: "10px",
-                                            opacity:{md:"0" , xs:"1"},
+                                            opacity: {md: "0", xs: "1"},
                                         }}
                                     >
                                         {item.describtion}

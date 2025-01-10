@@ -59,7 +59,7 @@ function Navigation() {
             <AppBar
                 position={(!scrolled && path === '/') ? "static" : "fixed"}
                 sx={{
-                    backgroundColor: (scrolled || path === '/') ? 'white' : 'transparent',
+                    backgroundColor: (scrolled || path === '/') ? 'white' : 'rgba(128, 128, 128, 0.5)',
                     color: (scrolled || path === '/') ? '#000' : '#fff',
                     borderBottom: '1px solid #ddd',
                     padding: '10px 0',
@@ -68,7 +68,9 @@ function Navigation() {
                     transition: 'all 0.3s ease',
                 }}
             >
-                <Toolbar sx={{ justifyContent: 'space-between' }}>
+
+
+            <Toolbar sx={{ justifyContent: 'space-between' }}>
                     <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <Box>
                             <Link href="/" passHref>

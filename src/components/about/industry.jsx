@@ -77,7 +77,12 @@ const Industry = () => {
                                     >
                                         {feature.title}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ fontSize: '15px', lineHeight: '25px', color: '#4B535D' }}>
+                                    <Typography variant="body2" sx={{
+                                        fontSize: '15px',
+                                        lineHeight: '25px',
+                                        color: '#4B535D',
+                                        width: '96%',
+                                    }}>
                                         {feature.description}
                                     </Typography>
                                 </Box>

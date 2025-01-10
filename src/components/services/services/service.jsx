@@ -309,7 +309,7 @@ function Service(props) {
                 <Container maxWidth={"xl"}>
                     <Box
                         sx={{
-                            fontSize: "50px",
+                            fontSize: "46px",
                             fontWeight: "700",
                             color: "#fff",
                             padding: "100px 0 30px 0",
@@ -356,7 +356,7 @@ function Service(props) {
                             <Grid item lg={9}>
                                 <Box sx={{color: "#fff", marginBottom: "40px"}}>
                                     <Box sx={{
-                                        fontSize: {md: "48px", xs: "36px"},
+                                        fontSize: {md: "45px", xs: "34px"},
                                         fontWeight: "700",
                                         marginBottom: "10px"
                                     }}>
@@ -513,7 +513,7 @@ function Service(props) {
                 <Grid container spacing={4} sx={{padding: "50px 0 68px"}}>
                     <Box
                         sx={{
-                            fontSize: "48px",
+                            fontSize: "45px",
                             fontWeight: "700",
                             paddingBottom: "30px",
                             textAlign: "center",

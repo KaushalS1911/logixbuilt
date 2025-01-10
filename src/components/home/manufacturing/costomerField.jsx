@@ -74,7 +74,6 @@ const CostomerField = () => {
                                   fontWeight: "500",
                                   fontSize: { xs: "40px", md: "55px" },
                                   color: "white",
-                                  // textAlign: "center",
                               }}
                           >
                               <CountUp end={23860} duration={5} />
@@ -88,7 +87,6 @@ const CostomerField = () => {
                                   fontSize: "13px",
                                   letterSpacing: "3.2px",
                                   lineHeight: "25px",
-                                  // textAlign: "center",
                               }}
                           >
                               TRUSTED CUSTOMERS
@@ -100,7 +98,6 @@ const CostomerField = () => {
                                   fontSize: "13px",
                                   letterSpacing: "3.2px",
                                   lineHeight: "25px",
-                                  // textAlign: "center",
                               }}
                           >
                               AROUND THE WORLD

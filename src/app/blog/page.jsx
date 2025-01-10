@@ -21,10 +21,10 @@ const Page = () => {
             <Newsletter />
             <Blogslider/>
             <Posts/>
-            <Socialmedia/>
-            <Experiences/>
-            <TechUse/>
-            <MediaProject/>
+            {/*<Socialmedia/>*/}
+            {/*<Experiences/>*/}
+            {/*<TechUse/>*/}
+            {/*<MediaProject/>*/}
 
 
 
