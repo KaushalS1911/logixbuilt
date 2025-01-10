@@ -10,6 +10,11 @@ import Img6 from "../../../assets/images/services/ourproducts/sql.jpg"
 import Img7 from "../../../assets/images/services/ourproducts/html.png"
 import Img8 from "../../../assets/images/services/ourproducts/php.png"
 import Img9 from "../../../assets/images/services/ourproducts/gpt.png"
+import Img10 from "../../../assets/images/services/ourproducts/cloud.png"
+import Img11 from "../../../assets/images/services/ourproducts/ocean.jpeg"
+import Img12 from "../../../assets/images/services/ourproducts/mongodb.png"
+import Img13 from "../../../assets/images/services/ourproducts/next.png"
+import Img14 from "../../../assets/images/services/ourproducts/microsoft.jpeg"
 import Image from "next/image";
 
 function Ourproducts() {
@@ -21,17 +26,22 @@ function Ourproducts() {
                 { name: "NativeScript", image: Img2 },
                     { name:"JavaScript", image: Img5 },
                     { name:"HTML 5", image: Img7 },
+                    { name:"Next.js", image: Img13 },
 
             ],
             "BACK-END & DATABASES": [
                 { name: "Node.js", image: Img3 },
                 { name: "SQL" , image: Img6},
-                { name: "PHP" , image: Img8}
+                { name: "PHP" , image: Img8},
+                { name: "Express.js", image: Img4 },
+                { name: "MongoDB", image: Img12 },
 
             ],
             "INFRASTRUCTURE": [
-                { name: "MongoDB", image: Img4 },
-                { name: "MongoDB", image: Img9 },
+                { name: "PrivateGPT", image: Img9 },
+                { name: "Google Cloud", image: Img10 },
+                { name: "Digital Ocean", image: Img11 },
+                { name: "Microsoft Azure", image: Img14 },
 
             ]
 

@@ -201,7 +201,7 @@ const Modification = () => {
                                                 fontSize: "17px",
                                                 lineHeight: "28px",
                                                 color: "#0A1119",
-                                                width: "99%",
+                                                width: "90%",
                                             }}
                                         >
                                             We embarked on our journey with a distinct approach.
@@ -224,7 +224,7 @@ const Modification = () => {
                                                 fontSize: "17px",
                                                 lineHeight: "28px",
                                                 color: "#0A1119",
-                                                width: "99%",
+                                                width: "90%",
                                             }}
                                         >
                                             We embarked on our journey with a distinct approach.
