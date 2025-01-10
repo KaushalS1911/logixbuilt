@@ -12,7 +12,7 @@ function Page() {
     ]
     return (
         <>
-            <HeadingPage bgImg={bg1.src} heading={'services'} breadcrumbs={breadCrumbs}/>
+            <HeadingPage bgImg={bg1.src} heading={'Services'} breadcrumbs={breadCrumbs}/>
             <Service />
             <BusinessVenture/>
             <Ourproducts/>
