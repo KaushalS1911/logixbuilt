@@ -150,9 +150,10 @@ const TeamPage = () => {
                         right: 42,
                         color: 'white',
                         textAlign: 'center',
+                        fontWeight: 'bold',
                     }}
                 >
-                    The Family Beyond
+                    The Family Beyond tech solution
                 </Typography>
             </Box>
         </Box>
